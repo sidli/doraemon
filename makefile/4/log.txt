@@ -1,0 +1,53 @@
+CVP_LIBS = \
+sw/flat/VoiceComPack/SIP_PFL/sip_pfl.obj \
+sw/flat/VoiceComPack/SIP_PAL/sip_pal.obj \
+sw/flat/VoiceComPack/SIP_SSM/grfrtlsc/sipssm_grfrtlsc.obj \
+sw/flat/VoiceComPack/SIP_SSM/src_GRF/sipssm_grf.obj \
+sw/flat/VoiceComPack/SIP_SSM/sip_ssm.obj \
+sw/flat/VoiceComPack/SipMgnt/sip_mgnt.obj \
+sw/flat/VoiceComPack/SSAPIWrapper/sipssapiw.obj \
+sw/flat/PmhCommon/pmh.obj \
+sw/flat/VoiceComPack/PMC/pmc.obj
+
+MODULE_OBJS_$(PROGRAM) = \ 
+$(GENERATED_FILES) \
+$(ENV_OBJS) \
+$(VOICE_APP)\
+$(INIT_SUBSYSTEM) \
+$(SERVERS_PLATFORM) \
+$(TEST_OBJS) \
+$(BOOTPACKAGECOMMIT_OBJS) \
+$(PSTACK) \
+$(APPLICATIONS) \
+$(HWW_DOMAIN) \
+$(IOCM_OBJS) \
+$(IOCM_ASAM_MD_OBJS) \
+$(APPLICATIONS_PLTF) \
+$($(TARG_ARCH)_BSP) \
+$(ITF_LIBS) \
+$(NCLIBS) \
+$(DUMMYS) \
+$(CVP_LIBS)
+
+all : package
+        @echo "start"
+        cd $(VIEWROOT)/vobs/esam/build/$(BOARD)/OS/
+        $(MAKE) -f Makefile_sip target
+        @echo end
+
+target: $(PROGRAM).$(VERS)
+
+include $(ROOT)/sw/flat/BLDCOMMON/Makefile_top
+
+/repo3/sidl/1265c/sw/vobs/dsl/sw/flat/BLDCOMMON即/repo3/sidl/1265c/sw/src/BLDCOMMON
+Digital Subscriber Line(dsl)数字用户线路,以电话线为传输介质的传输技术
+
+ifeq ($(origin IVY),command line)
+  USE_IVY := 1
+makefile中origin显示变量在哪里定义
+
+ifneq (0, $(shell /usr/bin/test -f `which $(IVY)` &> /dev/null; echo $$?))
+  $(error Could not find ivy. Please specify correct path to ivy on the command line)
+endif
+/ap/local/devtools/bin/ivy
+Apache Ivy是一个管理项目依赖的工具。

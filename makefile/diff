@@ -1,0 +1,343 @@
+diff --git a/SIP_PAL/pal/MediaMgnt/pal_mm_handler.cpp b/SIP_PAL/pal/MediaMgnt/pal_mm_handler.cpp
+--- a/SIP_PAL/pal/MediaMgnt/pal_mm_handler.cpp
++++ b/SIP_PAL/pal/MediaMgnt/pal_mm_handler.cpp
+@@ -1051,68 +1051,70 @@ MM_Handler::createStream(const Pal_ty_u3
+             localsdp.media_lines[0].preconFields.push_back(newField);
+             localsdp.media_lines[0].preconFields.setType(E_PRECON_FIELDS_TYPE_NORMAL);
+         }
+     }
+     else
+     {
+         PalMediaLines negomlines;
+         if (remotesdp.HasMode())
+         {
+             session_mode = remotesdp.mode;
+         }
+         std::vector<SSAPIW::PEarlyMediaType> PEarlyMedia(E_PEM_SENDRCV);
+ 
+         if (pGlbSSProfile->pStVspPfl->stBS.peerCodecCommit == PCC_ALWAYS)
+         {
+             gNegoRule.codecFit = E_CODEC_NEGO_RULE_ALLFIT;
+         }
+         else
+         {
+             gNegoRule.codecFit = E_CODEC_NEGO_RULE_FIRSTFIT;
+         }
+ 
+         trc_printf(pal_sdp_flags,"mm_handler to addAttrLines\r\n");
+         remotesdp.media_lines.addAttrToSdpCodecInEachMLine();
+ 
+         //ALU01971873 & ALU01982908: The dynamic payload negotiate type can be set to be "far-end"
+         //or "asymmetric". But this value is only applied to SDP offer.
+         unsigned short pltype,process,symmetric,faxmodem;
+         PalGetRfc2833CfgInfo(pltype,process,symmetric,faxmodem);
+         if (ptermpfl != Pal_co_null && ptermpfl->pCurrentCallContext != Pal_co_null)
++        {
+             trc_printf(pal_sdp_flags,
+                        "[mm_handler, %d] symmetric:%d, dIsOutboundCall:%d\r\n",
+                        __LINE__, symmetric,
+                        ptermpfl->pCurrentCallContext->dIsOutboundCall);
+ 
+-        if((symmetric == E_ASYMMETRIC) && (ptermpfl->pCurrentCallContext->dIsOutboundCall == true))
+-        {
+-            gNegoRule.codecPreferential = E_CODEC_NEGO_PREFERENTIAL_LOCAL_FIRST;
++            if((symmetric == E_ASYMMETRIC) && (ptermpfl->pCurrentCallContext->dIsOutboundCall == true))
++            {
++                gNegoRule.codecPreferential = E_CODEC_NEGO_PREFERENTIAL_LOCAL_FIRST;
++            }
+         }
+         rc = buildMedialines(remotesdp.media_lines,
+                              sipw_lcalmlines,
+                              sipw_rmtmlines,
+                              negomlines,
+                              media_mode,
+                              port,
+                              session_mode,
+                              PEarlyMedia,
+                              v152_nego_succ,
+                              gNegoRule,
+                              E_ACTIVE);
+ 
+         if (rc != Pal_en_success)//ALU01817887
+         {
+             unsigned int i;
+ 
+             err_resp.response_code = 488;
+             err_resp.warning_code = 305;
+ 
+             for (i=0; i<negomlines.size(); i++)
+             {
+                 if (negomlines[i].preconFields.getType() == E_PRECON_FIELDS_TYPE_FAILURE)
+                 {
+                     err_resp.response_code = 580;
+                     break;
+                 }
+             }
+         }
+ 
+diff --git a/SIP_PAL/pal/pal_util.cpp b/SIP_PAL/pal/pal_util.cpp
+--- a/SIP_PAL/pal/pal_util.cpp
++++ b/SIP_PAL/pal/pal_util.cpp
+@@ -7937,61 +7937,61 @@ Pal_ty_retVal pal_fn_updatePrefixSuffix(
+         {
+             /* cbp changes:  INVITE req build rule is:
+              *  1. outbound_uri_prefix+DN+@outbound_proxy or
+              *  2. outbound_uri_prefix+DN+outbound_uri_suffix
+              * DN is digits dialed, so outbound_uri_prefix must have data but ISAM-V
+              * contains null, add sip: as default to insure ISAM-V can work
+              */
+             /*ALU01933245: don't give default prefix here, otherwise we'll forget the configured prefix then*/
+             pTermProfile->pOutboundURIPrefix = (char*)pal_memget(ICF_MODULE_PA, 1, NULL);
+             pTermProfile->pOutboundURIPrefix[0] = '\0';
+         }
+         INFORMATIONAL_PRINT(VOIP_BRIEF_TRACE,
+                 "[pal_util, %d] %s: lineId=%d, pTermProfile->pOutboundURIPrefix:%s",
+                 __LINE__, __FUNCTION__, lineId, pTermProfile->pOutboundURIPrefix);
+ 
+         if (pTermProfile->pOutboundURISuffix != Pal_co_null)
+         {
+             Pal_mc_memfree(ICF_MODULE_PA,pTermProfile->pOutboundURISuffix,pErr);
+             pTermProfile->pOutboundURISuffix = Pal_co_null;
+         }
+ 
+         if (suffix != Pal_co_null && suffix[0] != '\0')
+         {
+             /* cbg changes: check whether outboundUriSuffix contains blanks and remove them */
+ 
+             /*outboundUriSuffix can be of the form @ip:port;other-params...so this
+              * parameter can contain only one ":" before the character ";"
+              * and it is assumed that the value after
+              * ":" and before ";" is the port and validations are done on that part*/
+             char tempSuffix[33] = {0};
+-            Pal_mc_strcpy(tempSuffix, suffix); // for strtok would modify its param
++            Pal_mc_strncpy(tempSuffix, suffix, sizeof(tempSuffix)); // for strtok would modify its param
+             pDomainName = Pal_mc_strtokr(tempSuffix,":",&pTemp);
+ 			Pal_mc_strncpy(dTempSuffix,pDomainName,ICF_MAX_STR_LEN - 1);
+             pTemp = Pal_mc_strtokr(pTemp, ";", &pRemValue);
+             if ((Pal_mc_strlen(pTemp) > 0))
+             {
+                 pCurPos = pTemp;
+                 pEndPos = pTemp + Pal_mc_strlen(pTemp) - 1;
+                 pCurPos = pal_stripLeadingLWS(pCurPos, pEndPos);
+                 pTemp = pCurPos;
+                 pEndPos = pal_stripTrailingLWS(pTemp, pEndPos);
+                 *(pEndPos+1) = '\0';
+ 
+                 if ((Pal_mc_strlen(pTemp) > 0) && (Pal_en_true == pal_fn_isValidNum(pTemp)))
+                 {
+                     Pal_mc_strncat(dTempSuffix,":",\
+                                    (ICF_MAX_STR_LEN-strlen(dTempSuffix)-1));
+                     Pal_mc_strncat(dTempSuffix,pTemp,\
+                                    (ICF_MAX_STR_LEN-strlen(dTempSuffix)-1));
+                 }
+             }
+ 
+             if ((Pal_mc_strlen(pRemValue) > 0))
+             {
+                 /* if pRemValue doesn't contains user=phone, add it */
+                 if (Pal_mc_strstr(pRemValue, "user=phone") == NULL)
+                 {
+                     Pal_mc_strncat(dTempSuffix, ";user=phone", \
+                                    (ICF_MAX_STR_LEN-strlen(dTempSuffix)-1));
+                 }
+                 /*append the remaining parameters*/
+diff --git a/SIP_PFL/pfl_mapper.c b/SIP_PFL/pfl_mapper.c
+--- a/SIP_PFL/pfl_mapper.c
++++ b/SIP_PFL/pfl_mapper.c
+@@ -23429,124 +23429,124 @@ Xp_ty_void Xp_fn_fillBS_RequestOriginCla
+             if (0 == XP_STRCMP(pVal,"Millisecond"))
+             {
+                 XP_FUNC_EXIT;
+                 return Plf_en_millisecond;
+             }
+             //XP_CMD_PRINTF("Variable is Neither Sec / Millisec, return second\r\n");
+             XP_FUNC_DEBUG("Variable is Neither Sec / Millisec, return second\r\n"); /*ALU01994737 */
+             return Plf_en_second;
+         }
+ 
+ Xp_ty_void Xp_fn_fillFlsh_CW_ServiceCode_Activate\
+ (Xp_ty_s8 *pVal, Xp_ty_s32 len,Xp_st_elmData *pSchElm)
+ {
+     Pfl_st_vspPfl   *pGlbPflData=NULL;
+ 
+     XP_FUNC_ENTER;
+ 
+     XP_CHK_PROFILE_INDEX;
+ 
+     pGlbPflData = pfl_fn_getGlbProfilePointer(glbProfileIndex);
+ 
+     if (pSchElm->valStatus != Xp_valFailed)
+     {
+         XP_STRCPY(pGlbPflData->stFlshSS.unCuplParam.stLsCuplParam.stSrvProvision.\
+                            provisionEvent.cwServiceCode.dSubscriberActivate,pVal);
+     }
+     else
+     {
+         if (XP_DEFAULT_VALUE == (pSchElm->mask & XP_DEFAULT_VALUE))
+         {
+-            XP_STRCPY(pGlbPflData->stFlshSS.unCuplParam.stLsCuplParam.stSrvProvision.\
+-                           provisionEvent.cwServiceCode.dSubscriberActivate,pSchElm->defVal.charVal);
++            XP_STRNCPY(pGlbPflData->stFlshSS.unCuplParam.stLsCuplParam.stSrvProvision.\
++                           provisionEvent.cwServiceCode.dSubscriberActivate,pSchElm->defVal.charVal,PFL_WL_OPTION);
+         }
+     }
+ 
+     XP_FUNC_DEBUG("Hook Flash:: Call Waiting Active::scNumber:: %s\r\n",pGlbPflData->stFlshSS.unCuplParam.stLsCuplParam.stSrvProvision.\
+                            provisionEvent.cwServiceCode.dSubscriberActivate);
+     XP_STRCPY(g_CW_ServiceCode.dSubscriberActivate, pGlbPflData->stFlshSS.unCuplParam.stLsCuplParam.stSrvProvision.\
+                            provisionEvent.cwServiceCode.dSubscriberActivate);
+     XP_FUNC_EXIT;
+ }
+ Xp_ty_void Xp_fn_fillFlsh_CW_ServiceCode_DeActivate\
+ (Xp_ty_s8 *pVal, Xp_ty_s32 len,Xp_st_elmData *pSchElm)
+ {
+     Pfl_st_vspPfl   *pGlbPflData=NULL;
+ 
+     XP_FUNC_ENTER;
+ 
+     XP_CHK_PROFILE_INDEX;
+ 
+     pGlbPflData = pfl_fn_getGlbProfilePointer(glbProfileIndex);
+ 
+     if (pSchElm->valStatus != Xp_valFailed)
+     {
+         XP_STRCPY(pGlbPflData->stFlshSS.unCuplParam.stLsCuplParam.stSrvProvision.\
+                            provisionEvent.cwServiceCode.dSubscriberDeactivate,pVal);
+     }
+     else
+     {
+         if (XP_DEFAULT_VALUE == (pSchElm->mask & XP_DEFAULT_VALUE))
+         {
+-            XP_STRCPY(pGlbPflData->stFlshSS.unCuplParam.stLsCuplParam.stSrvProvision.\
+-                           provisionEvent.cwServiceCode.dSubscriberDeactivate,pSchElm->defVal.charVal);
++            XP_STRNCPY(pGlbPflData->stFlshSS.unCuplParam.stLsCuplParam.stSrvProvision.\
++                           provisionEvent.cwServiceCode.dSubscriberDeactivate,pSchElm->defVal.charVal,PFL_WL_OPTION);
+         }
+     }
+ 
+     XP_FUNC_DEBUG("Hook Flash:: Call Waiting Deactive::scNumber:: %s\r\n",pGlbPflData->stFlshSS.unCuplParam.stLsCuplParam.stSrvProvision.\
+                            provisionEvent.cwServiceCode.dSubscriberDeactivate);
+     XP_STRCPY(g_CW_ServiceCode.dSubscriberDeactivate, pGlbPflData->stFlshSS.unCuplParam.stLsCuplParam.stSrvProvision.\
+                            provisionEvent.cwServiceCode.dSubscriberDeactivate);
+     XP_FUNC_EXIT;
+ }
+ Xp_ty_void Xp_fn_fillFlsh_CW_ServiceCode_Interrogate\
+ (Xp_ty_s8 *pVal, Xp_ty_s32 len,Xp_st_elmData *pSchElm)
+ {
+     Pfl_st_vspPfl   *pGlbPflData=NULL;
+ 
+     XP_FUNC_ENTER;
+ 
+     XP_CHK_PROFILE_INDEX;
+ 
+     pGlbPflData = pfl_fn_getGlbProfilePointer(glbProfileIndex);
+ 
+     if (pSchElm->valStatus != Xp_valFailed)
+     {
+         XP_STRCPY(pGlbPflData->stFlshSS.unCuplParam.stLsCuplParam.stSrvProvision.\
+                            provisionEvent.cwServiceCode.dSubscriberInterrogate,pVal);
+     }
+     else
+     {
+         if (XP_DEFAULT_VALUE == (pSchElm->mask & XP_DEFAULT_VALUE))
+         {
+-            XP_STRCPY(pGlbPflData->stFlshSS.unCuplParam.stLsCuplParam.stSrvProvision.\
+-                           provisionEvent.cwServiceCode.dSubscriberInterrogate,pSchElm->defVal.charVal);
++            XP_STRNCPY(pGlbPflData->stFlshSS.unCuplParam.stLsCuplParam.stSrvProvision.\
++                           provisionEvent.cwServiceCode.dSubscriberInterrogate,pSchElm->defVal.charVal,PFL_WL_OPTION);
+         }
+     }
+ 
+     XP_FUNC_DEBUG("Hook Flash:: Call Waiting Interrogate::scNumber:: %s\r\n",pGlbPflData->stFlshSS.unCuplParam.stLsCuplParam.stSrvProvision.\
+                            provisionEvent.cwServiceCode.dSubscriberInterrogate);
+     XP_STRCPY(g_CW_ServiceCode.dSubscriberInterrogate, pGlbPflData->stFlshSS.unCuplParam.stLsCuplParam.stSrvProvision.\
+                            provisionEvent.cwServiceCode.dSubscriberInterrogate);
+     XP_FUNC_EXIT;
+ }
+ 
+ Xp_ty_void Xp_fn_fillNonFlsh_CID_CPN_CallType_BS_BR_NL_Applicability
+ (
+ Xp_ty_s8        *pVal,
+ Xp_ty_s32        len,
+ Xp_st_elmData   *pSchElm
+ )
+ {
+     Pfl_st_vspPfl   *pGlbPflData=NULL;
+     XP_FUNC_ENTER;
+     XP_CHK_PROFILE_INDEX;
+     pGlbPflData = pfl_fn_getGlbProfilePointer(glbProfileIndex);
+     if (pSchElm->valStatus != Xp_valFailed)
+     {
+         pGlbPflData->stNonFlshSS.stCallType.
+         enCCBS_NR_NLApplicability = Xp_fn_getTrueOrFalse(pVal);
+     }
+     else if (XP_DEFAULT_VALUE == (pSchElm->mask & XP_DEFAULT_VALUE))
+     {
+         pGlbPflData->stNonFlshSS.stCallType.
+          enCCBS_NR_NLApplicability = Xp_fn_getTrueOrFalse(
+diff --git a/SipMgnt/elementMgnt/SipMgnt_termination.cpp b/SipMgnt/elementMgnt/SipMgnt_termination.cpp
+--- a/SipMgnt/elementMgnt/SipMgnt_termination.cpp
++++ b/SipMgnt/elementMgnt/SipMgnt_termination.cpp
+@@ -1461,61 +1461,61 @@ bool SipTermination::ProcessGetReq(sipSu
+             else  // FR:ALU01233387
+             {
+                 pGetResp->operStatusDownReason = MG_OP_DOWN_REASON_NONE;
+                 TraceDebug::getInstance()->infoPrint(
+                     "[SipMgnt_termination, %d] "
+                     "Term %d OpStDownReason = MG_OP_DOWN_REASON_NONE, "
+                     "Latest stable state %s, Current state %s, "
+                     "Polling purpose %d, Is polling? %d",
+                     __LINE__, m_lineId,
+                     m_RegLine->GetLatestStableState()->GetStateName(),
+                     m_RegLine->GetCurState()->GetStateName(),
+                     m_Polling->GetCurPurpose().mPurpose, m_Polling->IsPolling());
+             }
+         }
+     }
+ 
+     return 1;
+ }
+ 
+ bool SipTermination::ProcessDeleteReq()
+ {
+     TraceDebug::getInstance()->funcPrint(
+         "[SipMgnt_termination, %d] Enter SipTermination::%s.",
+         __LINE__, __FUNCTION__);
+ 
+     //may need provider_name after termination is deleted.
+     //For e.g. ALU02007116.
+     //so backup it here
+     std::string providerNameBackup = m_configData.provider_name;
+     memset(&m_configData,0,sizeof(sipSubscriber_set_req_t));
+-    strcpy(m_configData.provider_name, providerNameBackup.c_str());
++    strncpy(m_configData.provider_name, providerNameBackup.c_str(),sizeof(m_configData.provider_name));
+     ChgAdminStatusDeleted();
+ 
+     return 1;
+ }
+ 
+ bool SipTermination::GenerateRandContactUriUser (char* pUserInfo)
+ {
+     char dContactUriUser[VOIP_MAX_CONTACTURI_LEN]= {'\0'};
+     unsigned long dSec = 0,dUsec=0;
+     static unsigned long dMaggic=12345;
+     int dRet=0,dRet2=0;
+     std::string vspName = GetVSPName();
+     sipVsp_set_req_t *pVspData = SipVSP::getInstance(vspName)->GetVspData();
+     Pal_ty_u32bit  dAryRdm[6]= {0}, dRdmTmp=0,dIdx= 0;
+     U32 localPort = 0, addOct4 = 0;
+     char *pLocalIp = SipMgnt_UAIp(vspName);
+     char *plocalIpOct4 = NULL;
+ 
+     TraceDebug::getInstance()->funcPrint(
+         "[SipMgnt_termination, %d] Enter SipTermination::%s.",
+         __LINE__, __FUNCTION__);
+ 
+     if (pVspData != NULL)
+     {
+         localPort = pVspData->listenSignalPort;
+     }
+     //memcpy(localIpOct4, pLocalIp+11, 4);
+     plocalIpOct4 = strrchr(pLocalIp,'.');
+     if (NULL == plocalIpOct4)
+     {

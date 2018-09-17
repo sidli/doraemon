@@ -1,0 +1,13 @@
+gcc main.c -std=c99
+
+#include "print_pretty.c"
+#include "print_pretty.c"
+
+#ifndef PRINT_PRETTY
+#define PRINT_PRETTY
+#endif
+
+C99标准
+C89标准
+
+虽然这个方式避免了重复包含的问题，但这仍然没有改变这是一个非常烂的代码结构。

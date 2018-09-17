@@ -1,0 +1,2114 @@
+$ gcc -v --help
+使用内建 specs。
+COLLECT_GCC=gcc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-cygwin/4.8.3/lto-wrapper.exe
+用法：gcc [选项] 文件...
+选项：
+  -pass-exit-codes         在某一阶段退出时返回最高的错误码
+  --help                   显示此帮助说明
+  --target-help            显示目标机器特定的命令行选项
+  --help={common|optimizers|params|target|warnings|[^]{joined|separate|undocumented}}[,...]
+                           显示特定类型的命令行选项
+  --version                显示编译器版本信息
+  -dumpspecs               显示所有内建 spec 字符串
+  -dumpversion             显示编译器的版本号
+  -dumpmachine             显示编译器的目标处理器
+  -print-search-dirs       显示编译器的搜索路径
+  -print-libgcc-file-name  显示编译器伴随库的名称
+  -print-file-name=<库>    显示 <库> 的完整路径
+  -print-prog-name=<程序>  显示编译器组件 <程序> 的完整路径
+  -print-multiarch         Display the target's normalized GNU triplet, used as
+                           a component in the library path
+  -print-multi-directory   显示不同版本 libgcc 的根目录
+  -print-multi-lib         显示命令行选项和多个版本库搜索路径间的映射
+  -print-multi-os-directory 显示操作系统库的相对路径
+  -print-sysroot           显示目标库目录
+  -print-sysroot-headers-suffix 显示用于寻找头文件的 sysroot 后缀
+  -Wa,<选项>               将逗号分隔的 <选项> 传递给汇编器
+  -Wp,<选项>               将逗号分隔的 <选项> 传递给预处理器
+  -Wl,<选项>               将逗号分隔的 <选项> 传递给链接器
+  -Xassembler <参数>       将 <参数> 传递给汇编器
+  -Xpreprocessor <参数>    将 <参数> 传递给预处理器
+  -Xlinker <参数>          将 <参数> 传递给链接器
+  -save-temps              不删除中间文件
+  -save-temps=<arg>        不删除中间文件
+  -no-canonical-prefixes   生成其他 gcc 组件的相对路径时不生成规范化的
+                           前缀
+  -pipe                    使用管道代替临时文件
+  -time                    为每个子进程计时
+  -specs=<文件>            用 <文件> 的内容覆盖内建的 specs 文件
+  -std=<标准>              指定输入源文件遵循的标准
+  --sysroot=<目录>         将 <目录> 作为头文件和库文件的根目录
+  -B <目录>                将 <目录> 添加到编译器的搜索路径中
+  -v                       显示编译器调用的程序
+  -###                     与 -v 类似，但选项被引号括住，并且不执行命令
+  -E                       仅作预处理，不进行编译、汇编和链接
+  -S                       编译到汇编语言，不进行汇编和链接
+  -c                       编译、汇编到目标代码，不进行链接
+  -o <文件>                输出到 <文件>
+  -pie                     Create a position independent executable
+  -shared                  Create a shared library
+  -x <语言>                指定其后输入文件的语言
+                           允许的语言包括：c c++ assembler none
+                           ‘none’意味着恢复默认行为，即根据文件的扩展名猜测
+                           源文件的语言
+
+以 -g、-f、-m、-O、-W 或 --param 开头的选项将由 gcc 自动传递给其调用的
+ 不同子进程。若要向这些进程传递其他选项，必须使用 -W<字母> 选项。
+
+目标：x86_64-pc-cygwin
+配置为：/cygdrive/i/szsz/tmpp/gcc/gcc-4.8.3-3.x86_64/src/gcc-4.8.3/configure --srcdir=/cygdrive/i/szsz/tmpp/gcc/gcc-4.8.3-3.x86_64/src/gcc-4.8.3 --prefix=/usr --exec-prefix=/usr --bindir=/usr/bin --sbindir=/usr/sbin --libexecdir=/usr/libexec --datadir=/usr/share --localstatedir=/var --sysconfdir=/etc --libdir=/usr/lib --datarootdir=/usr/share --docdir=/usr/share/doc/gcc --htmldir=/usr/share/doc/gcc/html -C --build=x86_64-pc-cygwin --host=x86_64-pc-cygwin --target=x86_64-pc-cygwin --without-libiconv-prefix --without-libintl-prefix --libexecdir=/usr/lib --enable-shared --enable-shared-libgcc --enable-static --enable-version-specific-runtime-libs --enable-bootstrap --enable-__cxa_atexit --with-dwarf2 --with-tune=generic --enable-languages=ada,c,c++,fortran,lto,objc,obj-c++ --enable-graphite --enable-threads=posix --enable-libatomic --enable-libgomp --disable-libitm --enable-libquadmath --enable-libquadmath-support --enable-libssp --enable-libada --enable-libgcj-sublibs --disable-java-awt --disable-symvers --with-ecj-jar=/usr/share/java/ecj.jar --with-gnu-ld --with-gnu-as --with-cloog-include=/usr/include/cloog-isl --without-libiconv-prefix --without-libintl-prefix --with-system-zlib --enable-linker-build-id
+线程模型：posix
+gcc 版本 4.8.3 (GCC)
+COLLECT_GCC_OPTIONS='-v' '--help' '-mtune=generic' '-march=x86-64'
+
+ /usr/lib/gcc/x86_64-pc-cygwin/4.8.3/cc1.exe -quiet -v -Dunix -idirafter /usr/lib/gcc/x86_64-pc-cygwin/4.8.3/../../../../lib/../include/w32api -idirafter /usr/lib/gcc/x86_64-pc-cygwin/4.8.3/../../../../x86_64-pc-cygwin/lib/../lib/../../include/w32api help-dummy -quiet -dumpbase help-dummy -mtune=generic -march=x86-64 -auxbase help-dummy -version --help -o /tmp/ccigO7dp.s
+下列选项只与特定语言相关 Ada:
+ 找不到对应的选项。使用 --help=Ada 显示 Ada 前端所支持的所有选项
+
+下列选项只与特定语言相关 AdaSCIL:
+ 找不到对应的选项。使用 --help=AdaSCIL 显示 AdaSCIL 前端所支持的所有选项
+
+下列选项只与特定语言相关 AdaWhy:
+ 找不到对应的选项。使用 --help=AdaWhy 显示 AdaWhy 前端所支持的所有选项
+
+下列选项只与特定语言相关 C:
+  -lang-asm                   此开关缺少可用文档
+
+下列选项只与特定语言相关 C++:
+ 找不到对应的选项。使用 --help=C++ 显示 C++ 前端所支持的所有选项
+
+下列选项只与特定语言相关 Fortran:
+  -J<目录>                    将 MODULE 文件放入目录
+  -Waliasing                  为可能的虚参重叠给出警告
+  -Walign-commons             对 COMMON 块对齐的警告
+  -Wampersand                 若延续字符常量中缺少 & 则给出警告
+  -Warray-temporaries         创建临时数组时给出警告
+  -Wc-binding-type            Warn if the type of a variable might be not
+                              interoperable with C
+  -Wcharacter-truncation      对被截断的字符表达式给出警告
+  -Wcompare-reals             Warn about equality comparisons involving REAL or
+                              COMPLEX expressions
+  -Wconversion-extra          对大多数隐式类型转换给出警告
+  -Wextra                     打印额外(可能您并不想要)的警告信息
+  -Wfunction-elimination      Warn about function call elimination
+  -Wimplicit-interface        对带有隐式接口的调用给出警告
+  -Wimplicit-procedure        对没有隐式声明的过程调用给出警告
+  -Wintrinsic-shadow          如果用户过程有与内建过程相同的名字则警告
+  -Wintrinsics-std            当内建函数不是所选标准的一部分时给出警告
+  -Wline-truncation           对被截断的源文件行给出警告
+  -Wreal-q-constant           Warn about real-literal-constants with 'q'
+                              exponent-letter
+  -Wrealloc-lhs               Warn when a left-hand-side array variable is
+                              reallocated
+  -Wrealloc-lhs-all           Warn when a left-hand-side variable is reallocated
+  -Wsurprising                对“可疑”的构造给出警告
+  -Wtabs                      允许使用不符合规范的制表符
+  -Wtarget-lifetime           Warn if the pointer in a pointer assignment might
+                              outlive its target
+  -Wunderflow                 数字常量表达式下溢时警告
+  -Wunused-dummy-argument     对未使用的哑元给出警告。
+  -cpp                        启用预处理
+  -cpp=                       此开关缺少可用文档
+  -faggressive-function-elimination Eliminate multiple function invokations
+                              also for impure functions
+  -falign-commons             对齐 COMMON 块
+  -fall-intrinsics            无论选择何种标准，所有内建过程均可用
+  -fallow-leading-underscore  此开关缺少可用文档
+  -fautomatic                 不把局部变量 和 COMMON 块如它们在 SAVE
+                              语句中被命名那样来处理
+  -fbackslash                 指定字符串中的反斜杠引入一个转义字符
+  -fbacktrace                 遇到运行时错误时打印函数调用回溯
+  -fblas-matmul-limit=<n>     使用 BLAS 进行矩阵乘法的矩阵大小下限
+  -fcheck-array-temporaries   对为过程参数而临时创建的数组产生一个运行时警告
+  -fcheck=[...]               指定要进行哪种运行时检查
+  -fcoarray=[...]             指定要使用的集合数组并行化
+  -fconvert=big-endian        为未格式化的文件使用大端在前的格式
+  -fconvert=little-endian     为未格式化的文件使用小端在前的格式
+  -fconvert=native            对未格式化的文件，使用本地格式
+  -fconvert=swap              对未格式化的文件，交换字节次序
+  -fcray-pointer              使用 Cray 指针扩展
+  -fd-lines-as-code           在固定格式中忽略第一列的‘D’
+  -fd-lines-as-comments       将第一列为‘D’的行视作注释
+  -fdefault-double-8          将默认双精度种别设为 8 字节宽
+  -fdefault-integer-8         将默认整数种别设为 8 字节宽
+  -fdefault-real-8            将默认实型种别设为 8 字节宽
+  -fdollar-ok                 允许在实体名中使用美元符号
+  -fdump-core                 不起作用。为向前兼容保留的选项。
+  -fdump-fortran-optimized    Display the code tree after front end optimization
+  -fdump-fortran-original     解析后显示代码树
+  -fdump-parse-tree           Display the code tree after parsing; deprecated
+                              option
+  -fexternal-blas             为大尺寸数组调用 matmul 时应当使用一个外部 BLAS 库
+  -ff2c                       使用 f2c 调用约定
+  -ffixed-form                假定源文件是固定格式的
+  -ffixed-line-length-<n>     在固定模式下以 n 作为字符行宽
+  -ffixed-line-length-none    在固定模式下允许任意的字符行宽
+  -ffpe-trap=[...]            在以下浮点异常的情况下停止
+  -ffree-form                 假定源文件是自由格式
+  -ffree-line-length-<n>      在自由模式下以 n 作为字符行宽
+  -ffree-line-length-none     在自由模式下允许任意的字符行宽
+  -ffrontend-optimize         Enable front end optimization
+  -fimplicit-none             不允许使用隐式类型，除非显式地使用了 IMPLICIT 语句
+  -finit-character=<n>        将局部字符变量初始化 ASCII 值 n
+  -finit-integer=<n>          将局部整数变量初始化为 n
+  -finit-local-zero           局部变量初始化为零(与  g77 相同)
+  -finit-logical=<true|false> 初始化局部逻辑变量
+  -finit-real=<zero|nan|inf|-inf> 初始化局部实变量
+  -finteger-4-integer-8       Interpret any INTEGER(4) as an INTEGER(8)
+  -fintrinsic-modules-path    指定编译好的内建模块的位置
+  -fintrinsic-modules-path=   指定编译好的内建模块的位置
+  -fmax-array-constructor=<n> 一个数组构造函数中对象的最大数目
+  -fmax-identifier-length=<n> 标识符的最大长度
+  -fmax-stack-var-size=<n>    以字节大小表示的可以被放入堆栈的数组的最大大小
+  -fmax-subrecord-length=<n>  子记录的最大长度
+  -fmodule-private            将模块实体的默认访问权限设置为 PRIVATE。
+  -fpack-derived              为派生类型使用尽可能紧实的布局
+  -fprotect-parens            尊重表达式中的括号
+  -frange-check               启用编译时范围检查
+  -freal-4-real-10            Interpret any REAL(4) as a REAL(10)
+  -freal-4-real-16            Interpret any REAL(4) as a REAL(16)
+  -freal-4-real-8             Interpret any REAL(4) as a REAL(8)
+  -freal-8-real-10            Interpret any REAL(8) as a REAL(10)
+  -freal-8-real-16            Interpret any REAL(8) as a REAL(16)
+  -freal-8-real-4             Interpret any REAL(8) as a REAL(4)
+  -frealloc-lhs               在赋值中重分配左值
+  -frecord-marker=4           对未格式化的文件，使用一个 4 字节的记录标记
+  -frecord-marker=8           对未格式化的文件，使用一个 8 字节的记录格式
+  -frecursive                 在堆栈上分配局部变量以允许间接递归
+  -frepack-arrays             在过程入口处将数组段复制到一个连续的块中
+  -fsecond-underscore         当名字已经包含一个下划线时添加第二个下划线
+  -fsign-zero                 在零值前使用负号
+  -fstack-arrays              Put all local arrays on stack.
+  -funderscoring              为外部可见的名字添加下划线
+  -fwhole-file                立即编译所有程序单元并检查接口
+  -nocpp                      禁用预处理
+  -static-libgfortran         静态链接 GNU Fortran 助手库(libgfortran)
+  -std=f2003                  遵循 ISO Fortran 2003 标准
+  -std=f2008                  遵循 ISO Fortran 2008 标准
+  -std=f2008ts                Conform to the ISO Fortran 2008 standard
+                              including TS 29113
+  -std=f95                    遵循 ISO Fortran 95 标准
+  -std=gnu                    不特别遵循任何标准
+  -std=legacy                 接受一定的扩展以支持传统的代码
+
+下列选项只与特定语言相关 Go:
+  -L                          此开关缺少可用文档
+  -fgo-check-divide-overflow  Add explicit checks for division overflow in
+                              INT_MIN / -1
+  -fgo-check-divide-zero      Add explicit checks for division by zero
+  -fgo-dump-<type>            Dump Go frontend internal information
+  -fgo-optimize-<type>        Turn on optimization passes in the frontend
+  -fgo-pkgpath=<string>       Set Go package path
+  -fgo-prefix=<string>        Set package-specific prefix for exported Go names
+  -fgo-relative-import-path=  -fgo-relative-import-path=<path> Treat a relative
+                              import as relative to path
+  -frequire-return-statement  Functions which return values must end with
+                              return statements
+
+下列选项只与特定语言相关 Java:
+  --CLASSPATH                 此开关缺少可用文档
+  --bootclasspath             此开关缺少可用文档
+  --classpath                 此开关缺少可用文档
+  --encoding                  此开关缺少可用文档
+  --extdirs                   此开关缺少可用文档
+  --output-class-directory    此开关缺少可用文档
+  --output-class-directory=   此开关缺少可用文档
+  --resource                  此开关缺少可用文档
+  --resource=                 此开关缺少可用文档
+  -CLASSPATH                  此开关缺少可用文档
+  -MD_                        此开关缺少可用文档
+  -MMD_                       此开关缺少可用文档
+  -Wall-deprecation           此开关缺少可用文档
+  -Wall-javadoc               此开关缺少可用文档
+  -Wassert-identifier         此开关缺少可用文档
+  -Wboxing                    此开关缺少可用文档
+  -Wchar-concat               此开关缺少可用文档
+  -Wcondition-assign          此开关缺少可用文档
+  -Wconstructor-name          此开关缺少可用文档
+  -Wdep-ann                   此开关缺少可用文档
+  -Wdiscouraged               此开关缺少可用文档
+  -Wempty-block               此开关缺少可用文档
+  -Wenum-identifier           此开关缺少可用文档
+  -Wenum-switch               此开关缺少可用文档
+  -Wextraneous-semicolon      发现不建议使用的空语句时给出警告
+  -Wfallthrough               此开关缺少可用文档
+  -Wfield-hiding              此开关缺少可用文档
+  -Wfinal-bound               此开关缺少可用文档
+  -Wfinally                   此开关缺少可用文档
+  -Wforbidden                 此开关缺少可用文档
+  -Whiding                    此开关缺少可用文档
+  -Windirect-static           此开关缺少可用文档
+  -Wintf-annotation           此开关缺少可用文档
+  -Wintf-non-inherited        此开关缺少可用文档
+  -Wjavadoc                   此开关缺少可用文档
+  -Wlocal-hiding              此开关缺少可用文档
+  -Wmasked-catch-block        此开关缺少可用文档
+  -Wnls                       此开关缺少可用文档
+  -Wno-effect-assign          此开关缺少可用文档
+  -Wnull                      此开关缺少可用文档
+  -Wout-of-date               当 .class 文件已过时时给出警告
+  -Wover-ann                  此开关缺少可用文档
+  -Wparam-assign              此开关缺少可用文档
+  -Wpkg-default-method        此开关缺少可用文档
+  -Wraw                       此开关缺少可用文档
+  -Wredundant-modifiers       当指定了不必须的修饰符时给出警告
+  -Wserial                    此开关缺少可用文档
+  -Wspecial-param-hiding      此开关缺少可用文档
+  -Wstatic-access             此开关缺少可用文档
+  -Wstatic-receiver           此开关缺少可用文档
+  -Wsuppress                  此开关缺少可用文档
+  -Wsynthetic-access          此开关缺少可用文档
+  -Wtasks                     此开关缺少可用文档
+  -Wtype-hiding               此开关缺少可用文档
+  -Wuncheck                   此开关缺少可用文档
+  -Wunnecessary-else          此开关缺少可用文档
+  -Wunqualified-field         此开关缺少可用文档
+  -Wunused-argument           此开关缺少可用文档
+  -Wunused-import             此开关缺少可用文档
+  -Wunused-label              有未使用的标号时警告
+  -Wunused-local              此开关缺少可用文档
+  -Wunused-private            此开关缺少可用文档
+  -Wunused-thrown             此开关缺少可用文档
+  -Wuseless-type-check        此开关缺少可用文档
+  -Wvarargs-cast              此开关缺少可用文档
+  -Wwarning-token             此开关缺少可用文档
+  -bootclasspath              此开关缺少可用文档
+  -classpath                  此开关缺少可用文档
+  -encoding                   此开关缺少可用文档
+  --CLASSPATH                 不建议使用；请改用 --classpath
+  -fassert                    允许使用 assert 关键字
+  -fassume-compiled           此开关缺少可用文档
+  -fassume-compiled=          此开关缺少可用文档
+  -faux-classpath             此开关缺少可用文档
+  --bootclasspath=<路径>      替换系统路径
+  -fbootstrap-classes         生成的类可被自举加载
+  -fcheck-references          检查指向 NULL 的引用
+  --classpath=<路径>          设置类路径
+  -fcompile-resource=         此开关缺少可用文档
+  -fdisable-assertions        此开关缺少可用文档
+  -fdisable-assertions=       此开关缺少可用文档
+  -femit-class-file           输出一个 class 文件
+  -femit-class-files          -fmit-class-file 的别名
+  -fenable-assertions         此开关缺少可用文档
+  -fenable-assertions=        此开关缺少可用文档
+  --encoding=<编码>           选择输入编码(默认来自您的区域选项)
+  --extdirs=<路径>            设定扩展目录
+  -ffilelist-file             输入文件是一个文件名列表，指定了需要编译的文件
+  -fforce-classes-archive-check 总是检查非 gcj 生成的类文档
+  -fhash-synchronization      假定运行时使用一张散列表完成从对象到其同步结构的映射
+  -findirect-classes          在运行时生成类的实例
+  -findirect-dispatch         为虚方法调用使用偏移表
+  -finline-functions          Integrate functions not declared "inline" into
+                              their callers when profitable
+  -fjni                       假定本地函数使用 JNI 实现
+  -foptimize-static-class-initialization 启用静态类初始代码优化
+  -foutput-class-dir=         此开关缺少可用文档
+  -freduced-reflection        减少生成的反射元数据
+  -fsaw-java-file             此开关缺少可用文档
+  -fsource-filename=          此开关缺少可用文档
+  -fsource=                   设定源语言版本
+  -fstore-check               存储到对象数组时进行可赋值性检查
+  -ftarget=                   指定目标虚拟机的版本
+  -fuse-atomic-builtins       为内建原子操作生成代码
+  -fuse-boehm-gc              为 Boehm 生成代码
+  -fuse-divide-subroutine     调用一个库子程序来完成整数除法
+  -version                    显示编译器版本
+
+下列选项只与特定语言相关 LTO:
+  -fltrans                    在局部转化(LTRANS)模式下运行链接时优化器。
+  -fltrans-output-list=       指定存放 LTRANS 输出的文件列表的文件。
+  -fresolution=               符号解析文件
+  -fwpa                       在全程序分析(WPA)模式下运行链接时优化器。
+
+下列选项只与特定语言相关 ObjC:
+ 找不到对应的选项。使用 --help=ObjC 显示 ObjC 前端所支持的所有选项
+
+下列选项只与特定语言相关 ObjC++:
+  -fobjc-call-cxx-cdtors      如果需要，生成特殊的 Objective-C
+                              方法来初始化/析构非简单旧数据 C++ 变量
+
+下列选项与语言相关:
+  --all-warnings              此开关缺少可用文档
+  --ansi                      此开关缺少可用文档
+  --assert                    此开关缺少可用文档
+  --assert=                   此开关缺少可用文档
+  --comments                  此开关缺少可用文档
+  --comments-in-macros        此开关缺少可用文档
+  --define-macro              此开关缺少可用文档
+  --define-macro=             此开关缺少可用文档
+  --dependencies              此开关缺少可用文档
+  --dump                      此开关缺少可用文档
+  --dump=                     此开关缺少可用文档
+  --imacros                   此开关缺少可用文档
+  --imacros=                  此开关缺少可用文档
+  --include                   此开关缺少可用文档
+  --include-barrier           此开关缺少可用文档
+  --include-directory         此开关缺少可用文档
+  --include-directory-after   此开关缺少可用文档
+  --include-directory-after=  此开关缺少可用文档
+  --include-directory=        此开关缺少可用文档
+  --include-prefix            此开关缺少可用文档
+  --include-prefix=           此开关缺少可用文档
+  --include-with-prefix       此开关缺少可用文档
+  --include-with-prefix-after 此开关缺少可用文档
+  --include-with-prefix-after= 此开关缺少可用文档
+  --include-with-prefix-before 此开关缺少可用文档
+  --include-with-prefix-before= 此开关缺少可用文档
+  --include-with-prefix=      此开关缺少可用文档
+  --include=                  此开关缺少可用文档
+  --no-line-commands          此开关缺少可用文档
+  --no-standard-includes      此开关缺少可用文档
+  --no-standard-libraries     此开关缺少可用文档
+  --no-warnings               此开关缺少可用文档
+  --output                    此开关缺少可用文档
+  --output-pch=               此开关缺少可用文档
+  --output=                   此开关缺少可用文档
+  --pedantic                  此开关缺少可用文档
+  --preprocess                此开关缺少可用文档
+  --print-missing-file-dependencies 此开关缺少可用文档
+  --trace-includes            此开关缺少可用文档
+  --traditional-cpp           此开关缺少可用文档
+  --trigraphs                 此开关缺少可用文档
+  --undefine-macro            此开关缺少可用文档
+  --undefine-macro=           此开关缺少可用文档
+  --user-dependencies         此开关缺少可用文档
+  --verbose                   此开关缺少可用文档
+  --write-dependencies        此开关缺少可用文档
+  --write-user-dependencies   此开关缺少可用文档
+  -A<问题>=<答案>             给出问题的答案。在问题前加一个‘-’将禁用其答案
+  -C                          不丢弃注释
+  -CC                         展开宏时不丢弃注释
+  -D<宏>[=<值>]               将宏定义为值。如果只给出了宏，值将被定为 1
+  -E                          此开关缺少可用文档
+  -F <目录>                   将目录添加至主框架包含路径的末尾
+  -H                          打印使用到的头文件名
+  -I <目录>                   将目录添加至主包含路径末尾
+  -M                          生成 make 依赖项
+  -MD                         生成 make 依赖规则并编译
+  -MF <文件>                  将依赖项输出到给定文件
+  -MG                         将缺失的头文件看作生成的文件
+  -MM                         与 -M 类似但是忽略系统头文件
+  -MMD                        与 -MD 类似但是忽略系统头文件
+  -MP                         为所有头文件生成伪目标
+  -MQ <目标>                  添加一个 MAKE 括起的目标
+  -MT <目标>                  添加一个不被括起的目标
+  -P                          不生成 #line 指令
+  -U<宏>                      取消定义宏
+  -Wabi                       当结果与 ABI 相容的编译器的编译结果不同时给出警告
+  -Wabi-tag                   Warn if a subobject has an abi_tag attribute that
+                              the complete object type does not have
+  -Waddress                   使用可疑的内存地址时给出警告
+  -Wall                       启用大部分警告信息
+  -Wassign-intercept          当 Objective-C 赋值可能为垃圾回收所介入时给出警告
+  -Wbad-function-cast         当把函数转换为不兼容类型时给出警告
+  -Wbuiltin-macro-redefined   当内建预处理宏未定义或重定义时给出警告
+  -Wc++-compat                当在 C 语言中使用了 C 与 C++
+                              交集以外的构造时给出警告
+  -Wc++0x-compat              Deprecated in favor of -Wc++11-compat
+  -Wc++11-compat              Warn about C++ constructs whose meaning differs
+                              between ISO C++ 1998 and ISO C++ 2011
+  -Wcast-qual                 当类型转换丢失限定信息时给出警告
+  -Wchar-subscripts           当下标类型为“char”时给出警告
+  -Wclobbered                 对能为"longjmp"或"vfork"所篡改的变量给出警告
+  -Wcomment                   对可能嵌套的注释和长度超过一个物理行长的 C++
+                              注释给出警告
+  -Wcomments                  -Wcomment 的同义词
+  -Wconversion                当隐式类型转换可能改变值时给出警告
+  -Wconversion-null           将 NULL 转换为非指针类型时给出警告
+  -Wctor-dtor-privacy         当所有构造函数和析构函数都是私有时给出警告
+  -Wdeclaration-after-statement 当声明出现在语句后时给出警告
+  -Wdelete-non-virtual-dtor   Warn about deleting polymorphic objects with non-
+                              virtual destructors
+  -Wdeprecated                使用不建议的编译器特性、类、方法或字段时给出警告
+  -Wdiv-by-zero               对编译时发现的零除给出警告
+  -Wdouble-promotion          对从“float”到“double”的隐式转换给出警告
+  -Weffc++                    对不遵循《Effetive C++》的风格给出警告
+  -Wempty-body                当 if 或 else 语句体为空时给出警告
+  -Wendif-labels              当 #elif 和 #endif 后面跟有其他标识符时给出警告
+  -Wenum-compare              对不同枚举类型之间的比较给出警告
+  -Werror                     所有的警告都当作是错误
+  -Werror-implicit-function-declaration 不建议使用此开关；请改用
+                              -Werror=implicit-function-declaration
+  -Wfloat-equal               当比较浮点数是否相等时给出警告
+  -Wformat                    对 printf/scanf/strftime/strfmon
+                              中的格式字符串异常给出警告
+  -Wformat-contains-nul       当格式字符串包含 NUL 字节时给出警告
+  -Wformat-extra-args         当传递给格式字符串的参数太多时给出警告
+  -Wformat-nonliteral         当格式字符串不是字面值时给出警告
+  -Wformat-security           当使用格式字符串的函数可能导致安全问题时给出警告
+  -Wformat-y2k                当 strftime 格式给出 2 位记年时给出警告
+  -Wformat-zero-length        对长度为 0 的格式字符串给出警告
+  -Wformat=                   对 printf/scanf/strftime/strfmon
+                              中的格式字符串异常给出警告
+  -Wignored-qualifiers        当类型限定符被忽略时给出警告。
+  -Wimplicit                  对隐式函数声明给出警告
+  -Wimplicit-function-declaration 对隐式函数声明给出警告
+  -Wimplicit-int              当声明未指定类型时给出警告
+  -Wimport                    此开关缺少可用文档
+  -Winherited-variadic-ctor   Warn about C++11 inheriting constructors when the
+                              base has a variadic constructor
+  -Winit-self                 对初始化为自身的变量给出警告。
+  -Wint-to-pointer-cast       当将一个大小不同的整数转换为指针时给出警告
+  -Winvalid-offsetof          对“offsetof”宏无效的使用给出警告
+  -Winvalid-pch               在找到了 PCH 文件但未使用的情况给出警告
+  -Wjump-misses-init          当跳转略过变量初始化时给出警告
+  -Wliteral-suffix            Warn when a string or character literal is
+                              followed by a ud-suffix which does not begin with
+                              an underscore.
+  -Wlogical-op                当逻辑操作结果似乎总为真或假时给出警告
+  -Wlong-long                 当使用 -pedantic 时不对“long long”给出警告
+  -Wmain                      对可疑的“main”声明给出警告
+  -Wmaybe-uninitialized       Warn about maybe uninitialized automatic variables
+  -Wmissing-braces            若初始值设定项中可能缺少花括号则给出警告
+  -Wmissing-declarations      当全局函数没有前向声明时给出警告
+  -Wmissing-field-initializers 若结构初始值设定项中缺少字段则给出警告
+  -Wmissing-format-attribute  此开关缺少可用文档
+  -Wmissing-include-dirs      当用户给定的包含目录不存在时给出警告
+  -Wmissing-parameter-type    K&R 风格函数参数声明中未指定类型限定符时给出警告
+  -Wmissing-prototypes        全局函数没有原型时给出警告
+  -Wmudflap                   当构造未被 -fmudflap 处理时给出警告
+  -Wmultichar                 使用多字节字符集的字符常量时给出警告
+  -Wnarrowing                 Warn about narrowing conversions within { } that
+                              are ill-formed in C++11
+  -Wnested-externs            当“extern”声明不在文件作用域时给出警告
+  -Wnoexcept                  Warn when a noexcept expression evaluates to
+                              false even though the expression can't actually
+                              throw
+  -Wnon-template-friend       在模板内声明未模板化的友元函数时给出警告
+  -Wnon-virtual-dtor          当析构函数不是虚函数时给出警告
+  -Wnonnull                   当将 NULL 传递给需要非 NULL 的参数的函数时给出警告
+  -Wnormalized=<id|nfc|nfkc>  对未归一化的 Unicode 字符串给出警告
+  -Wold-style-cast            程序使用 C 风格的类型转换时给出警告
+  -Wold-style-declaration     对声明中的过时用法给出警告
+  -Wold-style-definition      使用旧式形参定义时给出警告
+  -Woverlength-strings        当字符串长度超过标准规定的可移植的最大长度时给出警告
+  -Woverloaded-virtual        重载虚函数名时给出警告
+  -Woverride-init             覆盖无副作用的初始值设定时给出警告
+  -Wpacked-bitfield-compat    当紧实位段的偏移量因 GCC 4.4 而改变时给出警告
+  -Wparentheses               可能缺少括号的情况下给出警告
+  -Wpedantic                  给出标准指定的所有警告信息
+  -Wpmf-conversions           当改变成员函数指针的类型时给出警告
+  -Wpointer-arith             当在算术表达式中使用函数指针时给出警告
+  -Wpointer-sign              赋值时如指针符号不一致则给出警告
+  -Wpointer-to-int-cast       将一个指针转换为大小不同的整数时给出警告
+  -Wpragmas                   对错误使用的 pragma 加以警告
+  -Wproperty-assign-default   Warn if a property for an Objective-C object has
+                              no assign semantics specified
+  -Wprotocol                  当继承来的方法未被实现时给出警告
+  -Wpsabi                     此开关缺少可用文档
+  -Wredundant-decls           对同一个对象多次声明时给出警告
+  -Wreorder                   编译器将代码重新排序时给出警告
+  -Wreturn-local-addr         Warn about returning a pointer/reference to a
+                              local or temporary variable.
+  -Wreturn-type               当 C 函数的返回值默认为“int”，或者 C++
+                              函数的返回类型不一致时给出警告
+  -Wselector                  当选择子有多个方法时给出警告
+  -Wsequence-point            当可能违反定序点规则时给出警告
+  -Wsign-compare              在有符号和无符号数间进行比较时给出警告
+  -Wsign-conversion           为有符号和无符号整数间的隐式类型转换给出警告
+  -Wsign-promo                当重载将无符号数提升为有符号数时给出警告
+  -Wsizeof-pointer-memaccess  此开关缺少可用文档
+  -Wstrict-aliasing=          当代码可能破坏强重叠规则时给出警告
+  -Wstrict-null-sentinel      将未作转换的 NULL 用作哨兵时给出警告
+  -Wstrict-overflow=          禁用假定有符号数溢出行为未被定义的优化
+  -Wstrict-prototypes         使用了非原型的函数声明时给出警告
+  -Wstrict-selector-match     当备选方法的类型签字不完全匹配时给出警告
+  -Wsuggest-attribute=format  当函数可能是 format 属性的备选时给出警告
+  -Wswitch                    当使用枚举类型作为开关变量，没有提供 default
+                              分支，但又缺少某个 case 时给出警告
+  -Wswitch-default            当使用枚举类型作为开关变量，但没有提供“default”分支时给出警告
+  -Wswitch-enum               当使用枚举类型作为开关变量但又缺少某个 case
+                              时给出警告
+  -Wsync-nand                 当 __sync_fetch_and_nand 和 __sync_nand_and_fetch
+                              内建函数被使用时给出警告
+  -Wsynth                     不建议使用。此开关不起作用。
+  -Wsystem-headers            不抑制系统头文件中的警告
+  -Wtraditional               使用了传统 C 不支持的特性时给出警告
+  -Wtraditional-conversion    原型导致的类型转换与无原型时的类型转换不同时给出警告
+  -Wtrigraphs                 当三字母序列可能影响程序意义时给出警告
+  -Wundeclared-selector       当使用 @selector() 却不作事先声明时给出警告
+  -Wundef                     当 #if 指令中用到未定义的宏时给出警告
+  -Wuninitialized             自动变量未初始化时警告
+  -Wunknown-pragmas           对无法识别的 pragma 加以警告
+  -Wunsuffixed-float-constants 对不带后缀的浮点常量给出警告
+  -Wunused                    启用所有关于“XX未使用”的警告
+  -Wunused-local-typedefs     Warn when typedefs locally defined in a function
+                              are not used
+  -Wunused-macros             当定义在主文件中的宏未被使用时给出警告
+  -Wunused-result             当一个带有 warn_unused_result
+                              属性的函数的调用者未使用前者的返回值时给出警告
+  -Wuseless-cast              Warn about useless casts
+  -Wvarargs                   Warn about questionable usage of the macros used
+                              to retrieve variable arguments
+  -Wvariadic-macros           Warn about using variadic macros
+  -Wvirtual-move-assign       Warn if a virtual base has a non-trivial move
+                              assignment operator
+  -Wvla                       使用变长数组时警告
+  -Wvolatile-register-var     当一个寄存器变量被声明为 volatile 时给出警告
+  -Wwrite-strings             在 C++ 中，非零值表示将字面字符串转换为‘char
+                              *’时给出警告。在 C
+                              中，给出相似的警告，但这种类型转换是符合 ISO C
+                              标准的。
+  -Wzero-as-null-pointer-constant Warn when a literal '0' is used as null
+                              pointer
+  -ansi                       -std=c89 (对 C 来说) 或 -std=c++98 (对 C++
+                              来说)的同义词
+  -d<字母>                    为指定的某趟汇译启用内存转储
+  -fRTS=                      Select the runtime
+  -faccess-control            执行类成员访问控制语义
+  -fada-spec-parent=          -fada-spec-parent=unit  Dump Ada specs as child
+                              units of given parent
+  -fall-virtual               此开关缺少可用文档
+  -fallow-parameterless-variadic-functions Allow variadic functions without
+                              named parameter
+  -falt-external-templates    不再受支持
+  -fasm                       识别“asm”关键字
+  -fbuilding-libgcc           此开关缺少可用文档
+  -fbuiltin                   识别内建函数
+  -fbuiltin-                  此开关缺少可用文档
+  -fcanonical-system-headers  Where shorter, use canonicalized paths to systems
+                              headers.
+  -fcheck-new                 检查 new 的返回值
+  -fcond-mismatch             允许‘?’运算符的参数有不同的类型
+  -fconserve-space            不起作用。为向前兼容保留的选项。
+  -fconst-string-class=<名字> 使用名字作为常量字符串类的名称
+  -fconstexpr-depth=<number>  Specify maximum constexpr recursion depth
+  -fdebug-cpp                 Emit debug annotations during preprocessing
+  -fdeduce-init-list          enable deduction of std::initializer_list for a
+                              template type parameter from a brace-enclosed
+                              initializer-list
+  -fdefault-inline            不起作用。为向前兼容保留的选项。
+  -fdirectives-only           仅预处理指示。
+  -fdollars-in-identifiers    允许‘$’作为标识符的一部分
+  -fdump-ada-spec             Write all declarations as Ada code transitively
+  -fdump-ada-spec-slim        Write all declarations as Ada code for the given
+                              file only
+  -felide-constructors        此开关缺少可用文档
+  -femit-struct-debug-baseonly 积极地缩减结构体的调试信息
+  -femit-struct-debug-detailed=<规格列表> 详细指定如何缩减结构体的调试信息
+  -femit-struct-debug-reduced 保守地缩减结构体的调试信息
+  -fenforce-eh-specs          生成检查异常规范的代码
+  -fenum-int-equiv            此开关缺少可用文档
+  -fexec-charset=<字符集>     将所有字符串和字符常量转换到字符集
+  -fext-numeric-literals      Interpret imaginary, fixed-point, or other gnu
+                              number suffix as the corresponding number literal
+                              rather than a user-defined number literal.
+  -fextended-identifiers      允许标识符中出现 Unicode 字符名(\u 和 \U)
+  -fextern-tls-init           Support dynamic initialization of thread-local
+                              variables in a different translation unit
+  -fexternal-templates        此开关缺少可用文档
+  -ffor-scope                 for 循环初始化中定义的变量作用域局限于循环内
+  -ffreestanding              不假定标准 C 库和“main”存在
+  -ffriend-injection          将友元函数声明视作包含它的命名空间中的有效声明
+  -fgnu-keywords              识别 GNU 定义的关键字
+  -fgnu-runtime               为 GNU 运行时环境生成代码
+  -fgnu89-inline              为内联函数使用传统的 GNU 语义
+  -fguiding-decls             此开关缺少可用文档
+  -fhandle-exceptions         此开关缺少可用文档
+  -fhonor-std                 此开关缺少可用文档
+  -fhosted                    假定一般的 C 执行环境
+  -fhuge-objects              不再受支持
+  -fimplement-inlines         导出被内联的函数
+  -fimplicit-inline-templates 允许内联模板隐式实例化
+  -fimplicit-templates        允许模板隐式实例化
+  -finput-charset=<字符集>    指定源代码的默认字符集
+  -fkeep-inline-dllexport     除非必需，不生成 DLL 导出的内联函数
+  -flabels-ok                 此开关缺少可用文档
+  -flax-vector-conversions    允许具有不同元素数量和/或元素类型的向量间的转换
+  -fms-extensions             使用微软扩展时不给出警告
+  -fmudflap                   为单线程程序添加 mudflap 边界检查
+  -fmudflapir                 插入 mudflag 时忽略读操作
+  -fmudflapth                 为多线程程序添加 mudflap 边界检查
+  -fname-mangling-version-    此开关缺少可用文档
+  -fnew-abi                   此开关缺少可用文档
+  -fnext-runtime              为 NeXT (苹果 Mac OS X) 运行时环境生成代码
+  -fnil-receivers             假定 Objective-C 消息的接受者可能是 nil
+  -fnonansi-builtins          此开关缺少可用文档
+  -fnonnull-objects           此开关缺少可用文档
+  -fnothrow-opt               Treat a throw() exception specification as
+                              noexcept to improve code size
+  -fobjc-abi-version=         Specify which ABI to use for Objective-C family
+                              code and meta-data generation.
+  -fobjc-direct-dispatch      允许快速跳转至消息分发者
+  -fobjc-exceptions           启用 Objective-C 异常和同步语法
+  -fobjc-gc                   在 Objective-C/Objective-C++ 程序中启用垃圾收集
+  -fobjc-nilcheck             Enable inline checks for nil receivers with the
+                              NeXT runtime and ABI version 2.
+  -fobjc-sjlj-exceptions      启用 Objective-C setjmp 异常处理运行时
+  -fobjc-std=objc1            Conform to the Objective-C 1.0 language as
+                              implemented in GCC 4.0
+  -fopenmp                    启用 OpenMP(对 Fortran 而言也同时设定 -frecursive)
+  -foperator-names            识别“compl”、“xor”等 C++ 关键词
+  -foptional-diags            不起作用。为向前兼容保留的选项。
+  -fpch-deps                  此开关缺少可用文档
+  -fpch-preprocess            即使在预处理时也搜索并使用 PCH 文件
+  -fpermissive                将兼容性错误降格为警告
+  -fplan9-extensions          启用九号计划语言扩展
+  -fpreprocessed              将输入文件当作已经预处理过的
+  -fpretty-templates          -fno-pretty-templates
+                              不使用模板签名加实参的方式美化模板特例化的打印
+  -freplace-objc-classes      指定对象文件可能在运行时被换入以允许“修复并继续”调试模式
+  -frepo                      启用模板自动实例化
+  -frtti                      生成运行时类型描述信息
+  -fshort-double              令 double 使用 float 的大小
+  -fshort-enums               为枚举类型使用尽可能窄的整数类型
+  -fshort-wchar               强制指定“wchar_t”的内在类型为“unsigned short”
+  -fsigned-bitfields          没有给定“signed”或“unsigned”时将位段视作有符号的
+  -fsigned-char               使“char”类型默认为有符号
+  -fsquangle                  此开关缺少可用文档
+  -fstats                     显示编译过程中累计的统计数字
+  -fstrict-enums              Assume that values of enumeration type are always
+                              within the minimum range of that type
+  -fstrict-prototype          此开关缺少可用文档
+  -ftabstop=<N>               指定报告列号时制表位间的距离
+  -ftemplate-backtrace-limit= Set the maximum number of template instantiation
+                              notes for a single warning or error
+  -ftemplate-depth-           此开关缺少可用文档
+  -ftemplate-depth=<N>        指定模板实例化的最大深度
+  -fthis-is-variable          此开关缺少可用文档
+  -fno-threadsafe-statics     不为局部静态变量生成线程安全的初始化代码
+  -ftrack-macro-expansion     此开关缺少可用文档
+  -ftrack-macro-expansion=    -ftrack-macro-expansion=<0|1|2>  Track locations
+                              of tokens coming from macro expansion and display
+                              them in error messages
+  -funsigned-bitfields        未指定“signed”或“unsigned”时默认位段为无符号的
+  -funsigned-char             使“char”类型默认为无符号
+  -fuse-cxa-atexit            将 __cxa_atexit 而非 atexit 登记为析构函数
+  -fuse-cxa-get-exception-ptr 在异常处理中使用 __cxa_get_exception_ptr
+  -fvisibility-inlines-hidden Marks all inlined functions and methods as having
+                              hidden visibility
+  -fvisibility-ms-compat      默认使用与 Microsoft Visual Studio 匹配的可见性
+  -fvtable-gc                 不再受支持
+  -fvtable-thunks             不再受支持
+  -fweak                      将公共符号视作弱符号
+  -finput-charset=<字符集>    将所有宽字符串和字符常量都转换为字符集
+  -fworking-directory         生成一个指向当前工作目录的 #line 预处理指令
+  -fxref                      不再受支持
+  -fzero-link                 为 Zero-Link 模式生成后期类查找(通过
+                              objc_getClass())
+  -gant                       Catch typos
+  -gen-decls                  将声明转储到一个 .decl 文件中
+  -gnat<选项>                 指定给 GNAT 的选项
+  -gnatO                      Set name of output ALI file (internal switch)
+  -idirafter <目录>           将目录添加至系统包含路径末尾
+  -imacros <文件>             接受文件中定义的宏
+  -imultilib <目录>           将目录设定为 multilib 的包含子目录
+  -include <文件>             在包含其它文件之前先包含该文件的内容
+  -iprefix <路径>             将路径指定为下两个选项的前缀
+  -iquote <目录>              将目录添加至括起的包含路径末尾
+  -isysroot <目录>            将目录设为系统根目录
+  -isystem <目录>             将目录添加至系统包含路径开头
+  -iwithprefix <目录>         将目录添加至系统包含路径末尾
+  -iwithprefixbefore <目录>   将目录添加至主包含路径末尾
+  -nostdinc                   不搜索标准系统头文件目录(但仍将使用由 -isystem
+                              指定的目录)
+  -nostdinc++                 不搜索 C++ 标准系统头文件目录
+  -nostdlib                   Do not look for object files in standard path
+  -o <文件>                   将输出写入文件
+  -pedantic                   此开关缺少可用文档
+  -print-objc-runtime-info    生成有平台相关特性的 C 头文件
+  -remap                      包含文件时映射短文件名
+  -std=c++03                  Conform to the ISO 1998 C++ standard revised by
+                              the 2003 technical corrigendum
+  -std=c++0x                  Deprecated in favor of -std=c++11
+  -std=c++11                  Conform to the ISO 2011 C++ standard
+                              (experimental and incomplete support)
+  -std=c++1y                  Conform to the ISO 201y(7?) C++ draft standard
+                              (experimental and incomplete support)
+  -std=c++98                  Conform to the ISO 1998 C++ standard revised by
+                              the 2003 technical corrigendum
+  -std=c11                    Conform to the ISO 2011 C standard (experimental
+                              and incomplete support)
+  -std=c1x                    Deprecated in favor of -std=c11
+  -std=c89                    遵循 ISO 1990 C 标准
+  -std=c90                    遵循 ISO 1990 C 标准
+  -std=c99                    遵循 ISO 1999 C 标准
+  -std=c9x                    不建议使用，请改用 -std=c99
+  -std=gnu++03                Conform to the ISO 1998 C++ standard revised by
+                              the 2003 technical corrigendum with GNU extensions
+  -std=gnu++0x                Deprecated in favor of -std=gnu++11
+  -std=gnu++11                Conform to the ISO 2011 C++ standard with GNU
+                              extensions (experimental and incomplete support)
+  -std=gnu++1y                Conform to the ISO 201y(7?) C++ draft standard
+                              with GNU extensions (experimental and incomplete
+                              support)
+  -std=gnu++98                Conform to the ISO 1998 C++ standard revised by
+                              the 2003 technical corrigendum with GNU extensions
+  -std=gnu11                  Conform to the ISO 2011 C standard with GNU
+                              extensions (experimental and incomplete support)
+  -std=gnu1x                  Deprecated in favor of -std=gnu11
+  -std=gnu89                  遵循 ISO 1990 C 标准，也支持 GNU 扩展
+  -std=gnu90                  遵循 ISO 1990 C 标准，也支持 GNU 扩展
+  -std=gnu99                  遵循 ISO 1999 C 标准，也支持 GNU 扩展
+  -std=gnu9x                  不建议使用，请改用 -std=gnu99
+  -std=iso9899:1990           遵循 ISO 1990 C 标准
+  -std=iso9899:199409         遵循 ISO 1990 C 标准于 1994 年修订的版本
+  -std=iso9899:1999           遵循 ISO 1999 C 标准
+  -std=iso9899:199x           不建议使用，为 -std=iso9899:1999 所取代
+  -std=iso9899:2011           Conform to the ISO 2011 C standard (experimental
+                              and incomplete support)
+  -traditional-cpp            启用传统预处理
+  -trigraphs                  支持 ISO C 三元符
+  -undef                      不预定义系统或 GCC 特定的宏
+  -v                          启用详细输出
+  -w                          不显示警告
+
+--param 选项可接受以下参数:
+  predictable-branch-outcome  被认为可以预测的分支的最大估算结果
+  inline-min-speedup          The minimal estimated speedup allowing inliner to
+                              ignore inline-insns-single and inline-isnsns-auto
+  max-inline-insns-single     单个可内联的函数体最多能包含的指令数
+  max-inline-insns-auto       自动内联时指令的最大数量
+  max-inline-insns-recursive  由于嵌套内联造成的内联函数代码膨胀的上限值(指令数)
+  max-inline-insns-recursive-auto 由于嵌套内联造成的非内联函数代码膨胀的上限值(指令数)
+  max-inline-recursive-depth  内联函数中嵌套内联的最大深度
+  max-inline-recursive-depth-auto 非内联函数中嵌套内联的最大深度
+  min-inline-recursive-probability 仅当被执行的调用的概率超过此参数时方进行递归地内联
+  max-early-inliner-iterations 早期内联器可以进行的嵌套间接内联的最大数量
+  comdat-sharing-probability  Probability that COMDAT function will be shared
+                              with different compilation unit
+  partial-inlining-entry-probability 进行部分内联时分离区域入口基本块占函数入口基本块的百分比概率的上限
+  max-variable-expansions-in-unroller 如果使用了 -fvariable-expansion-in-
+                              unroller，即指单个变量在循环展开时可以同时被展开的次数
+  min-vect-loop-bound         使用 -ftree-vectorize
+                              时考虑进行向量化的循环次数下限
+  max-delay-slot-insn-search  考虑填充入延迟槽中的最大指令数
+  max-delay-slot-live-search  用以发现准确的活动寄存器信息的最大指令数量
+  max-pending-list-length     调度候选操作列表的最大长度
+  max-modulo-backtrack-attempts The maximum number of backtrack attempts the
+                              scheduler should make when modulo scheduling a
+                              loop
+  large-function-insns        超过这个大小的函数体被认为是大的
+  large-function-growth       内联大函数造成的代码膨胀的上限(以百分数的形式给出)
+  large-unit-insns            超过这个大小的翻译单元被认为是大的
+  inline-unit-growth          给定的编译单元因内联造成的体积膨胀上限(以百分数表示)
+  ipcp-unit-growth            给定的编译单元因跨进程常量传递造成的编译单元体积膨胀上限(以百分数表示)
+  early-inlining-insns        对单个调用进行的早期内联所导致的函数体代码膨胀的最大估计值
+  large-stack-frame           超过这个大小的栈帧被认为是大的
+  large-stack-frame-growth    内联造成的栈帧膨胀的上限(以百分数的形式给出)
+  max-gcse-memory             GCSE 可分配的最大内存量
+  max-gcse-insertion-ratio    The maximum ratio of insertions to deletions of
+                              expressions in GCSE
+  gcse-after-reload-partial-fraction 重新载入后进行部分冗余消除的比例阈值
+  gcse-after-reload-critical-fraction 重新载入后允许进行冗余消除的关键边执行次数的比例阈值
+  gcse-cost-distance-ratio    计算一个表达式被 GCSE
+                              优化移动的最大距离时的比例因子
+  gcse-unrestricted-cost      指定 GCSE
+                              优化不约束一个表达式能被移动的距离时的代价
+  max-hoist-depth             Maximum depth of search in the dominator tree for
+                              expressions to hoist
+  max-unrolled-insns          单个循环中考虑展开的最大指令数
+  max-average-unrolled-insns  单个循环中考虑展开的平均最大指令数
+  max-unroll-times            单个循环最多可以被展开的次数
+  max-peeled-insns            剥离后的循环所能有的最大指令数
+  max-peel-times              单个循环最大的剥离数
+  max-peel-branches           The maximum number of branches on the path
+                              through the peeled sequence
+  max-completely-peeled-insns 一个完全剥离的循环所能有的最大指令数
+  max-completely-peel-times   一个完全剥离的单个循环最大的剥离数
+  max-once-peeled-insns       被剥离后只卷绕一次的循环包含的最多指令数
+  max-completely-peel-loop-nest-depth 一个完全剥离的循环嵌套所能有的最大深度
+  max-unswitch-insns          去开关后的循环所能有的最大指令数
+  max-unswitch-level          单个循环中考虑去开关的最大指令数
+  max-iterations-to-track     暴力迭代次数分析算法评估迭代次数的上限
+  max-iterations-computation-cost 用于计算迭代次数的表达式的开销的上限值
+  sms-max-ii-factor           调整摆动模调度器调度循环时使用的上限的一个因素
+  sms-min-sc                  The minimum value of stage count that swing
+                              modulo scheduler will generate.
+  sms-dfa-history             使用 DFA 检查冲突时摆动模调度器考虑的周期数
+  sms-loop-average-count-threshold 由摆动模调度程序考虑的关于平均循环计数的阈值
+  hot-bb-count-ws-permille    A basic block profile count is considered hot if
+                              it contributes to the given permillage of the
+                              entire profiled execution
+  hot-bb-frequency-fraction   当某基本块执行频率超过函数中基本块执行的最大频率的指定百分比时，该基本块可被考虑为热点代码
+  align-threshold             当某基本块执行频率超过函数中基本块执行的最大频率的指定百分比时，该基本块将被对齐
+  align-loop-iterations       对齐循环次数大于或等于设定值的循环
+  max-predicted-iterations    静态预测时的最多循环次数
+  tracer-dynamic-coverage-feedback 必须被踪迹形成所覆盖的函数百分比，以执行频率加权。当取样反馈可用时使用
+  tracer-dynamic-coverage     必须被踪迹形成所覆盖的函数百分比，以执行频率加权。当取样反馈不可用时使用
+  tracer-max-code-growth      以百分比表示的尾复制所引起的最大代码膨胀
+  tracer-min-branch-ratio     当最优边的反向概率小于此阈值(以百分数表示)时停止反向增长
+  tracer-min-branch-probability-feedback 当最优边的概率小于此限值(以百分数表示)时，停止前向增长。当取样反馈可用时使用。
+  tracer-min-branch-probability 当最优边的概率小于此限值(以百分数表示)时，停止前向增长。当取样反馈不可用时使用。
+  max-crossjump-edges         考虑进行交叉跳转的最大入边数量
+  min-crossjump-insns         考虑进行交叉跳转的最小匹配指令数量
+  max-grow-copy-bb-insns      复制基本块时最大的展开因子
+  max-goto-duplication-insns  分解计算转移时复制指令的数量上限
+  max-cse-path-length         公因式消去时考虑的最大路径长度
+  max-cse-insns               清空前公因式消去处理的最大指令数
+  lim-expensive               循环不变量转移时一条昂贵的表达式的最小开销
+  iv-consider-all-candidates-bound 当备选少于此设定值时所有备选都将为归纳变量优化所考虑
+  iv-max-considered-uses      对归纳变量数少于设定值的循环进行归纳变量优化
+  iv-always-prune-cand-set-bound 当备选归纳变量少于设定值时总是设法在优化过程中消除未使用的归纳变量
+  scev-max-expr-size          用在标量演化分析器中的表达式的大小上限
+  scev-max-expr-complexity    Bound on the complexity of the expressions in the
+                              scalar evolutions analyzer
+  omega-max-vars              Omega 约束系统中变量数的上限
+  omega-max-geqs              Omega 约束系统中不等式数量的上限
+  omega-max-eqs               Omega 约束系统中等式数量的上限
+  omega-max-wild-cards        Omega 约束系统中通配符数量的上限
+  omega-hash-table-size       Omega 约束系统中散列表大小的上限
+  omega-max-keys              Omega 约束系统中
+  omega-eliminate-redundant-constraints 设为 1
+                              时，使用昂贵的方法来消除所有冗余的约束
+  vect-max-version-for-alignment-checks 向量循环版本化插入的运行时对齐检查次数的上限
+  vect-max-version-for-alias-checks 向量循环版本化插入的运行时别名检查次数的上限
+  max-cselib-memory-locations cselib 最多记录的内存位置
+  ggc-min-expand              引发垃圾收集的堆展开的最小值，以占堆总大小的百分比给出
+  ggc-min-heapsize            开始垃圾回收时最小的堆大小，以千字节表示
+  max-reload-search-insns     后向搜索以寻找等价重载入时要搜索的最大指令数量
+  sink-frequency-threshold    Target block's relative execution frequency (as a
+                              percentage) required to sink a statement
+  max-sched-region-blocks     一个区域中考虑进行块间调度的最大块数
+  max-sched-region-insns      一个区域中考虑进行块间调度的最大指令数
+  max-pipeline-region-blocks  一个区域中考虑进行块间调度的最大块数
+  max-pipeline-region-insns   一个区域中考虑进行块间调度的最大指令数
+  min-spec-prob               块间投机调度时到达一个源块的最小概率
+  max-sched-extend-regions-iters 通过 CFG 以扩展区域的最大循环次数
+  max-sched-insn-conflict-delay 考虑进行投机移动的指令的最大冲突延迟数
+  sched-spec-prob-cutoff      以百分比表示的投机成功的最小概率，影响对投机指令的调度
+  sched-state-edge-prob-cutoff The minimum probability an edge must have for
+                              the scheduler to save its state across it.
+  selsched-max-lookahead      进行选择调度时前瞻窗口的最大尺寸
+  selsched-max-sched-times    指定一条指令最多能被调度几次
+  selsched-insns-to-rename    在适合行重命名的就绪列表中最多的指令数
+  sched-mem-true-dep-cost     可能冲突的存储和装载之间的最小距离
+  max-last-value-rtl          可以被记作组合器的最终值的最大 RTL 节点数
+  integer-share-limit         共享整型常量的上界
+  ssp-buffer-size             考虑预防堆栈溢出的缓冲区的下限值
+  max-jump-thread-duplication-stmts 线索化跳转时一个以被复制的块中所能包含的最大语句数
+  max-fields-for-field-sensitive 在指针分析将该结构视为单一变量前结构包含的最大字段数
+  max-sched-ready-insns       首趟调度考虑准备生成的指令的最大数量
+  max-dse-active-local-stores Maximum number of active local stores in RTL dead
+                              store elimination
+  prefetch-latency            预取操作完成前执行指令的数目
+  simultaneous-prefetches     可以同时运行的预取操作数目
+  l1-cache-size               一级缓存大小
+  l1-cache-line-size          一级缓存列长度
+  l2-cache-size               二级缓存大小
+  use-canonical-types         是否使用合乎规范的类型
+  max-partial-antic-length    进行树上部分冗余消除时部分可预期集的最大长度
+  sccvn-max-scc-size          在 SCCVN 停止处理一个函数以前 SCC 的最大尺寸
+  sccvn-max-alias-queries-per-access Maximum number of disambiguations to
+                              perform per memory access
+  ira-max-loops-num           用作区域寄存器分配的最大循环数
+  ira-max-conflict-table-size 以 MB 表示的冲突表大小上限
+  ira-loop-reserved-regs      保留不为循环不变量转移使用的各种寄存器的数量
+  switch-conversion-max-branch-ratio 当数组大小与开关分支的比率大于此值时开关转换不会发生
+  loop-block-tile-size        循环分块中每小块的大小
+  graphite-max-nb-scop-params 一个静态控制部分(ScoP)中参数的最大数量
+  graphite-max-bbs-per-function Graphite 可分析的每函数所包含的基本块数量上限
+  loop-max-datarefs-for-datadeps Maximum number of datarefs in loop for
+                              building loop data dependencies
+  loop-invariant-max-bbs-in-loop 用作循环不变量转移的循环中基本块的最大数量
+  slp-max-insns-in-bb         考虑进行基本块向量化的基本块能包含的指令数上限
+  min-insn-to-prefetch-ratio  为有未知路程计数的循环启用预取时最小的指令/预取比
+  prefetch-min-insn-to-mem-ratio 为循环启用预取时最小的指令/内存操作比
+  max-vartrack-size           变量跟踪散列表的最大尺寸
+  max-vartrack-expr-depth     Max. recursion depth for expanding var tracking
+                              expressions
+  max-vartrack-reverse-op-size Max. size of loc list for which reverse ops
+                              should be added
+  min-nondebug-insn-uid       非调试指令所使用的最小 UID
+  ipa-sra-ptr-growth-factor   IPA-SRA
+                              考虑将指向的聚合的指针替换为参数时这些参数总和大小相对原指针参数大小倍数的最大值
+  tm-max-aggregate-size       Size in bytes after which thread-local aggregates
+                              should be instrumented with the logging functions
+                              instead of save/restore pairs
+  ipa-cp-value-list-size      Maximum size of a list of values associated with
+                              each parameter for interprocedural constant
+                              propagation
+  ipa-cp-eval-threshold       Threshold ipa-cp opportunity evaluation that is
+                              still considered beneficial to clone.
+  ipa-max-agg-items           Maximum number of aggregate content items for a
+                              parameter in jump functions and lattices
+  ipa-cp-loop-hint-bonus      Compile-time bonus IPA-CP assigns to candidates
+                              which make loop bounds or strides known.
+  lto-partitions              Number of partitions the program should be split
+                              to
+  lto-min-partition           Minimal size of a partition for LTO (in estimated
+                              instructions)
+  cxx-max-namespaces-for-diagnostic-help Maximum number of namespaces to search
+                              for alternatives when name lookup fails
+  max-stores-to-sink          Maximum number of conditional store pairs that
+                              can be sunk
+  case-values-threshold       The smallest number of different values for which
+                              it is best to use a jump-table instead of a tree
+                              of conditional branches, if 0, use the default
+                              for the machine
+  allow-load-data-races       Allow new data races on loads to be introduced
+  allow-store-data-races      Allow new data races on stores to be introduced
+  allow-packed-load-data-races Allow new data races on packed data loads to be
+                              introduced
+  allow-packed-store-data-races Allow new data races on packed data stores to
+                              be introduced
+  tree-reassoc-width          Set the maximum number of instructions executed
+                              in parallel in reassociated tree. If 0, use the
+                              target dependent heuristic.
+  max-tail-merge-comparisons  Maximum amount of similar bbs to compare a bb with
+  max-tail-merge-iterations   Maximum amount of iterations of the pass over a
+                              function
+  max-tracked-strlens         Maximum number of strings for which strlen
+                              optimization pass will track string lengths
+  sched-pressure-algorithm    Which -fsched-pressure algorithm to apply
+  max-slsr-cand-scan          Maximum length of candidate scans for straight-
+                              line strength reduction
+  uninit-control-dep-attempts Maximum number of nested calls to search for
+                              control dependencies during uninitialized
+                              variable analysis
+
+下列选项控制编译器警告信息:
+  --extra-warnings            此开关缺少可用文档
+  -W                          不建议使用此开关；请改用 -Wextra
+  -Waggregate-return          当返回结构、联合或数组时给出警告
+  -Waggressive-loop-optimizations Warn if a loop with constant number of
+                              iterations triggers undefined behavior
+  -Warray-bounds              当数组访问越界时给出警告
+  -Wattributes                当对属性的使用不合适时给出警告
+  -Wcast-align                当转换指针类型导致对齐边界增长时给出警告
+  -Wcoverage-mismatch         Warn in case profiles in -fprofile-use do not
+                              match
+  -Wcpp                       Warn when a #warning directive is encountered
+  -Wdeprecated-declarations   对 __attribute__((deprecated)) 声明给出警告
+  -Wdisabled-optimization     当某趟优化被禁用时给出警告
+  -Wfree-nonheap-object       Warn when attempting to free a non-heap object
+  -Winline                    当内联函数无法被内联时给出警告
+  -Winvalid-memory-model      Warn when an atomic memory model parameter is
+                              known to be outside the valid range.
+  -Wlarger-than-              此开关缺少可用文档
+  -Wlarger-than=<N>           当目标文件大于 N 字节时给出警告
+  -Woverflow                  算术表示式溢出时给出警告
+  -Wpacked                    当 packed 属性对结构布局不起作用时给出警告
+  -Wpadded                    当需要填补才能对齐结构成员时给出警告
+  -Wshadow                    当一个局部变量掩盖了另一个局部变量时给出警告
+  -Wstack-protector           当因为某种原因堆栈保护失效时给出警告
+  -Wstack-usage=              Warn if stack usage might be larger than
+                              specified amount
+  -Wstrict-aliasing           当代码可能破坏强重叠规则时给出警告
+  -Wstrict-overflow           禁用假定有符号数溢出行为未被定义的优化
+  -Wsuggest-attribute=const   Warn about functions which might be candidates
+                              for __attribute__((const))
+  -Wsuggest-attribute=noreturn 当函数可能是 __attribute__((noreturn))
+                              的备选时给出警告
+  -Wsuggest-attribute=pure    Warn about functions which might be candidates
+                              for __attribute__((pure))
+  -Wtrampolines               Warn whenever a trampoline is generated
+  -Wtype-limits               当由于数据类型范围限制比较结果永远为真或假时给出警告
+  -Wunsafe-loop-optimizations 当循环因为不平凡的假定而不能被优化时给出警告
+  -Wunused-but-set-parameter  Warn when a function parameter is only set,
+                              otherwise unused
+  -Wunused-but-set-variable   Warn when a variable is only set, otherwise unused
+  -Wunused-function           有未使用的函数时警告
+  -Wunused-parameter          发现未使用的函数指针时给出警告
+  -Wunused-value              当一个表达式的值未被使用时给出警告
+  -Wunused-variable           有未使用的变量时警告
+  -Wvector-operation-performance Warn when a vector operation is compiled
+                              outside the SIMD
+
+下列选项控制优化:
+  -O<N>                       将优化等级设为 N
+  -Ofast                      为速度优化，不严格遵守标准
+  -Og                         Optimize for debugging experience rather than
+                              speed or size
+  -Os                         为最小空间而不是最大速度优化
+  -faggressive-loop-optimizations Aggressively optimize loops using language
+                              constraints
+  -falign-functions           对齐函数入口
+  -falign-jumps               对齐只能为跳转所到达的标号
+  -falign-labels              对齐所有的标号
+  -falign-loops               对齐循环入口
+  -fasynchronous-unwind-tables 生成精确到每条指令边界的堆栈展开表
+  -fbranch-count-reg          将加/减法、比较、跳转指令序列替换为根据计数寄存器跳转指令
+  -fbranch-probabilities      为分支概率使用取样信息
+  -fbranch-target-load-optimize 在开始/结末线程前进行分支目标载入优化
+  -fbranch-target-load-optimize2 在开始/结末线程后进行分支目标载入优化
+  -fbtr-bb-exclusive          限制目标载入融合不重用任何基本块中的寄存器
+  -fcaller-saves              函数调用前后保存/恢复寄存器值
+  -fcombine-stack-adjustments Looks for opportunities to reduce stack
+                              adjustments and stack references.
+  -fcommon                    不将未初始化的全局数据放在公共节中
+  -fcompare-elim              Perform comparison elimination after register
+                              allocation has finished
+  -fconserve-stack            不进行可能导致堆栈使用明显增长的优化
+  -fcprop-registers           进行一趟寄存器副本传递优化
+  -fcrossjumping              进行跨跳转优化
+  -fcse-follow-jumps          进行 CSE 时，跟随跳转至目标
+  -fcx-fortran-rules          复数乘除遵循 Fortran 规则
+  -fcx-limited-range          当进行复数除法时省略缩减范围的步骤
+  -fdata-sections             将每个数据项分别放在它们各自的节中
+  -fdce                       使用 RTL 死代码清除
+  -fdefer-pop                 延迟将函数实参弹栈
+  -fdelayed-branch            尝试填充分支指令的延迟槽
+  -fdelete-null-pointer-checks 删除无用的空指针检查
+  -fdevirtualize              Try to convert virtual calls to direct ones.
+  -fdse                       使用 RTL 死存储清除
+  -fearly-inlining            进行早内联
+  -fexceptions                启用异常处理
+  -fexpensive-optimizations   进行一些细微的、代价高昂的优化
+  -ffinite-math-only          假定结果不会是 NaN 或无穷大浮点数
+  -ffloat-store               不将单精度和双精度浮点数分配到扩展精度的寄存器中
+  -fforward-propagate         进行 RTL 上的前向传递
+  -fgcse                      进行全局公共子表达式消除
+  -fgcse-after-reload         Perform global common subexpression elimination
+                              after register allocation has finished
+  -fgcse-las                  Perform redundant load after store elimination in
+                              global common subexpression elimination
+  -fgcse-lm                   在全局公共子表达式消除中进行增强的读转移优化
+  -fgcse-sm                   在全局公共子表达式消除后进行存储转移
+  -fgraphite-identity         启用 Graphite 身份转换
+  -fguess-branch-probability  启用分支概率猜测
+  -fhoist-adjacent-loads      Enable hoisting adjacent loads to encourage
+                              generating conditional move instructions
+  -fif-conversion             将条件跳转替换为没有跳转的等值表示
+  -fif-conversion2            将条件跳转替换为条件执行
+  -finline                    Enable inlining of function declared "inline",
+                              disabling disables all inlining
+  -finline-atomics            Inline __atomic operations when a lock free
+                              instruction sequence is available.
+  -finline-functions-called-once Integrate functions only required by their
+                              single caller
+  -finline-small-functions    Integrate functions into their callers when code
+                              size is known not to grow
+  -fipa-cp                    进行进程间的复写传递
+  -fipa-cp-clone              进行复制以使跨进程常量传递更有效
+  -fipa-profile               Perform interprocedural profile propagation
+  -fipa-pta                   进行进程间的指向分析
+  -fipa-pure-const            发现纯函数和常函数
+  -fipa-reference             发现只读和不可寻址静态变量
+  -fipa-sra                   为聚合类型进行跨进程标量替换
+  -fira-hoist-pressure        Use IRA based register pressure calculation in
+                              RTL hoist optimizations.
+  -fivopts                    在树上优化归纳变量
+  -fjump-tables               为足够大的 switch 语句使用跳转表
+  -floop-block                启用循环分块转换
+  -floop-interchange          启用循环交换转换
+  -floop-nest-optimize        Enable the ISL based loop nest optimizer
+  -floop-parallelize-all      将所有循环标记为并行
+  -floop-strip-mine           启用循环条带开采转换
+  -fmath-errno                执行内建数学函数后设置 errno
+  -fmerge-all-constants       试图合并相同的常量和常变量
+  -fmerge-constants           试图合并不同编译单元中的相同常量
+  -fmodulo-sched              在首趟调度前进行基于 SMS 的模调度
+  -fmove-loop-invariants      将每次循环中不变的计算外提
+  -fnon-call-exceptions       支持同步非调用异常
+  -fomit-frame-pointer        尽可能不生成栈帧
+  -fopt-info                  Enable all optimization info dumps on stderr
+  -foptimize-register-move    进行全寄存器传送优化
+  -foptimize-sibling-calls    优化同级递归和尾递归
+  -foptimize-strlen           Enable string length optimizations on trees
+  -fpack-struct               将结构成员不带间隔地紧实存放
+  -fpack-struct=<N>           设定结构成员最大对齐边界的初始值
+  -fpeel-loops                进行循环剥离
+  -fpeephole                  启用机器相关的窥孔优化
+  -fpeephole2                 在 sched2 前进行一趟 RTL 窥孔优化
+  -fpredictive-commoning      启用预测公因子优化。
+  -fprefetch-loop-arrays      如果可用，为循环中的数组生成预取指令
+  -freg-struct-return         在寄存器中返回小聚合
+  -fregmove                   启用寄存器传送优化
+  -frename-registers          进行寄存器重命名优化
+  -freorder-blocks            基本块重新排序以改善代码布局
+  -freorder-blocks-and-partition 对基本块重新排序并划分为热区和冷区
+  -freorder-functions         函数重新排序以改善代码布局
+  -frerun-cse-after-loop      在循环优化结束后增加一趟公共子表达式消除
+  -freschedule-modulo-scheduled-loops 启用/禁用已经通过模调度的循环中的传统调度
+  -frounding-math             禁用假定默认浮点舍入行为的优化
+  -fsched-critical-path-heuristic 为调度器启用关键路径启发式发现
+  -fsched-dep-count-heuristic 为调度器启用依赖计数启发式发现
+  -fsched-group-heuristic     在调度器中启用组启发
+  -fsched-interblock          启用基本块间的调度
+  -fsched-last-insn-heuristic 为调度器启用最近指令启发式发现
+  -fsched-pressure            启用对寄存器压力敏感的指令调度
+  -fsched-rank-heuristic      在调度器中启用秩启发
+  -fsched-spec                允许非载入的投机移动
+  -fsched-spec-insn-heuristic 为调度器启用投机指令启发式发现
+  -fsched-spec-load           允许一些载入的投机移动
+  -fsched-spec-load-dangerous 允许更多载入的投机移动
+  -fsched-stalled-insns       允许对队列中的指令进行早调度
+  -fsched-stalled-insns-dep   设置排队中指令的进行早调度的依赖距离检查
+  -fsched2-use-superblocks    在重载后调度中使用跨基本块调度
+  -fschedule-insns            分配寄存器前重新调度指令
+  -fschedule-insns2           分配寄存器后重新调度指令
+  -fsection-anchors           从共享的锚点访问在同样的节中的数据
+  -fsel-sched-pipelining      在选择性调度中对内层循环进行软件流水化
+  -fsel-sched-pipelining-outer-loops 在选择性调度中对外层循环进行软件流水化
+  -fsel-sched-reschedule-pipelined 重新调度没有被流水线化的流水线区域
+  -fselective-scheduling      用选择性调度算法调度指令
+  -fselective-scheduling2     在重加载后使用选择性调度
+  -fset-stack-executable      为嵌套函数设定可执行堆栈权限。
+  -fshrink-wrap               Emit function prologues only before parts of the
+                              function that need it, rather than at the top of
+                              the function.
+  -fsignaling-nans            禁用为 IEEE NaN 可见的优化
+  -fsigned-zeros              禁用忽略 IEEE 中零的符号的浮点优化
+  -fsingle-precision-constant 将浮点常量转换为单精度常量
+  -fsplit-ivs-in-unroller     展开循环时分离归纳变量的生存期
+  -fsplit-wide-types          将宽类型分割到独立的寄存器中
+  -fstrict-aliasing           假定应用强重叠规则
+  -fthread-jumps              进行跳转线程优化
+  -ftoplevel-reorder          重新排序文件作用域的函数、变量和汇编
+  -ftrapping-math             假定浮点运算可能引发陷阱
+  -ftrapv                     加法、减法或乘法溢出时激活陷阱
+  -ftree-bit-ccp              Enable SSA-BIT-CCP optimization on trees
+  -ftree-builtin-call-dce     为内建函数启用有条件的死代码消除优化
+  -ftree-ccp                  启用树上的 SSA-CCP 优化
+  -ftree-ch                   启用树上的循环不变量转移
+  -ftree-coalesce-inlined-vars Enable coalescing of copy-related user variables
+                              that are inlined
+  -ftree-coalesce-vars        Enable coalescing of all copy-related user
+                              variables
+  -ftree-copy-prop            在树级别进行复写传递
+  -ftree-copyrename           将 SSA 临时变量重命名为更易理解的名称
+  -ftree-cselim               将条件存储转换为非条件存储
+  -ftree-dce                  启用树上的 SSA 死代码消除优化
+  -ftree-dominator-opts       启用主导优化
+  -ftree-dse                  删除死存储
+  -ftree-forwprop             在树级别进行前向复写传递
+  -ftree-fre                  启用树上的完全冗余消除(FRE)
+  -ftree-loop-distribute-patterns Enable loop distribution for patterns
+                              transformed into a library call
+  -ftree-loop-distribution    在树上进行循环分配
+  -ftree-loop-if-convert      Convert conditional jumps in innermost loops to
+                              branchless equivalents
+  -ftree-loop-if-convert-stores 将包含内存写入的条件跳转转换为不带分支的等效形式
+  -ftree-loop-im              启用树上的循环不变量转移
+  -ftree-loop-ivcanon         在循环中生成正规的归纳变量
+  -ftree-loop-optimize        在树级别进行循环优化
+  -ftree-lrs                  在 SSA->normal 过程中分离活动范围
+  -ftree-partial-pre          In SSA-PRE optimization on trees, enable partial-
+                              partial redundancy elimination
+  -ftree-phiprop              为条件指针外提内存读取操作。
+  -ftree-pre                  启用树上的 SSA-PRE 优化
+  -ftree-pta                  在树上进行函数内的指向分析。
+  -ftree-reassoc              在树级别进行重结合
+  -ftree-scev-cprop           为标量演化信息进行复写传递。
+  -ftree-sink                 启用树上的 SSA 代码下沉优化
+  -ftree-slp-vectorize        在树上进行基本块向量化(SLP)
+  -ftree-slsr                 Perform straight-line strength reduction
+  -ftree-sra                  为聚合类型进行标量替换
+  -ftree-switch-conversion    转换开关初始化
+  -ftree-tail-merge           Enable tail merging on trees
+  -ftree-ter                  在 SSA->normal 过程中替换临时表达式
+  -ftree-vect-loop-version    在树上进行循环向量化时启用多版本循环
+  -ftree-vectorize            在树上进行循环向量化
+  -ftree-vrp                  进行树上的值域传递
+  -funit-at-a-time            一次编译一整个编译单元
+  -funroll-all-loops          展开所有循环
+  -funroll-loops              展开所有迭代次数已知的循环
+  -funsafe-loop-optimizations 允许假定循环以“正常”方式动作的循环优化
+  -funsafe-math-optimizations 允许可能违反 IEEE 或 ISO 标准的优化
+  -funswitch-loops            外提循环内的测试语句
+  -funwind-tables             仅为异常处理生成堆栈展开表
+  -fvar-tracking              进行变量跟踪
+  -fvar-tracking-assignments  评注赋值以进行变量跟踪
+  -fvar-tracking-assignments-toggle 切换 -fvar-tracking-assignments
+  -fvar-tracking-uninit       进行变量追踪并且标记未被初始化的变量
+  -fvariable-expansion-in-unroller 展开循环时也展开变量
+  -fvect-cost-model           启用向量化开销模型
+  -fvpt                       在优化中使用表达式值样本提供的信息
+  -fweb                       建立关系网并且分离对同一变量的无关应用
+  -fwhole-program             进行全程序优化
+  -fwrapv                     假定有符号运算溢出时回绕
+
+下列选项与特定目标机相关:
+  -m128bit-long-double        sizeof(long double) 等于 16
+  -m32                        生成 32 位 i386 代码
+  -m3dnow                     支持 3DNow! 内建函数
+  -m3dnowa                    支持扩展 3DNow! 内建函数
+  -m64                        生成 64 位 x86-64 代码
+  -m80387                     使用硬件浮点单元
+  -m8bit-idiv                 将 32/64 位整数除法扩展为带运行时检查的 8
+                              位无符号整数除法
+  -m96bit-long-double         sizeof(long double) 等于 12
+  -mabi=                      生成遵循给定 ABI 的代码
+  -mabm                       支持生成高级位操作(ABM)指令。
+  -maccumulate-outgoing-args  在函数序言中为输出参数预留空间
+  -maddress-mode=             Use given address mode
+  -madx                       Support flag-preserving add-carry instructions
+  -maes                       支持 AES 内建函数及代码生成
+  -malign-double              一些双精度浮点数在双字边界上对齐
+  -malign-functions=          函数入口对齐在 2 的此次方上
+  -malign-jumps=              跳转目标对齐在 2 的此次方上
+  -malign-loops=              循环代码对齐到 2 的此次方上
+  -malign-stringops           对齐字符串操作的目标
+  -march=                     为给定的 CPU 生成代码
+  -masm=                      使用给定的汇编风格
+  -mavx                       支持 MMX、SSE、SSE2、SSE3、SSSE3、SSE4.1、SSE4.2
+                              和 AVX 内建函数及代码生成
+  -mavx2                      Support MMX, SSE, SSE2, SSE3, SSSE3, SSE4.1,
+                              SSE4.2, AVX and AVX2 built-in functions and code
+                              generation
+  -mavx256-split-unaligned-load Split 32-byte AVX unaligned load
+  -mavx256-split-unaligned-store Split 32-byte AVX unaligned store
+  -mbmi                       支持 BMI 内建函数及代码生成
+  -mbmi2                      Support BMI2 built-in functions and code
+                              generation
+  -mbranch-cost=              指定分支的代价(1-5，任意单位)
+  -mcld                       在函数序言中生成 cld 指令
+  -mcmodel=                   使用给定的 x86-64 代码模式
+  -mconsole                   创建命令行程序
+  -mcpu=                      此开关缺少可用文档
+  -mcrc32                     支持生成 crc32 指令。
+  -mcx16                      支持生成 cmpxchg16b 指令。
+  -mdispatch-scheduler        Do dispatch scheduling if processor is bdver1 or
+                              bdver2 or bdver3 and Haifa scheduling is selected.
+  -mdll                       生成动态链接库的代码
+  -mf16c                      支持 F16C 内建函数及代码生成
+  -mfancy-math-387            为 FPU 生成 sin、cos 和 sqrt 指令
+  -mfentry                    Emit profiling counter call at function entry
+                              before prologue.
+  -mfma                       支持
+                              MMX、SSE、SSE2、SSE3、SSSE3、SSE4.1、SSE4.2、AVX
+                              和 FMA 内建函数及代码生成
+  -mfma4                      支持 FMA4 内建函数及代码生成
+  -mforce-drap                总是使用动态对齐参数指针(DRAP)来重新对齐堆栈
+  -mfp-ret-in-387             在 FPU 寄存器中存放函数返回值
+  -mfpmath=                   为指定的指令集生成浮点数学代码
+  -mfsgsbase                  支持 FSGSBASE 内建函数及代码生成
+  -mfused-madd                此开关缺少可用文档
+  -mfxsr                      Support FXSAVE and FXRSTOR instructions
+  -mhard-float                使用硬件浮点单元
+  -mhle                       Support Hardware Lock Elision prefixes
+  -mieee-fp                   浮点数间的比较严格遵循 IEEE 标准
+  -mincoming-stack-boundary=  假定栈对齐到 2 的此次方上
+  -minline-all-stringops      内联所有已知的字符串操作
+  -minline-stringops-dynamically 内联 memset/memcpy
+                              字符串操作，但仅为较小的块使用内联版本
+  -mintel-syntax              此开关缺少可用文档
+  -mlarge-data-threshold=     在 x86-64 中等模式下大于指定阈值的数据将被存放在
+                              .ldata 节中
+  -mlong-double-64            使用 64 位 long double
+  -mlong-double-80            Use 80-bit long double
+  -mlwp                       支持 LWP 内建函数及代码生成
+  -mlzcnt                     Support LZCNT built-in function and code
+                              generation
+  -mmmx                       支持 MMX 内建函数
+  -mmovbe                     支持生成 movbe 指令。
+  -mms-bitfields              使用本地 (MS) 位段存储方式
+  -mno-align-stringops        此开关缺少可用文档
+  -mno-fancy-math-387         此开关缺少可用文档
+  -mno-push-args              此开关缺少可用文档
+  -mno-red-zone               此开关缺少可用文档
+  -mno-sse4                   不支持 SSE4.1 和 SSE4.2 内建函数及代码生成
+  -mnop-fun-dllimport         忽略函数的 dllimport 属性
+  -momit-leaf-frame-pointer   为叶函数(不调用其他函数的函数)忽略框架指针
+  -mpc32                      Set 80387 floating-point precision to 32-bit
+  -mpc64                      Set 80387 floating-point precision to 64-bit
+  -mpc80                      Set 80387 floating-point precision to 80-bit
+  -mpclmul                    支持 PCLMUL 内建函数及代码生成
+  -mpe-aligned-commons        使用 PE 格式的 GNU 扩展来对齐 common 数据
+  -mpopcnt                    支持生成 popcnt 指令。
+  -mprefer-avx128             自动向量化时使用 128 位 AVX 指令而不是 256 位 AVX
+                              指令
+  -mpreferred-stack-boundary= 试图让栈保持对齐到 2 的此次方上
+  -mprfchw                    Support PREFETCHW instruction
+  -mpush-args                 使用 push 指令保存输出参数
+  -mrdrnd                     支持 RDRND 内建函数及代码生成
+  -mrdseed                    Support RDSEED instruction
+  -mrecip                     生成倒数指令而不是 divss 和 sqrtss。
+  -mrecip=                    Control generation of reciprocal estimates.
+  -mred-zone                  在 x86-64 代码中使用红区
+  -mregparm=                  用以传递整数参数的寄存器个数
+  -mrtd                       更改调用约定
+  -mrtm                       Support RTM built-in functions and code generation
+  -msahf                      支持在 x86-64 模式下生成 sahf 指令。
+  -msoft-float                不使用硬件浮点单元
+  -msse                       支持 MMX 和 SSE 内建函数及代码生成
+  -msse2                      支持 MMX、SSE 和 SSE2 内建函数及代码生成
+  -msse2avx                   支持带 VEX 前缀的 SSE 指令
+  -msse3                      支持 MMX、SSE、SSE2 和 SSE3 内建函数及代码生成
+  -msse4                      支持 MMX、SSE、SSE2、SSE3、SSSE3、SSE4.1 和
+                              SSE4.2 内建函数及代码生成
+  -msse4.1                    支持 MMX、SSE、SSE2、SSE3、SSSE3 和 SSE4.1
+                              内建函数及代码生成
+  -msse4.2                    支持 MMX、SSE、SSE2、SSE3、SSSE3、SSE4.1 和
+                              SSE4.2 内建函数及代码生成
+  -msse4a                     支持 MMX、SSE、SSE2、SSE3 和 SSE4A
+                              内建函数及代码生成
+  -msse5                      此开关缺少可用文档
+  -msseregparm                在 SF 和 DF 模式下使用 SSE 寄存器调用约定
+  -mssse3                     支持 MMX、SSE、SSE2、SSE3 和 SSSE3
+                              内建函数及代码生成
+  -mstack-arg-probe           启用堆栈探测
+  -mstackrealign              在前言中重新对齐堆栈
+  -mstringop-strategy=        选择生成字符串操作的策略
+  -mtbm                       支持 TBM 内建函数及代码生成
+  -mthreads                   使用 Mingw 特定的线程支持
+  -mtls-dialect=              使用给定的线程局部存储模式
+  -mtls-direct-seg-refs       当访问线程局部数据时直接引用 %gs
+  -mtune=                     为指定的 CPU 优化代码
+  -muse-libstdc-wrappers      生成依赖 Cygwin DLL 包装的代码以支持对 C++ 运算符
+                              new/delete 的替换
+  -mveclibabi=                指定要使用的向量库 ABI
+  -mvect8-ret-in-mem          将 8 字节向量在内存中返回
+  -mvzeroupper                Generate vzeroupper instruction before a transfer
+                              of control flow out of the function.
+  -mwin32                     设定 Windows 定义
+  -mwindows                   创建图形界面程序
+  -mx32                       Generate 32bit x86-64 code
+  -mxop                       支持 XOP 内建函数及代码生成
+  -mxsave                     Support XSAVE and XRSTOR instructions
+  -mxsaveopt                  Support XSAVEOPT instruction
+
+  Known assembler dialects (for use with the -masm-dialect= option):
+    att intel
+
+  Known ABIs (for use with the -mabi= option):
+    ms sysv
+
+  Known code models (for use with the -mcmodel= option):
+    32 kernel large medium small
+
+  Valid arguments to -mfpmath=:
+    387 387+sse 387,sse both sse sse+387 sse,387
+
+  Known vectorization library ABIs (for use with the -mveclibabi= option):
+    acml svml
+
+  Known address mode (for use with the -maddress-mode= option):
+    long short
+
+  Valid arguments to -mstringop-strategy=:
+    byte_loop libcall loop rep_4byte rep_8byte rep_byte unrolled_loop
+
+  Known TLS dialects (for use with the -mtls-dialect= option):
+    gnu gnu2
+
+下列选项与具体语言无关:
+  --debug                     此开关缺少可用文档
+  --dumpbase                  此开关缺少可用文档
+  --dumpdir                   此开关缺少可用文档
+  --help                      显示此信息
+  --help=<类型>               显示一或多项特定类型选项的描述。类型可能是
+                              optimizers、target、warnings、undocumented 或
+                              params
+  --optimize                  此开关缺少可用文档
+  --param <参数>=<值>         将参数参数设为给定值。下面给出所有参数的列表
+  --param=                    此开关缺少可用文档
+  --pedantic-errors           此开关缺少可用文档
+  --profile                   此开关缺少可用文档
+  --target-help               --help=target 的别名
+  --version                   此开关缺少可用文档
+  -Werror=                    将指定的警告当作错误
+  -Wfatal-errors              发现第一个错误时即退出
+  -Wframe-larger-than=<N>     当一个函数的堆栈框架需要多于 N
+                              字节的内存时给出警告
+  -Wmissing-noreturn          此开关缺少可用文档
+  -Wunreachable-code          不起作用。为向前兼容保留的选项。
+  -aux-info <文件>            将声明信息写入文件
+  -aux-info=                  此开关缺少可用文档
+  -auxbase                    此开关缺少可用文档
+  -auxbase-strip              此开关缺少可用文档
+  -dumpbase <文件>            设定内存转储使用的文件基本名
+  -dumpdir <目录>             设定内存转储使用的目录名
+  -fPIC                       尽可能生成与位置无关的代码(大模式)
+  -fPIE                       为可执行文件尽可能生成与位置无关的代码(大模式)
+  -fabi-version=              此开关缺少可用文档
+  -falign-functions=          此开关缺少可用文档
+  -falign-jumps=              此开关缺少可用文档
+  -falign-labels=             此开关缺少可用文档
+  -falign-loops=              此开关缺少可用文档
+  -fargument-alias            不起作用。为向前兼容保留的选项。
+  -fargument-noalias          不起作用。为向前兼容保留的选项。
+  -fargument-noalias-anything 不起作用。为向前兼容保留的选项。
+  -fargument-noalias-global   不起作用。为向前兼容保留的选项。
+  -fassociative-math          Allow optimization for floating-point arithmetic
+                              which may change the result of the operation due
+                              to rounding.
+  -fauto-inc-dec              生成 auto-inc/dec指令
+  -fbounds-check              生成检查数组访问是否越界的代码
+  -fcall-saved-<寄存器>       认为寄存器在函数调用后值不变
+  -fcall-used-<寄存器>        认为寄存器的值将被函数调用所改变
+  -fcheck-data-deps           比较几个数据依赖分析的结果。
+  -fcompare-debug-second      只为 -fcompare-debug 运行第二遍编译
+  -fcompare-debug[=<选项>]    分别在带与不带“选项”，例如
+                              -gtoggle，的情况下编译，然后比较最后的指令输出
+  -fcse-skip-blocks           不起作用。为向前兼容保留的选项。
+  -fdbg-cnt-list              列出所有可用的调试计数器及其极限和计数。
+  -fdbg-cnt=<计数器>:<极限>[,<计数器>:<极限>,...] 设定调试计数器极限。
+  -fdebug-prefix-map=         在调试信息中将一个目录名映射到另一个
+  -fdebug-types-section       Output .debug_types section when using DWARF v4
+                              debuginfo.
+  -fdelete-dead-exceptions    Delete dead instructions that may throw exceptions
+  -fdiagnostics-show-caret    Show the source line with a caret indicating the
+                              column
+  -fdiagnostics-show-location=[once|every-line] 指定在自动换行的诊断信息开始给出源位置的频率
+  -fdiagnostics-show-option   在诊断信息后输出控制它们的命令行选项
+  -fdisable-                  -fdisable-[tree|rtl|ipa]-<pass>=range1+range2
+                              disables an optimization pass
+  -fdump-<类型>               将一些编译器内部信息转储到一个文件里
+  -fdump-final-insns=文件名   在翻译完毕后将指令输出到文件中
+  -fdump-go-spec=filename     Write all declarations to file as Go code
+  -fdump-noaddr               在调试转储中不输出地址
+  -fdump-passes               Dump optimization passes
+  -fdump-unnumbered           在调试转储中不输出指令数、行号标记和地址
+  -fdump-unnumbered-links     在调试转储中不输出前一条和后一条指令号码
+  -fdwarf2-cfi-asm            用 GAS 汇编指示来启用 CFI 表
+  -feliminate-dwarf2-dups     进行 DWARF2 冗余消除
+  -feliminate-unused-debug-symbols 在调试信息中进行无用类型消除
+  -feliminate-unused-debug-types 在调试信息中进行无用类型消除
+  -femit-class-debug-always   保留 C++ 类调试信息。
+  -fenable-                   -fenable-[tree|rtl|ipa]-<pass>=range1+range2
+                              enables an optimization pass
+  -fexcess-precision=[fast|standard] 指定如何处理有额外精度的浮点数
+  -ffast-math                 此开关缺少可用文档
+  -ffat-lto-objects           Output lto objects containing both the
+                              intermediate language and binary output.
+  -ffixed-<寄存器>            认为寄存器对编译器而言不可用
+  -fforce-addr                不起作用。为向前兼容保留的选项。
+  -ffp-contract=              -ffp-contract=[off|on|fast] Perform floating-
+                              point expression contraction.
+  -ffunction-cse              允许将函数地址保存在寄存器中
+  -ffunction-sections         将每个函数分别放在它们各自的节中
+  -fgnu-tm                    Enable support for GNU transactional memory
+  -fgraphite                  启用 Graphite 表示的输入输出
+  -fhelp                      此开关缺少可用文档
+  -fhelp=                     此开关缺少可用文档
+  -fident                     处理 #ident 指令
+  -findirect-inlining         进行间接内联
+  -finhibit-size-directive    不生成 .size 伪指令
+  -finline-limit-             此开关缺少可用文档
+  -finline-limit=<N>          将内联函数的大小限制在 N 以内
+  -finstrument-functions      在函数入口和出口加入取样调用
+  -finstrument-functions-exclude-file-list= -finstrument-functions-exclude-file-
+                              list=文件名,...  取样时排除列出的文件中的函数
+  -finstrument-functions-exclude-function-list= -finstrument-functions-exclude-
+                              function-list=函数名,...  取样时排除列出的函数
+  -fipa-matrix-reorg          不起作用。为向前兼容保留的选项。
+  -fipa-struct-reorg          不起作用。为向前兼容保留的选项。
+  -fira-algorithm=            -fira-algorithm=|CB|priority] 设置使用的 IRA 算法
+  -fira-loop-pressure         Use IRA based register pressure calculation in
+                              RTL loop optimizations.
+  -fira-region=               -fira-region=[one|all|mixed] 设置 IRA 的区域
+  -fira-share-save-slots      为保存不同的硬寄存器的共享槽。
+  -fira-share-spill-slots     为溢出的伪寄存器共享堆栈槽。
+  -fira-verbose=<N>           控制 IRA 诊断信息的级别。
+  -fkeep-inline-functions     为完全内联的函数生成代码
+  -fkeep-static-consts        保留未用到的静态常量
+  -fleading-underscore        给外部符号添加起始的下划线
+  -floop-flatten              不起作用。为向前兼容保留的选项。
+  -floop-optimize             不起作用。为向前兼容保留的选项。
+  -flto                       启用链接时优化。
+  -flto-compression-level=<N> 为 IL 使用 zlib 压缩级别 N
+  -flto-partition=1to1        Partition symbols and vars at linktime based on
+                              object files they originate from
+  -flto-partition=balanced    Partition functions and vars at linktime into
+                              approximately same sized buckets
+  -flto-partition=max         Put every symbol into separate partition
+  -flto-partition=none        Disable partioning and streaming
+  -flto-report                报告各种链接时优化统计
+  -flto=                      Link-time optimization with number of parallel
+                              jobs or jobserver.
+  -fmax-errors=<n>            报告错误数量的上限值
+  -fmem-report                报告永久性内存分配
+  -fmem-report-wpa            Report on permanent memory allocation in WPA only
+  -fmerge-debug-strings       试图合并不同编译单元中的相同调试字符串
+  -fmessage-length=<N>        将诊断信息限制在每行 N 个字符。0 取消自动换行
+  -fmodulo-sched-allow-regmoves 进行基于 SMS 且允许寄存器转移的模调度
+  -fopt-info[-<type>=filename] Dump compiler optimization details
+  -fpartial-inlining          进行部分内联
+  -fpcc-struct-return         在内存而不是寄存器中返回小聚合
+  -fpic                       尽可能生成与位置无关的代码(小模式)
+  -fpie                       为可执行文件尽可能生成与位置无关的代码(小模式)
+  -fplugin-arg-<插件>-<键>[=<值>] 为插件指定参数键=值
+  -fplugin=                   指定要加载的插件
+  -fpost-ipa-mem-report       在跨进程优化前报告内存分配
+  -fpre-ipa-mem-report        在跨进程优化前报告内存分配
+  -fprofile                   启用基本程序取样代码
+  -fprofile-arcs              插入基于弧的程序取样代码
+  -fprofile-correction        启用对流不一致取样数据输入的修正
+  -fprofile-dir=              Set the top-level directory for storing the
+                              profile data. The default is 'pwd'.
+  -fprofile-generate          启用一些公共选项来生成样本文件，以便进行基于取样的优化
+  -fprofile-generate=         启用生成取样信息的公共选项以支持基于取样反馈的优化，同时设置
+                              -fprofile-dir=
+  -fprofile-report            Report on consistency of profile
+  -fprofile-use               启用一些公共选项以进行基于取样的优化
+  -fprofile-use=              启用公共选项以进行基于取样反馈的优化，同时设置
+                              -fprofile-dir=
+  -fprofile-values            为取样表达式的值插入相关代码
+  -frandom-seed               此开关缺少可用文档
+  -frandom-seed=<字符串>      使用字符串使编译可以复现
+  -freciprocal-math           与 -fassociative-math
+                              相同，作用于包含除法的表达式。
+  -frecord-gcc-switches       在目标文件中记录 gcc 命令行开关。
+  -free                       Turn on Redundant Extensions Elimination pass.
+  -frerun-loop-opt            不起作用。为向前兼容保留的选项。
+  -fsanitize=address          Enable AddressSanitizer, a memory error detector
+  -fsanitize=thread           Enable ThreadSanitizer, a data race detector
+  -fsched-stalled-insns-dep=<N> 设置排队中指令的进行早调度的依赖距离检查
+  -fsched-stalled-insns=<N>   指定能被早期调度的在排队中的指令的最大数量
+  -fsched-verbose=<N>         指定调度器的冗余级别
+  -fsched2-use-traces         不起作用。为向前兼容保留的选项。
+  -fsee                       不起作用。为向前兼容保留的选项。
+  -fshow-column               诊断信息中给出行号。默认打开
+  -fsplit-stack               Generate discontiguous stack frames
+  -fstack-check               在程序中插入检查栈溢出的代码。与 fstack-
+                              check=specific 相同
+  -fstack-check=[no|generic|specific] 在程序中插入检查栈溢出的代码
+  -fstack-limit               此开关缺少可用文档
+  -fstack-limit-symbol=<寄存器> 当堆栈越过寄存器时引发陷阱
+  -fstack-limit-symbol=<符号> 当堆栈越过符号时引发陷阱
+  -fstack-protector           使用 propolice 来保护堆栈
+  -fstack-protector-all       为每个函数使用堆栈保护机制
+  -fstack-reuse=              -fstack-reuse=[all|named_vars|none] Set stack
+                              reuse level for local variables.
+  -fstack-usage               Output stack usage information on a per-function
+                              basis
+  -fstrength-reduce           不起作用。为向前兼容保留的选项。
+  -fstrict-overflow           将有符号数溢出的行为视为未定义的
+  -fstrict-volatile-bitfields Force bitfield accesses to match their type width
+  -fsync-libcalls             Implement __atomic operations via libcalls to
+                              legacy __sync functions
+  -fsyntax-only               检查语法错误，然后停止
+  -ftarget-help               此开关缺少可用文档
+  -ftest-coverage             生成“gcov”需要的数据文件
+  -ftime-report               报告每趟汇编的耗时
+  -ftls-model=[global-dynamic|local-dynamic|initial-exec|local-exec] 设定默认的线程局部存储代码生成模式
+  -ftracer                    通过尾复制进行超块合成
+  -ftree-loop-linear          Enable loop interchange transforms.  Same as
+                              -floop-interchange
+  -ftree-parallelize-loops=   启用循环的自动并行化
+  -ftree-salias               不起作用。为向前兼容保留的选项。
+  -ftree-store-ccp            不起作用。为向前兼容保留的选项。
+  -ftree-store-copy-prop      不起作用。为向前兼容保留的选项。
+  -ftree-vectorizer-verbose=<number> This switch is deprecated. Use -fopt-info
+                              instead.
+  -fuse-ld=bfd                Use the bfd linker instead of the default linker
+  -fuse-ld=gold               Use the gold linker instead of the default linker
+  -fuse-linker-plugin         此开关缺少可用文档
+  -fverbose-asm               为汇编输出添加额外注释
+  -fversion                   此开关缺少可用文档
+  -fvisibility=[default|internal|hidden|protected] 设置符号的默认可见性
+  -fwritable-relocated-rdata  Put relocated read-only data into .data section.
+  -fzee                       不起作用。为向前兼容保留的选项。
+  -fzero-initialized-in-bss   将初始化为零的数据存放在 bss 节中
+  -g                          生成默认格式的调试信息
+  -gcoff                      生成 COFF 格式的调试信息
+  -gdwarf-                    生成 DWARF v2(或更新)格式的调试信息
+  -ggdb                       生成默认扩展格式的调试信息
+  -gno-pubnames               Don't generate DWARF pubnames and pubtypes
+                              sections.
+  -gno-record-gcc-switches    Don't record gcc command line switches in DWARF
+                              DW_AT_producer.
+  -gno-split-dwarf            Don't generate debug information in separate .dwo
+                              files
+  -gno-strict-dwarf           生成较所选版本更先进的 DWARF 附加信息
+  -gpubnames                  Generate DWARF pubnames and pubtypes sections.
+  -grecord-gcc-switches       Record gcc command line switches in DWARF
+                              DW_AT_producer.
+  -gsplit-dwarf               Generate debug information in separate .dwo files
+  -gstabs                     生成 STABS 格式的调试信息
+  -gstabs+                    生成扩展 STABS 格式的调试信息
+  -gstrict-dwarf              不生成较所选版本更先进的 DWARF 附加信息
+  -gtoggle                    切换调试信息生成
+  -gvms                       生成 VMS 格式的调试信息
+  -gxcoff                     生成 XCOFF 格式的调试信息
+  -gxcoff+                    生成 XCOFF 扩展格式的调试信息
+  -imultiarch <dir>           Set <dir> to be the multiarch include subdirectory
+  -iplugindir=<目录>          将目录设定为默认的插件子目录
+  -p                          启用函数取样
+  -pedantic-errors            与 -pedantic 类似，但将它们视作错误
+  -quiet                      不显示编译的函数或逝去的时间
+
+GNU C (GCC) 版本 4.8.3 (x86_64-pc-cygwin)
+        由 GNU C 版本 4.8.3 编译，GMP 版本 6.0.0，MPFR 版本 3.1.2，MPC 版本 1.0.2
+GGC 准则：--param ggc-min-expand=100 --param ggc-min-heapsize=131072
+COLLECT_GCC_OPTIONS='-v' '--help' '-mtune=generic' '-march=x86-64'
+
+ /usr/lib/gcc/x86_64-pc-cygwin/4.8.3/../../../../x86_64-pc-cygwin/bin/as.exe -v --help -o /tmp/ccZ62xn7.o /tmp/ccigO7dp.s
+GNU assembler version 2.24.51 (x86_64-pc-cygwin) using BFD version (GNU Binutils) 2.24.51.20140703
+Usage: /usr/lib/gcc/x86_64-pc-cygwin/4.8.3/../../../../x86_64-pc-cygwin/bin/as [option...] [asmfile...]
+Options:
+  -a[sub-option...]       turn on listings
+                          Sub-options [default hls]:
+                          c      omit false conditionals
+                          d      omit debugging directives
+                          g      include general info
+                          h      include high-level source
+                          l      include assembly
+                          m      include macro expansions
+                          n      omit forms processing
+                          s      include symbols
+                          =FILE  list to FILE (must be last sub-option)
+  --alternate             initially turn on alternate macro syntax
+  --compress-debug-sections
+                          compress DWARF debug sections using zlib
+  --nocompress-debug-sections
+                          don't compress DWARF debug sections
+  -D                      produce assembler debugging messages
+  --debug-prefix-map OLD=NEW
+                          map OLD to NEW in debug information
+  --defsym SYM=VAL        define symbol SYM to given value
+  -f                      skip whitespace and comment preprocessing
+  -g --gen-debug          generate debugging information
+  --gstabs                generate STABS debugging information
+  --gstabs+               generate STABS debug info with GNU extensions
+  --gdwarf-2              generate DWARF2 debugging information
+  --gdwarf-sections       generate per-function section names for DWARF line information
+  --hash-size=<value>     set the hash table size close to <value>
+  --help                  show this message and exit
+  --target-help           show target specific options
+  -I DIR                  add DIR to search list for .include directives
+  -J                      don't warn about signed overflow
+  -K                      warn when differences altered for long displacements
+  -L,--keep-locals        keep local symbols (e.g. starting with `L')
+  -M,--mri                assemble in MRI compatibility mode
+  --MD FILE               write dependency information in FILE (default none)
+  -nocpp                  ignored
+  -o OBJFILE              name the object-file output OBJFILE (default a.out)
+  -R                      fold data section into text section
+  --reduce-memory-overheads
+                          prefer smaller memory use at the cost of longer
+                          assembly times
+  --statistics            print various measured statistics from execution
+  --strip-local-absolute  strip local absolute symbols
+  --traditional-format    Use same format as native assembler when possible
+  --version               print assembler version number and exit
+  -W  --no-warn           suppress warnings
+  --warn                  don't suppress warnings
+  --fatal-warnings        treat warnings as errors
+  -w                      ignored
+  -X                      ignored
+  -Z                      generate object file even after errors
+  --listing-lhs-width     set the width in words of the output data column of
+                          the listing
+  --listing-lhs-width2    set the width in words of the continuation lines
+                          of the output data column; ignored if smaller than
+                          the width of the first line
+  --listing-rhs-width     set the max width in characters of the lines from
+                          the source file
+  --listing-cont-lines    set the maximum number of continuation lines used
+                          for the output data column of the listing
+  @FILE                   read options from FILE
+  -n                      Do not optimize code alignment
+  -q                      quieten some warnings
+  --32/--64/--x32         generate 32bit/64bit/x32 code
+  --divide                ignored
+  -march=CPU[,+EXTENSION...]
+                          generate code for CPU and EXTENSION, CPU is one of:
+                           generic32, generic64, i386, i486, i586, i686,
+                           pentium, pentiumpro, pentiumii, pentiumiii, pentium4,
+                           prescott, nocona, core, core2, corei7, l1om, k1om,
+                           k6, k6_2, athlon, opteron, k8, amdfam10, bdver1,
+                           bdver2, bdver3, bdver4, btver1, btver2
+                          EXTENSION is combination of:
+                           8087, 287, 387, no87, mmx, nommx, sse, sse2, sse3,
+                           ssse3, sse4.1, sse4.2, sse4, nosse, avx, avx2,
+                           avx512f, avx512cd, avx512er, avx512pf, noavx, vmx,
+                           vmfunc, smx, xsave, xsaveopt, aes, pclmul, fsgsbase,
+                           rdrnd, f16c, bmi2, fma, fma4, xop, lwp, movbe, cx16,
+                           ept, lzcnt, hle, rtm, invpcid, clflush, nop, syscall,
+                           rdtscp, 3dnow, 3dnowa, padlock, svme, sse4a, abm,
+                           bmi, tbm, adx, rdseed, prfchw, smap, mpx, sha,
+                           clflushopt, xsavec, xsaves, prefetchwt1, se1
+  -mtune=CPU              optimize for CPU, CPU is one of:
+                           generic32, generic64, i8086, i186, i286, i386, i486,
+                           i586, i686, pentium, pentiumpro, pentiumii,
+                           pentiumiii, pentium4, prescott, nocona, core, core2,
+                           corei7, l1om, k1om, k6, k6_2, athlon, opteron, k8,
+                           amdfam10, bdver1, bdver2, bdver3, bdver4, btver1,
+                           btver2
+  -msse2avx               encode SSE instructions with VEX prefix
+  -msse-check=[none|error|warning]
+                          check SSE instructions
+  -moperand-check=[none|error|warning]
+                          check operand combinations for validity
+  -mavxscalar=[128|256]   encode scalar AVX instructions with specific vector
+                           length
+  -mevexlig=[128|256|512] encode scalar EVEX instructions with specific vector
+                           length
+  -mevexwig=[0|1]         encode EVEX instructions with specific EVEX.W value
+                           for EVEX.W bit ignored instructions
+  -mmnemonic=[att|intel]  use AT&T/Intel mnemonic
+  -msyntax=[att|intel]    use AT&T/Intel syntax
+  -mindex-reg             support pseudo index registers
+  -mnaked-reg             don't require `%' prefix for registers
+  -mold-gcc               support old (<= 2.8.1) versions of gcc
+  -madd-bnd-prefix        add BND prefix for all valid branches
+  -mbig-obj               generate big object files
+
+Report bugs to <http://www.sourceware.org/bugzilla/>
+COMPILER_PATH=/usr/lib/gcc/x86_64-pc-cygwin/4.8.3/:/usr/lib/gcc/x86_64-pc-cygwin/4.8.3/:/usr/lib/gcc/x86_64-pc-cygwin/:/usr/lib/gcc/x86_64-pc-cygwin/4.8.3/:/usr/lib/gcc/x86_64-pc-cygwin/:/usr/lib/gcc/x86_64-pc-cygwin/4.8.3/../../../../x86_64-pc-cygwin/bin/
+LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-cygwin/4.8.3/:/usr/lib/gcc/x86_64-pc-cygwin/4.8.3/../../../../x86_64-pc-cygwin/lib/../lib/:/usr/lib/gcc/x86_64-pc-cygwin/4.8.3/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-cygwin/4.8.3/../../../../x86_64-pc-cygwin/lib/:/usr/lib/gcc/x86_64-pc-cygwin/4.8.3/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '--help' '-mtune=generic' '-march=x86-64'
+
+ /usr/lib/gcc/x86_64-pc-cygwin/4.8.3/collect2.exe --build-id -m i386pep --wrap _Znwm --wrap _Znam --wrap _ZdlPv --wrap _ZdaPv --wrap _ZnwmRKSt9nothrow_t --wrap _ZnamRKSt9nothrow_t --wrap _ZdlPvRKSt9nothrow_t --wrap _ZdaPvRKSt9nothrow_t -Bdynamic --dll-search-prefix=cyg --tsaware --help /usr/lib/gcc/x86_64-pc-cygwin/4.8.3/../../../../lib/crt0.o /usr/lib/gcc/x86_64-pc-cygwin/4.8.3/crtbegin.o -L/usr/lib/gcc/x86_64-pc-cygwin/4.8.3 -L/usr/lib/gcc/x86_64-pc-cygwin/4.8.3/../../../../x86_64-pc-cygwin/lib/../lib -L/usr/lib/gcc/x86_64-pc-cygwin/4.8.3/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-cygwin/4.8.3/../../../../x86_64-pc-cygwin/lib -L/usr/lib/gcc/x86_64-pc-cygwin/4.8.3/../../.. /tmp/ccZ62xn7.o -lgcc_s -lgcc -lcygwin -ladvapi32 -lshell32 -luser32 -lkernel32 -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-cygwin/4.8.3/../../../../lib/default-manifest.o /usr/lib/gcc/x86_64-pc-cygwin/4.8.3/crtend.o
+Usage: collect2 [options]
+ Wrap linker and generate constructor code if needed.
+ Options:
+  -debug          Enable debug output
+  --help          Display this information
+  -v, --version   Display this program's version number
+
+Overview: http://gcc.gnu.org/onlinedocs/gccint/Collect2.html
+Report bugs: <http://gcc.gnu.org/bugs.html>
+
+用法：/usr/lib/gcc/x86_64-pc-cygwin/4.8.3/../../../../x86_64-pc-cygwin/bin/ld [选项] 文件...
+选项：
+  -a 关键字                   Shared library control for HP/UX compatibility
+  -A 架构, --architecture 架构
+                              设定 CPU 架构
+  -b 目标, --format 目标      指定随后的输入文件的目标
+  -c 文件, --mri-script 文件  读取 MRI 格式的链接脚本
+  -d, -dc, -dp                强制公共符号必须定义
+  -e 地址, --entry 地址       设定起始地址
+  -E, --export-dynamic        导出所有动态符号
+  --no-export-dynamic         Undo the effect of --export-dynamic
+  -EB                         链接高位字节在前的目标文件
+  -EL                         链接低位字节在前的目标文件
+  -f 共享库, --auxiliary 共享库
+                              指定为某共享对象符号表的辅助过滤器
+  -F 共享库, --filter 共享库  指定为某共享对象符号表的过滤器
+  -g                          忽略
+  -G 大小, --gpsize 大小      小数据的大小(如果未给出大小，与 --shared 相同)
+  -h 文件名, -soname 文件名   设定共享库的内部名称
+  -I 程序, --dynamic-linker 程序
+                              将“程序”设为要使用的动态链接器
+  -l 库名, --library 库名     搜索库“库名”
+  -L 目录, --library-path 目录
+                              将“目录”添加到库搜索路径中
+  --sysroot=<DIRECTORY>       Override the default sysroot location
+  -m 仿真                     设定仿真
+  -M, --print-map             在标准输出上打印链接图文件
+  -n, --nmagic                不将数据对齐至页边界
+  -N, --omagic                不将数据对齐至页边界，不将 text 节只读
+  --no-omagic                 将数据对齐至页边界，令 text 节只读
+  -o 文件, --output 文件      设定输出文件名
+  -O                          优化输出文件
+  -plugin PLUGIN              Load named plugin
+  -plugin-opt ARG             Send arg to last-loaded plugin
+  -flto                       Ignored for GCC LTO option compatibility
+  -flto-partition=            Ignored for GCC LTO option compatibility
+  -fuse-ld=                   Ignored for GCC linker option compatibility
+  -Qy                         为 SVR4 兼容性所忽略
+  -q, --emit-relocs           Generate relocations in final output
+  -r, -i, --relocatable       生成可重新定位的输出
+  -R 文件, --just-symbols 文件
+                              仅链接符号 (如果是目标，与 --rpath 相同)
+  -s, --strip-all             剔除所有符号信息
+  -S, --strip-debug           剔除调试符号信息
+  --strip-discarded           剔除被丢弃的节中的符号
+  --no-strip-discarded        不剔除被丢弃的节中的符号
+  -t, --trace                 跟踪文件打开操作
+  -T 文件, --script 文件      读取链接脚本
+  --default-script 文件, -dT  Read default linker script
+  -u 符号, --undefined 符号   Start with undefined reference to SYMBOL
+  --unique [=节]              不合并名为“节”的输入节或孤立节
+  -Ur                         生成全局构造/析构函数表
+  -v, --version               显示版本信息
+  -V                          显示版本和仿真信息
+  -x, --discard-all           丢弃所有局部符号
+  -X, --discard-locals        丢弃临时局部符号(默认)
+  --discard-none              不丢弃任何局部符号
+  -y 符号, --trace-symbol 符号
+                              Trace mentions of SYMBOL
+  -Y 路径                     Default search path for Solaris compatibility
+  -(, --start-group           开始一个组
+  -), --end-group             结束一个组
+  --accept-unknown-input-arch 接受无法决定其架构的输入文件
+  --no-accept-unknown-input-arch
+                              拒绝架构不明的输入文件
+  --as-needed                 Only set DT_NEEDED for following dynamic libs if used
+  --no-as-needed              Always set DT_NEEDED for dynamic libraries mentioned on
+                                the command line
+  -assert 关键字              为 SunOS 兼容性所忽略
+  -Bdynamic, -dy, -call_shared
+                              链接到共享库
+  -Bstatic, -dn, -non_shared, -static
+                              不链接到共享库
+  -Bsymbolic                  Bind global references locally
+  -Bsymbolic-functions        Bind global function references locally
+  --check-sections            Check section addresses for overlaps (default)
+  --no-check-sections         Do not check section addresses for overlaps
+  --copy-dt-needed-entries    Copy DT_NEEDED links mentioned inside DSOs that follow
+  --no-copy-dt-needed-entries Do not copy DT_NEEDED links mentioned inside DSOs that follow
+  --cref                      输出交叉引用表
+  --defsym 符号=表达式        定义一个符号
+  --demangle [=风格]          解修饰符号名[使用“风格”]
+  --embedded-relocs           Generate embedded relocs
+  --fatal-warnings            将警告当作错误
+  --no-fatal-warnings         Do not treat warnings as errors (default)
+  -fini 符号                  Call SYMBOL at unload-time
+  --force-exe-suffix          强制为生成的文件添加 .exe 后缀
+  --gc-sections               删除未使用的节(在某些目标上)
+  --no-gc-sections            不删除未使用的节(默认)
+  --print-gc-sections         List removed unused sections on stderr
+  --no-print-gc-sections      Do not list removed unused sections
+  --hash-size=<NUMBER>        初始的散列表大小设定接近“数”
+  --help                      显示选项帮助
+  -init 符号                  Call SYMBOL at load-time
+  -Map 文件                   写入一个链接图文件
+  --no-define-common          Do not define Common storage
+  --no-demangle               Do not demangle symbol names
+  --no-keep-memory            更多地使用磁盘 I/O 而不是内存
+  --no-undefined              不允许在目标文件中存在无法解析的引用
+  --allow-shlib-undefined     Allow unresolved references in shared libraries
+  --no-allow-shlib-undefined  不允许在共享库中存在无法解析的引用
+  --allow-multiple-definition 允许多个定义
+  --no-undefined-version      不允许未定义的版本
+  --default-symver            生成默认的符号版本
+  --default-imported-symver   为导入符号生成默认的符号版本
+  --no-warn-mismatch          不为不匹配的输入文件发出警告
+  --no-warn-search-mismatch   Don't warn on finding an incompatible library
+  --no-whole-archive          关闭 --whole-archive
+  --noinhibit-exec            Create an output file even if errors occur
+  -nostdlib                   Only use library directories specified on
+                                the command line
+  --oformat 目标              指定输出文件的目标
+  --print-output-format       Print default output format
+  -qmagic                     为 Linux 兼容性所忽略
+  --reduce-memory-overheads   Reduce memory overheads, possibly taking much longer
+  --relax                     Reduce code size by using target specific optimizations
+  --no-relax                  Do not use relaxation techniques to reduce code size
+  --retain-symbols-file 文件  只保留在“文件”中列出的符号
+  -rpath 路径                 设定运行时共享库的搜索路径
+  -rpath-link 路径            设定链接时共享库的搜索路径
+  -shared, -Bshareable        创建一个共享库
+  -pie, --pic-executable      生成一个位置无关的可执行文件
+  --sort-common [=ascending|descending]
+                              Sort common symbols by alignment [in specified order]
+  --sort-section 名称|对齐    Sort sections by name or maximum alignment
+  --spare-dynamic-tags 计数   How many tags to reserve in .dynamic section
+  --split-by-file [=大小]     Split output sections every SIZE octets
+  --split-by-reloc [=计数]    Split output sections every COUNT relocs
+  --stats                     打印内存使用统计
+  --target-help               显示目标相关的选项
+  --task-link 符号            Do task level linking
+  --traditional-format        Use same format as native linker
+  --section-start 节=地址     设定有名节的地址
+  -Tbss 地址                  设定 .bss 节的地址
+  -Tdata 地址                 设定 .data 节的地址
+  -Ttext 地址                 设定 .text 节的地址
+  -Ttext-segment 地址         Set address of text segment
+  -Trodata-segment 地址       Set address of rodata segment
+  -Tldata-segment 地址        Set address of ldata segment
+  --unresolved-symbols=<method>
+                              How to handle unresolved symbols.  <method> is:
+                                ignore-all, report-all, ignore-in-object-files,
+                                ignore-in-shared-libs
+  --verbose [=NUMBER]         链接过程中输出大量相关信息
+  --version-script 文件       读取版本信息脚本
+  --version-exports-section 符号
+                              Take export symbols list from .exports, using
+                                SYMBOL as the version.
+  --dynamic-list-data         Add data symbols to dynamic list
+  --dynamic-list-cpp-new      Use C++ operator new/delete dynamic list
+  --dynamic-list-cpp-typeinfo Use C++ typeinfo dynamic list
+  --dynamic-list 文件         Read dynamic list
+  --warn-common               为重复的公共符号给出警告
+  --warn-constructors         Warn if global constructors/destructors are seen
+  --warn-multiple-gp          Warn if the multiple GP values are used
+  --warn-once                 为每一个未定义的符号只警告一次
+  --warn-section-align        Warn if start of section changes due to alignment
+  --warn-shared-textrel       Warn if shared object has DT_TEXTREL
+  --warn-alternate-em         Warn if an object has alternate ELF machine code
+  --warn-unresolved-symbols   将不能解析的符号视作警告
+  --error-unresolved-symbols  将不能解析的符号视作错误
+  --whole-archive             Include all objects from following archives
+  --wrap 符号                 Use wrapper functions for SYMBOL
+  --ignore-unresolved-symbol 符号
+                              Unresolved SYMBOL will not cause an error or warning
+  @FILE                       Read options from FILE
+/usr/lib/gcc/x86_64-pc-cygwin/4.8.3/../../../../x86_64-pc-cygwin/bin/ld：支持的目标： pe-x86-64 pei-x86-64 pe-bigobj-x86-64 elf64-x86-64 elf64-l1om elf64-k1om pe-i386 pei-i386 elf32-i386 elf64-little elf64-big elf32-little elf32-big srec symbolsrec verilog tekhex binary ihex
+/usr/lib/gcc/x86_64-pc-cygwin/4.8.3/../../../../x86_64-pc-cygwin/bin/ld：支持的仿真：i386pep i386pe
+/usr/lib/gcc/x86_64-pc-cygwin/4.8.3/../../../../x86_64-pc-cygwin/bin/ld：仿真特定选项：
+i386pep:
+  --base_file <基址文件>             为可重定位的 DLL 生成一个基址文件
+  --dll                              设定 DLL 的默认映象基地址
+  --file-alignment <大小>            设定文件对齐边界
+  --heap <大小>                      设定堆的初始大小
+  --image-base <地址>                设定可执行文件的起始地址
+  --major-image-version <数>         设定可执行文件的版本号
+  --major-os-version <数>            设定对操作系统版本的最低要求
+  --major-subsystem-version <数>     设定对操作系统子系统版本的最低要求
+  --minor-image-version <数>         设定可执行文件的修订版本号
+  --minor-os-version <数>            设定对操作系统修订版本的最低要求
+  --minor-subsystem-version <数>     设定对操作系统子系统修订版本的最低要求
+  --section-alignment <大小>         设定节的对齐边界
+  --stack <大小>                     设定初始栈的大小
+  --subsystem <名>[:<版本>]          设定需要的操作系统子系统[和版本号]
+  --support-old-code                 支持与旧式代码的交互工作
+  --[no-]leading-underscore          Set explicit symbol underscore prefix mode
+  --[no-]insert-timestamp            Use a real timestamp rather than zero. (default)
+                                     This makes binaries non-deterministic
+  --add-stdcall-alias                导出带与不带 @nn 的符号
+  --disable-stdcall-fixup            不将 _sym 链接至 _sym@nn
+  --enable-stdcall-fixup             将 _sym 链接至 _sym@nn 而不给出警告
+  --exclude-symbols 符号,符号,...    将一些符号排除在自动导入以外
+  --exclude-all-symbols              Exclude all symbols from automatic export
+  --exclude-libs 库,库,...           将一些库排除在自动导入以外
+  --exclude-modules-for-implib mod,mod,...
+                                     Exclude objects, archive members from auto
+                                     export, place into import library instead.
+  --export-all-symbols               自动将所有全局量导出至 DLL
+  --kill-at                          从导出符号中移去 @nn
+  --out-implib <文件>                生成导入库
+  --output-def <文件>                为建立的 DLL 生成一个 .DEF 文件
+  --warn-duplicate-exports           对重复导出给出警告。
+  --compat-implib                    生成后向兼容的导入库；
+                                       同时生成 __imp_<符号>。
+  --enable-auto-image-base           除非用户指定否则自动选择映象基地址
+  --disable-auto-image-base          不自动选择映象基地址。(默认)
+  --dll-search-prefix=<字符串>       动态链接至 DLL 而缺少导入库时，使用
+                                      <字符串><基本名>.dll 而不是 lib<基本名>.dll
+  --enable-auto-import               Do sophisticated linking of _sym to
+                                       __imp_sym for DATA references
+  --disable-auto-import              不为 DLL 自动导入 DATA 项
+  --enable-runtime-pseudo-reloc      Work around auto-import limitations by
+                                       adding pseudo-relocations resolved at
+                                       runtime.
+  --disable-runtime-pseudo-reloc     Do not add runtime pseudo-relocations for
+                                       auto-imported DATA.
+  --enable-extra-pep-debug            Enable verbose debug output when building
+                                       or linking to DLLs (esp. auto-import)
+  --enable-long-section-names        Use long COFF section names even in
+                                       executable image files
+  --disable-long-section-names       Never use long COFF section names, even
+                                       in object files
+  --dynamicbase                  Image base address may be relocated using
+                                       address space layout randomization (ASLR)
+  --forceinteg           Code integrity checks are enforced
+  --nxcompat             Image is compatible with data execution prevention
+  --no-isolation                 Image understands isolation but do not isolate the image
+  --no-seh                       Image does not use SEH. No SE handler may
+                                       be called in this image
+  --no-bind                      Do not bind this image
+  --wdmdriver            Driver uses the WDM model
+  --tsaware                  Image is Terminal Server aware
+  --build-id[=STYLE]         Generate build ID
+i386pe:
+  --base_file <基址文件>             为可重定位的 DLL 生成一个基址文件
+  --dll                              设定 DLL 的默认映象基地址
+  --file-alignment <大小>            设定文件对齐边界
+  --heap <大小>                      设定堆的初始大小
+  --image-base <地址>                设定可执行文件的起始地址
+  --major-image-version <数>         设定可执行文件的版本号
+  --major-os-version <数>            设定对操作系统版本的最低要求
+  --major-subsystem-version <数>     设定对操作系统子系统版本的最低要求
+  --minor-image-version <数>         设定可执行文件的修订版本号
+  --minor-os-version <数>            设定对操作系统修订版本的最低要求
+  --minor-subsystem-version <数>     设定对操作系统子系统修订版本的最低要求
+  --section-alignment <大小>         设定节的对齐边界
+  --stack <大小>                     设定初始栈的大小
+  --subsystem <名>[:<版本>]          设定需要的操作系统子系统[和版本号]
+  --support-old-code                 支持与旧式代码的交互工作
+  --[no-]leading-underscore          Set explicit symbol underscore prefix mode
+  --thumb-entry=<symbol>             Set the entry point to be Thumb <symbol>
+  --[no-]insert-timestamp            Use a real timestamp rather than zero (default).
+                                     This makes binaries non-deterministic
+  --add-stdcall-alias                导出带与不带 @nn 的符号
+  --disable-stdcall-fixup            不将 _sym 链接至 _sym@nn
+  --enable-stdcall-fixup             将 _sym 链接至 _sym@nn 而不给出警告
+  --exclude-symbols 符号,符号,...    将一些符号排除在自动导入以外
+  --exclude-all-symbols              Exclude all symbols from automatic export
+  --exclude-libs 库,库,...           将一些库排除在自动导入以外
+  --exclude-modules-for-implib mod,mod,...
+                                     Exclude objects, archive members from auto
+                                     export, place into import library instead.
+  --export-all-symbols               自动将所有全局量导出至 DLL
+  --kill-at                          从导出符号中移去 @nn
+  --out-implib <文件>                生成导入库
+  --output-def <文件>                为建立的 DLL 生成一个 .DEF 文件
+  --warn-duplicate-exports           Warn about duplicate exports
+  --compat-implib                    生成后向兼容的导入库；
+                                       同时生成 __imp_<符号>。
+  --enable-auto-image-base[=<address>] Automatically choose image base for DLLs
+                                       (optionally starting with address) unless
+                                       specifically set with --image-base
+  --disable-auto-image-base          不自动选择映象基地址。(默认)
+  --dll-search-prefix=<字符串>       动态链接至 DLL 而缺少导入库时，使用
+                                      <字符串><基本名>.dll 而不是 lib<基本名>.dll
+  --enable-auto-import               Do sophisticated linking of _sym to
+                                       __imp_sym for DATA references
+  --disable-auto-import              不为 DLL 自动导入 DATA 项
+  --enable-runtime-pseudo-reloc      Work around auto-import limitations by
+                                       adding pseudo-relocations resolved at
+                                       runtime.
+  --disable-runtime-pseudo-reloc     Do not add runtime pseudo-relocations for
+                                       auto-imported DATA.
+  --enable-extra-pe-debug            当生成或链接至 DLL 时(尤其当自动导入时)启用
+                                       详细的调试输出
+  --large-address-aware              可执行文件支持大于 2 GB 的虚拟内存地址
+  --disable-large-address-aware      Executable does not support virtual
+                                       addresses greater than 2 gigabytes
+  --enable-long-section-names        Use long COFF section names even in
+                                       executable image files
+  --disable-long-section-names       Never use long COFF section names, even
+                                       in object files
+  --dynamicbase                  Image base address may be relocated using
+                                       address space layout randomization (ASLR)
+  --forceinteg           Code integrity checks are enforced
+  --nxcompat             Image is compatible with data execution prevention
+  --no-isolation                 Image understands isolation but do not isolate the image
+  --no-seh                       Image does not use SEH. No SE handler may
+                                       be called in this image
+  --no-bind                      Do not bind this image
+  --wdmdriver            Driver uses the WDM model
+  --tsaware                  Image is Terminal Server aware
+  --build-id[=STYLE]         Generate build ID
+
+向 <http://www.sourceware.org/bugzilla/> 报告程序缺陷
+
+For bug reporting instructions, please see:
+<http://gcc.gnu.org/bugs.html>
+
+
+输出搜索路径
+`gcc -print-prog-name=cc1` -v
+-v 显示附加信息 
+-vv 显示调试信息
+
+gcc main.c -std=c99
+
+$ gcc main.c -v
+使用内建 specs。
+COLLECT_GCC=gcc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-cygwin/4.8.3/lto-wrapper.exe
+目标：x86_64-pc-cygwin
+配置为：/cygdrive/i/szsz/tmpp/gcc/gcc-4.8.3-3.x86_64/src/gcc-4.8.3/configure --srcdir=/cygdrive/i/szsz/tmpp/gcc/gcc-4.8.3-3.x86_64/src/gcc-4.8.3 --prefix=/usr --exec-prefix=/usr --bindir=/usr/bin --sbindir=/usr/sbin --libexecdir=/usr/libexec --datadir=/usr/share --localstatedir=/var --sysconfdir=/etc --libdir=/usr/lib --datarootdir=/usr/share --docdir=/usr/share/doc/gcc --htmldir=/usr/share/doc/gcc/html -C --build=x86_64-pc-cygwin --host=x86_64-pc-cygwin --target=x86_64-pc-cygwin --without-libiconv-prefix --without-libintl-prefix --libexecdir=/usr/lib --enable-shared --enable-shared-libgcc --enable-static --enable-version-specific-runtime-libs --enable-bootstrap --enable-__cxa_atexit --with-dwarf2 --with-tune=generic --enable-languages=ada,c,c++,fortran,lto,objc,obj-c++ --enable-graphite --enable-threads=posix --enable-libatomic --enable-libgomp --disable-libitm --enable-libquadmath --enable-libquadmath-support --enable-libssp --enable-libada --enable-libgcj-sublibs --disable-java-awt --disable-symvers --with-ecj-jar=/usr/share/java/ecj.jar --with-gnu-ld --with-gnu-as --with-cloog-include=/usr/include/cloog-isl --without-libiconv-prefix --without-libintl-prefix --with-system-zlib --enable-linker-build-id
+线程模型：posix
+gcc 版本 4.8.3 (GCC)
+COLLECT_GCC_OPTIONS='-v' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-pc-cygwin/4.8.3/cc1.exe -quiet -v -Dunix -idirafter /usr/lib/gcc/x86_64-pc-cygwin/4.8.3/../../../../lib/../include/w32api -idirafter /usr/lib/gcc/x86_64-pc-cygwin/4.8.3/../../../../x86_64-pc-cygwin/lib/../lib/../../include/w32api main.c -quiet -dumpbase main.c -mtune=generic -march=x86-64 -auxbase main -version -o /tmp/cctPXyEz.s
+GNU C (GCC) 版本 4.8.3 (x86_64-pc-cygwin)
+        由 GNU C 版本 4.8.3 编译，GMP 版本 6.0.0，MPFR 版本 3.1.2，MPC 版本 1.0.2
+GGC 准则：--param ggc-min-expand=100 --param ggc-min-heapsize=131072
+忽略不存在的目录“/usr/local/include”
+忽略不存在的目录“/usr/lib/gcc/x86_64-pc-cygwin/4.8.3/../../../../x86_64-pc-cygwin/include”
+忽略重复的目录“/usr/lib/gcc/x86_64-pc-cygwin/4.8.3/../../../../x86_64-pc-cygwin/lib/../lib/../../include/w32api”
+#include "..." 搜索从这里开始：
+#include <...> 搜索从这里开始：
+ /usr/lib/gcc/x86_64-pc-cygwin/4.8.3/include
+ /usr/lib/gcc/x86_64-pc-cygwin/4.8.3/include-fixed
+ /usr/include
+ /usr/lib/gcc/x86_64-pc-cygwin/4.8.3/../../../../lib/../include/w32api
+搜索列表结束。
+GNU C (GCC) 版本 4.8.3 (x86_64-pc-cygwin)
+        由 GNU C 版本 4.8.3 编译，GMP 版本 6.0.0，MPFR 版本 3.1.2，MPC 版本 1.0.2
+GGC 准则：--param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: 05475cc227bbb97fc08b672ad53708f7
+COLLECT_GCC_OPTIONS='-v' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-pc-cygwin/4.8.3/../../../../x86_64-pc-cygwin/bin/as.exe -v -o /tmp/cc541dsC.o /tmp/cctPXyEz.s
+GNU assembler version 2.24.51 (x86_64-pc-cygwin) using BFD version (GNU Binutils) 2.24.51.20140703
+
+
+
+COMPILER_PATH=/usr/lib/gcc/x86_64-pc-cygwin/4.8.3/:/usr/lib/gcc/x86_64-pc-cygwin/4.8.3/:/usr/lib/gcc/x86_64-pc-cygwin/:/usr/lib/gcc/x86_64-pc-cygwin/4.8.3/:/usr/lib/gcc/x86_64-pc-cygwin/:/usr/lib/gcc/x86_64-pc-cygwin/4.8.3/../../../../x86_64-pc-cygwin/bin/
+LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-cygwin/4.8.3/:/usr/lib/gcc/x86_64-pc-cygwin/4.8.3/../../../../x86_64-pc-cygwin/lib/../lib/:/usr/lib/gcc/x86_64-pc-cygwin/4.8.3/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-cygwin/4.8.3/../../../../x86_64-pc-cygwin/lib/:/usr/lib/gcc/x86_64-pc-cygwin/4.8.3/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-pc-cygwin/4.8.3/collect2.exe --build-id -m i386pep --wrap _Znwm --wrap _Znam --wrap _ZdlPv --wrap _ZdaPv --wrap _ZnwmRKSt9nothrow_t --wrap _ZnamRKSt9nothrow_t --wrap _ZdlPvRKSt9nothrow_t --wrap _ZdaPvRKSt9nothrow_t -Bdynamic --dll-search-prefix=cyg --tsaware /usr/lib/gcc/x86_64-pc-cygwin/4.8.3/../../../../lib/crt0.o /usr/lib/gcc/x86_64-pc-cygwin/4.8.3/crtbegin.o -L/usr/lib/gcc/x86_64-pc-cygwin/4.8.3 -L/usr/lib/gcc/x86_64-pc-cygwin/4.8.3/../../../../x86_64-pc-cygwin/lib/../lib -L/usr/lib/gcc/x86_64-pc-cygwin/4.8.3/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-cygwin/4.8.3/../../../../x86_64-pc-cygwin/lib -L/usr/lib/gcc/x86_64-pc-cygwin/4.8.3/../../.. /tmp/cc541dsC.o -lgcc_s -lgcc -lcygwin -ladvapi32 -lshell32 -luser32 -lkernel32 -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-cygwin/4.8.3/../../../../lib/default-manifest.o /usr/lib/gcc/x86_64-pc-cygwin/4.8.3/crtend.o
+ 
+ 
+ 
+ collect /lib/crt0.o /lib/gcc/x86_64-pc-cygwin/4.8.3/crtbegin.o -L/lib/gcc/x86_64-pc-cygwin/4.8.3 -L/lib main.o -lgcc -lcygwin -lkernel32 /lib/default-manifest.o /lib/gcc/x86_64-pc-cygwin/4.8.3/crtend.o
+ 
+ 
+ SipTermination::DisableSubscriber
+ 
+ Pal_en_disableTermRequest
+ 
+ pal_digit_comp_evt_hdlr
+ 
+ -extern void Print_grf_savebuf_statistics();
+-extern void print_overflow_maxtimes();

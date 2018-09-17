@@ -1,0 +1,235 @@
+预定义变量介绍：
+$@	目标集合
+$%	当目标是函数库文件时, 表示其中的目标文件名
+$<	第一个依赖目标. 如果依赖目标是多个, 逐个表示依赖目标
+$?	比目标新的依赖目标的集合
+$^	所有依赖目标的集合, 会去除重复的依赖目标
+$+	所有依赖目标的集合, 不会去除重复的依赖目标
+$*	这个是GNU make特有的, 其它的make不一定支持
+自动化变量$(@D) 
+The directory part of the file name of the target, 
+with the trailing slash removed. If the value of ‘$@’ is dir/foo.o 
+then ‘$(@D)’ is dir. This value is . if ‘$@’ does not contain a slash.
+自动化变量$(@F)
+The file-within-directory part of the file name of 
+the target. If the value of ‘$@’ is dir/foo.o then ‘$(@F)’ is foo.o. 
+‘$(@F)’ is equivalent to ‘$(notdir $@)’. 
+
+
+
+如果你想让make不理那些无法读取的文件，而继续执行，你可以在include前加一个减号“-”。如： 
+-include <filename>其表示，无论include过程中出现什么错误，都不要报错继续执行。
+
+
+= 是最基本的赋值
+:= 是覆盖之前的值
+?= 是如果没有被赋值过就赋予等号后面的值
++= 是添加等号后面的值
+
+
+# utility functions usable in Makefiles
+# These functions should be called as follows:
+# MYVAR := $(call function,argument1,argument2)
+# Use := instead of = where possible, to avoid $(shell) to be called
+# multiple times.
+# Example:
+# BOARD := ndps-a
+# HEADERSTRING := $(call uppercase,$(BOARD))
+# uppercase/lowercase
+# $(call uppercase,string)
+uppercase = $(shell echo $(1) | tr a-z A-Z)
+lowercase = $(shell echo $(1) | tr A-Z a-z)
+
+
+反过滤函数: $(filter-out <pattern...>,<text>)
+功能: 以 <pattern> 模式过滤字符串 <text>, *去除* 符合模式 <pattern> 的单词, 可以有多个模式
+返回: 不符合模式 <pattern> 的字符串
+# Makefile 内容
+all:
+    @echo $(filter-out %.o %.a,program.c program.o program.a)
+# bash 中执行 make
+$ make
+program.c
+
+
+Makefile 中书写shell命令时可以加2种前缀 @ 和 -, 或者不用前缀.
+3种格式的shell命令区别如下:
+不用前缀 :: 输出执行的命令以及命令执行的结果, 出错的话停止执行
+前缀 @   :: 只输出命令执行的结果, 出错的话停止执行
+前缀 -   :: 命令执行有错的话, 忽略错误, 继续执行
+
+
+伪目标并不是一个"目标(target)", 不像真正的目标那样会生成一个目标文件.
+典型的伪目标是 Makefile 中用来清理编译过程中中间文件的 clean 伪目标, 一般格式如下:
+.PHONY: clean   <-- 这句没有也行, 但是最好加上
+clean:
+    -rm -f *.o
+
+*     :: 表示任意一个或多个字符
+?     :: 表示任意一个字符
+[...] :: ex. [abcd] 表示a,b,c,d中任意一个字符, [^abcd]表示除a,b,c,d以外的字符, [0-9]表示 0~9中任意一个数字
+~     :: 表示用户的home目录
+
+
+变量覆盖 override
+作用是使 Makefile中定义的变量能够覆盖 make 命令参数中指定的变量
+语法:
+override <variable> = <value>
+override <variable> := <value>
+override <variable> += <value>
+下面通过一个例子体会 override 的作用：
+# Makefile内容 (没有用override)
+SRCS := programA.c programB.c programC.c
+all:
+    @echo "SRCS: " $(SRCS)
+# bash中运行make
+$ make SRCS=nothing
+SRCS:  nothing
+#################################################
+# Makefile内容 (用override)
+override SRCS := programA.c programB.c programC.c
+all:
+    @echo "SRCS: " $(SRCS)
+# bash中运行make
+$ make SRCS=nothing
+SRCS:  programA.c programB.c programC.c
+
+
+目标变量
+作用是使变量的作用域仅限于这个目标(target), 而不像之前例子中定义的变量, 对整个Makefile都有效.
+语法:
+<target ...> :: <variable-assignment>
+<target ...> :: override <variable-assignment> (override作用参见 变量覆盖的介绍)
+示例:
+# Makefile 内容
+SRCS := programA.c programB.c programC.c
+target1: TARGET1-SRCS := programD.c
+target1:
+    @echo "SRCS: " $(SRCS)
+    @echo "SRCS: " $(TARGET1-SRCS)
+target2:
+    @echo "SRCS: " $(SRCS)
+    @echo "SRCS: " $(TARGET1-SRCS)
+# bash中执行make
+$ make target1
+SRCS:  programA.c programB.c programC.c
+SRCS:  programD.c
+$ make target2     <-- target2中显示不了 $(TARGET1-SRCS)
+SRCS:  programA.c programB.c programC.c
+SRCS:
+
+
+写 Makefile 的时候, 需要确定每个目标的依赖关系.
+GNU提供一个机制可以查看C代码文件依赖那些文件, 这样我们在写 Makefile 目标的时候就不用打开C源码来看其依赖那些文件了.
+比如, 下面命令显示内核源码中 virt/kvm/kvm_main.c 中的依赖关系
+$ cd virt/kvm/
+$ gcc -MM kvm_main.c 
+kvm_main.o: kvm_main.c iodev.h coalesced_mmio.h async_pf.h   <-- 这句就可以加到 Makefile 中作为编译 kvm_main.o 的依赖关系
+
+
+
+默认执行 make 命令时, GNU make在当前目录下依次搜索下面3个文件 "GNUmakefile", "makefile", "Makefile",
+找到对应文件之后, 就开始执行此文件中的第一个目标(target). 如果找不到这3个文件就报错.
+非默认情况下, 可以在 make 命令中指定特定的 Makefile 和特定的 目标.
+示例：
+复制代码
+# Makefile文件名改为 MyMake, 内容
+target1:
+    @echo "target [1]  begin"
+    @echo "target [1]  end"
+target2:
+    @echo "target [2]  begin"
+    @echo "target [2]  end"
+# bash 中执行 make
+$ ls
+Makefile
+$ mv Makefile MyMake
+$ ls
+MyMake
+$ make                     <-- 找不到默认的 Makefile
+make: *** No targets specified and no makefile found.  Stop.
+$ make -f MyMake           <-- 指定特定的Makefile
+target [1]  begin
+target [1]  end
+$ make -f MyMake target2   <-- 指定特定的目标(target)
+target [2]  begin
+target [2]  end
+
+
+SECONDARY 
+目标“.SECONDARY ”的依赖文件被作为中间过程文件对待。但这些文件不会被自动删除（可参考  10.4 make 隐含规则链  一节） 
+没有任何依赖文件的目标“.SECONDARY ”的含义是：将所有的文件作为中间过程文件（不会自动删除任何文件）。
+
+
+FORCE目标
+    当规则没有依赖关系也没有命令，而且其目标不是存在的文件名，make认为此规则运行时这个目标总是被更新。这意味着如果规则依赖于此目标，其命令总是被执行。
+clean: FORCE
+     rm $(objects)
+FORCE:
+例中目标’FORCE’满足这种特殊条件，这样依赖于它的目标’clean’被强制执行其命令。名字’FORCE’没有特殊含义，只不过通常这样用而已。这种方式使用’FORCE’和’.PHONY : clean’效果相同。使用’.PHONY’更加明确高效，担不是所有的’make’都支持；这样许多makefile中使用’FORCE’。
+
+makefile是在执行的时候遇到变量然后解析(可以把变量替换为语句)，变量没有作用域，都可以在任何地方引用。
+
+变量替换
+# Makefile内容
+SRCS := programA.c programB.c programC.c
+OBJS := $(SRCS:%.c=%.o)
+
+wildcard
+在Makefile规则中，通配符会被自动展开。但在变量的定义和函数引用时，通配符将失效。这种情况下如果需要通配符有效，就需要使用函数“wildcard”，
+它的用法是：$(wildcard PATTERN...) 。在Makefile中，它被展开为已经存在的、使用空格分开的、匹配此模式的所有文件列表。
+一般我们可以使用“$(wildcard *.c)”来获取工作目录下的所有的.c文件列表。
+
+GNU make works in two distinct phases: a read-in phase and a target-update phase (see How make Reads a Makefile). GNU make also has the ability to enable a second expansion of the prerequisites (only) for some or all targets defined in the makefile. 
+In order for this second expansion to occur, the special target .SECONDEXPANSION must be defined before the first prerequisite list that makes use of this feature.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+编程人员已经使用CMake和Make很长一段时间了。当你加入一家大公司或者开始在一个具有大量代码的工程上开展工作时，你需要注意所有的构建。你需要看到处跳转的”CMakeLists.txt”文件。你应该会在终端使用”cmake”和”make”。很多人都是盲目的跟着操作说明而并不在意我们已何种方式去做我们需要做的事。构建的整个过程是什么？为什么要用这种方式去组织？Cmake和Make之间有什么区别？这有关系吗？他们可以互相转换吗？ 
+事实证明，它们之间有很多的不同。理解它们之间的不同很重要，这样你可以确保在使用的过程中不会陷入麻烦。在讲述它们之间的区别之前，我们首先来看看它们是什么。 
+Make 
+    要设计一个软件系统，我们首先编写源码，然后通过编译器编译和创建可执行文件。可执行文件就是要实现最终功能的文件。“Make”是一个工具，它控制可执行程序和程序源文件中非源码文件的生成。 
+????“Make”工具需要清楚的知道如何构建程序。 它通过一个叫做“makefile”的文件知晓如何构建你的程序。这个文件列出了所有的非源码文件以及如何由别的文件来计算它。当你编写了一个程序，你应该为它写一个makefile文件，这样才有可能通过使用“Make”来构建和安装你的程序。 很简单的事情。如果你不理解的话，多读几遍这一段文字，因为理解这一段文字对于接下来的篇幅很重要。 
+为什么需要“Make” 
+    需要”make”的一个原因是，它可以使得终端用户构建和安装你的应用包，而不用去详细的了解它具体是如何做到的。每一个工程都有它自己的规则和细微的差别，这会使得每次在复用的时候会变得很痛苦。这就是我们创建这个makefile文件的原因。 构建步骤精确的记录在你提供的这个makefile文件中。“Make” 当源码文件发生变化时自动的指出哪一个文件需要更新。 同时它也自动确定以适当的顺序进行更新文件，当一个非源码文件依赖的另一个非源码文件发生改变时。 
+    每次当我们改变了系统中的一小部分源码的时候，重新编译整个程序的效率是很低的。因此，党我们改变了一小部分的源码文件的时候重新执行“Make”，它将不会重新编译整个程序。它仅仅更新那些直接或者间接依赖这些改变了的源码文件的非源码文件。很酷吧！“Make” 不局限于具体的语言。对于程序中的每一个非源码文件，makefile文件详细的说明了执行需要的shell命令。这些shell命令能够启动编译器产生目标文件，链接器产生可执行文件，ar更新库，镜像生成器格式化文档，等等。。。Make不仅仅局限于构建一个包。你也可以安装或者卸载一个包，生成索引表或者其他一些你经常做的值得你写下来怎么去做的事情。 
+CMake 
+????CMake支持跨平台Make。 CMake 辨别使用那种编译器去编译给出的源码种类。如果你不知道使用何种编译器，你不能使用相同的编译器去编译所有不同种类的源码。你可以手动的指用何种编译器，但是这将变得繁琐和痛苦。CMake为每一种类型的目标平台按照正确的顺序调用命令。因此，将有很多非显式的命令，比如$(CC). 
+    如果你是代码强迫症，请继续往下读。如果你不喜欢这一切，你可以跳过这一部分。一般的编译/链接标识处理头文件、库文件、以及重定位其他平台无关和构建系统独立命令。调试标识被包含，通过设置变量CMAKE_BUILD_TYPE 为“debug”，或者在调用程序的使用传递给CMake：cmake -DCMAKE——BUILD——TYPE：STRING=Debug。 
+????CMake也提供平台无关的包含，通过‘-fPIC’标志（POSITION_INDEPENDENT_CODE属性）。因此，更多隐式的设置能够在CMake命令中实现，在makefile文件中也可以（通过使用COMPILE_FLAGS或者相关的属性）。当然，CMake在集成第三方库（像OpenGL）方面也变得更加轻便。 
+它们之间有什么不同点？ 
+    如果你要使用编译脚本，构建的过程中有一个步骤，也就是需要在命令行中输入”make”。 对于CMake，需要进行2步：第一，你需要配置你的编译环境（可以通过在你的编译目录中输入cmake ，也可以通过使用GUI客户端）。这将创建一个等效的，依赖你选择的编译环境的编译脚本或其他。编译系统可以传递给CMake一个参数。总之，CMake根据你的系统配置选择合理的的默认的选择。第二，你在你选择的编译系统中执行实际的构建。 
+    你将进入GNU构建系统领域。 如果你不熟悉这个，这一段对于你来说就是碎碎念了。现在，说完了一些严肃的警告，往下走把！ 我们可以使用Autotool来比较CMake。当我们这样做的时候，我们会发现Make的缺点，而且这就是Autotool产生的理由了。我们可以看到CMake明显比Make优越的理由了。Autoconf 解决了一个重要的问题，也就是说与系统有关的构建和运行时信息的的可信赖发现。但是，这仅仅是轻便软件的开发中的一小部分。作为结尾，GNU工程已经开发了一系列集成的实用程序，用于完成Autoconf开始之后的工作：GNU构建系统中最重要的组件是Autoconf, Automake, and Libtool. 
+????“Make”就不能那样做了，至少不修改任何东西是做不到的。你可以自己做所有的跨平台工作，但是这将花费很多时间。CMake解决了这个问题，但是与此同时，它比GNU构建系统更有优势：
+用于编写CMakeLists.txt文件的语言具有可读性和很容易理解。
+不仅可以使用“Make” 来构建工程。
+支持多种生产工具，比如Xcode, Eclipse, Visual Studio, etc. 
+????CMake与Make对比具有以下优点：
+自动发现跨平台系统库。
+自动发现和管理的工具集
+更容易将文件编译进共享库， 以一种平台无关的方式或者以比make更容易使用的的生成方式。 
+????CMake不仅仅只“make”，所以它变得更复杂。从长远来看，最好能够学会使用它。如果你仅仅在一个平台上构建小的工程，“Make”更适合完成这部分工作。
+
+findstring函数查找字符串
+
+makefile中输出信息的方法有：$(warning xxx) 或 $(error xxx)
+

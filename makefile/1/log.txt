@@ -1,0 +1,66 @@
+预处理（Preprocess），编译（Compilation），汇编（Assembly）和链接（Linking）
+
+输出搜索路径
+`gcc -print-prog-name=cc1` -v
+或者/lib/gcc/x86_64-pc-cygwin/4.8.3/cc1.exe -v
+-v 显示附加信息 
+-vv 显示调试信息
+
+
+预处理
+gcc –E main.c –o main.i
+ccl –E main.c –o main.i
+预编译过程主要处理那些源代码中以#开始的预编译指令，主要处理规则如下：
+l  将所有的#define删除，并且展开所有的宏定义；
+l  处理所有条件编译指令，如#if，#ifdef等；
+l  处理#include预编译指令，将被包含的文件插入到该预编译指令的位置。该过程递归进行，及被包含的文件可能还包含其他文件。
+l  删除所有的注释//和 /**/；
+l  添加行号和文件标识，如#2 “main.c” 2,以便于编译时编译器产生调试用的行号信息及用于编译时产生编译错误或警告时能够显示行号信息；
+l  保留所有的#pragma编译器指令，因为编译器须要使用它们；
+
+编译
+gcc -S -masm=intel main.i -o main.s
+ccl -masm=intel main.i -o main.s
+编译过程就是把预处理完的文件进行一系列词法分析，语法分析，语义分析及优化后生成相应的汇编代码文件。
+masm(Microsoft Macro Assembler微软宏汇编器)
+
+所有以’.’开头的行都是指导汇编器和连接器的命令。
+汇编伪指令.def是确认在当前模块定义并在其他模块中使用的一个或多个符号，.global是标识一个或多个全局(外部)符号
+在 64-bit 模式下，有16个通用寄存器，但是这16个寄存器是兼容32位模式的，32位方式下寄存器名分别为 eax, ebx, ecx, edx, edi, esi, ebp, esp, r8d – r15d. 在64位模式下，他们被扩展为 rax, rbx, rcx, rdx, rdi, rsi, rbp, rsp, r8 – r15. 其中 r8 – r15 这八个寄存器是64-bit模式下新加入的寄存器。
+NOP指令
+1.”NOP"指令即空指令，
+2. 运行该指令时单片机什么都不做，但是会占用一个指令的时间。
+3. 当指令间需要有延时（给外部设备足够的响应时间；或是软件的延时等），可以插入“NOP”指令。
+
+汇编
+汇编器是将汇编代码转变成机器可以执行的命令，每一个汇编语句几乎都对应一条机器指令。
+gcc –c main.c –o main.o -std=C99
+as -v -o main.o main.s
+strings main.o
+
+链接
+链接器ld将各个目标文件组装在一起，解决符号依赖，库依赖关系，并生成可执行文件。
+collect /lib/crt0.o /lib/gcc/x86_64-pc-cygwin/4.8.3/crtbegin.o -L/lib/gcc/x86_64-pc-cygwin/4.8.3 -L/lib main.o -lgcc -lcygwin -lkernel32 /lib/default-manifest.o /lib/gcc/x86_64-pc-cygwin/4.8.3/crtend.o
+ld /lib/crt0.o main.o -L/lib/gcc/x86_64-pc-cygwin/4.8.3 -lcygwin -lkernel32
+
+“crt”是“C run-time”,主要用于在调用main()之前做一些初始化工作，全局符号_start就定义在这个模块中。
+
+ar t libkernel32.a（查看）
+（ar命令可以用来创建、修改库，也可以从库中提出单个模块。tr是linux命令常用命令，其全称“Text Replacer”，该命令用于进行文本替换。）
+ar x libgcc.a（解包）
+
+gcc -v -save-temps main.c
+
+
+
+http://gcc.gnu.org/onlinedocs/cpp/Preprocessor-Output.html#Preprocessor-Output
+
+‘1’	This indicates the start of a new file. 
+‘2’	This indicates returning to a file (after having included another file). 
+‘3’	This indicates that the following text comes from a system header file, so certain warnings should be suppressed. 
+‘4’	This indicates that the following text should be treated as being wrapped in an implicit extern "C" block.
+被extern "C"修饰的变量和函数是按照C语言方式编译和连接的，void foo( int x, int y )，该函数被C编译器编译后在符号库中的名字为_foo，而C++编译器则会产生像_foo_int_int之类的名字。
+
+
+预处理命令是在预编译过程中处理的。
+明明自己定义了设置了重复包含控制，为什么还会产生重复定义错误

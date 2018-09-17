@@ -1,0 +1,46 @@
+
+gcc -std=c99 -c -o wang_hello.o wang_hello.c
+
+make -f Makefile.debug
+
+gcc main.o miao_hello.o wang_hello.o -o main.exe
+
+这么编译有个好处，比如修改了print_pretty.c
+
+make默认查找makefile，大小写无关
+make可以指定目标，默认目标为第一项。
+make去检查目标文件是否比依赖文件新，如果新的话就不做。
+
+clean: 
+	rm -f *.o
+	
+all: main.exe
+
+.SUFFEXES:.o .c
+.c.o:
+	${CCP} -c $<
+	
+VAR=name     变量定义
+define VAR   
+    name
+endef        同上
+$(VAR)       使用变量，如果变量名为单字符，可以不使用圆括号或花括号
+${VAR}       同上
+$@           当前目标文件
+$*           删除了后缀的目标名
+$<           依赖列表中，比当前目标更新的当前依赖名称（即第一个依赖文件）
+$^           整个依赖列表
+$?           依赖列表中，比当前目标更新的当前依赖列表
+$(@D)        目标目录路径，与$(*D)类似
+CFLAGS       通常默认值是-O，但是可以被修改
+
+
+$$ 在这里是转义 $，$$i 最终 shell 看到的是 $i; 而 $(dir) 最终 shell 看到的是 $(dir) 的值。
+
+
+$%
+仅当目标是函数库文件中，表示规则中的目标成员名。例如，如果一个目标是"foo.a(bar.o)"，那么，"$%"就是"bar.o"，"$@"就是"foo.a"。如果目标不是函数库文件（Unix下是[.a]，Windows下是[.lib]），那么，其值为空。
+$^
+所有的依赖目标的集合。以空格分隔。如果在依赖目标中有多个重复的，那个这个变量会去除重复的依赖目标，只保留一份。
+$+
+这个变量很像"$^"，也是所有依赖目标的集合。只是它不去除重复的依赖目标。

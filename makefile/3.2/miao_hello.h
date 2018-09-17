@@ -1,0 +1,1 @@
+int miao_hello();

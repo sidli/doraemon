@@ -1,0 +1,641 @@
+###########################################################################
+#                                                                         #
+#                      Makefile NPOT-B sip                                #
+#                                                                         #
+###########################################################################
+ifndef ROOT
+include ../../common/root/root.mak
+endif
+
+export PORT_XAPI      := 1
+export SSAPI_MSGQUEUE := 1
+
+BOARD               := npot-b
+BOARD_TYPE          := lt
+TARG_ARCH           := M825XX
+TARG_CPU            := M82359
+PROJECT             := esam/$(BOARD)
+PROJECT_VX          := balt-a_ProjectVx
+OBJECTS_DIR_FORMAT  = $(OBASE)/$(BOARD)/$(X_ODIR)_sip%MODPATH%
+PRODUCT             := ESAM
+ENDIAN_$(TARG_ARCH) := LITTLE
+HEADERSTRING        := NPOT-B
+MEDIUM              := ethernet
+SUB_PRODUCT         := ISAM
+
+# FEATURES
+-include feature_config
+
+ifeq (user_preferences.mak,$(wildcard user_preferences.mak))
+include user_preferences.mak
+endif
+
+include $(VIEWROOT)/vobs/esam/build/common/release_info/release
+
+ifndef PROGRAM
+PROGRAM         := NDB4$(VARIANT)$(RELEASE)
+endif
+
+
+VAG_SIP_FLAGS := TRUE
+export VAG_SIP_FLAGS
+
+$(warning A top-level warning $(VAG_SIP_FLAGS))
+
+SEM_OAM_EVENT :=1
+SLEEP_MODE        := 1 
+export SLEEP_MODE SEM_OAM_EVENT
+
+ESAM_NEP_BOARD :=1
+export ESAM_NEP_BOARD
+
+include $(ROOT)/sw/flat/BLDCOMMON/include.mak
+
+export PROJECT PROJECT_VX BOARD_TYPE PRODUCT MEDIUM TARG_ARCH TARG_CPU
+
+ifneq ($(TARG_ARCH),HOST)
+ifndef CVP_OPTIMIZATION_FOR_SIZE
+export CVP_OPTIMIZATION_FOR_SIZE :=1
+endif
+ifndef CVM_OPTIMIZATION_FOR_SIZE
+export CVM_OPTIMIZATION_FOR_SIZE :=1
+endif
+endif
+
+REM_EXT_ALARM     := 1
+FD_LT             := 1
+export REM_EXT_ALARM FD_LT 
+###########################################################################
+#                                                                         #
+#                        OS module blocks                                 #
+#                                                                         #
+###########################################################################
+
+##################### 0S SPECIFIC ADAPTATON MODULES #####################  
+
+ifeq ($(TARG_ARCH),HOST)
+RTEMS_OBJS= \
+sw/flat/RTEMS_EXEC/exec.obj \
+sw/flat/RTEMS_PSOSAPI/pSOSapi.obj \
+sw/flat/RTEMS_PSOSUN/pSOSun.obj \
+sw/flat/RTEMS_CPU_$(TARG_ARCH)/cpu.obj 
+else
+VXWORKS_OBJS= \
+sw/flat/$(PROJECT_VX)/vxworks.obj 
+endif
+
+########################### BSP MMU MODULE #########################
+SERVERS_PLATFORM_TFTP=\
+sw/flat/TFTP/co/tftp_co.obj \
+sw/flat/TFTP/server/tftp_server.obj \
+sw/flat/TFTP/client/tftp_client.obj
+
+M825XX_BSP = \
+sw/flat/balt-a_BSP/BspM825xxBp/BspM825xxBp.obj \
+sw/flat/balt-a_BSP/BspM825xxVxWorks/BspM825xxVxWorks.obj \
+sw/flat/balt-a_BSP/BspM825xxMmu/mmuImpl/mmuImpl.obj \
+sw/flat/balt-a_BSP/BspM825xxMmu/mmuDummy/mmuDummy.obj \
+sw/flat/balt-a_BSP/BspM825xxMmu/mmuItf/mmuItf.obj \
+sw/flat/balt-a_BSP/BspM825xxMmu/mmuNone/mmuNone.obj \
+sw/flat/balt-a_BSP/BspDevEmacM825xx/BspDevEmacM825xx.obj \
+sw/flat/balt-a_BSP/BspM823xxVed/BspM823xxVed.obj \
+sw/flat/npot-b_BSP/BspM823xxCoreDump/BspM823xxCoreDump.obj \
+$(SERVERS_PLATFORM_TFTP)
+
+M825XX_ENV_OBJS =\
+sw/flat/M825xx_Startup_OS/M825xx_Startup_OS.obj \
+sw/flat/KRNLOS_$(TARG_OS)/init/vx_init.obj 
+
+########################### COMMON KRNL MODULES #########################  
+
+TEST_M825XX = \
+sw/flat/balt-a_BSP/BspM825xxDebug/BspM825xxDebug.dummy?INIT=test,100:bsp_init_Trace_and_Debug 
+
+TEST_OBJS += \
+$(TEST_$(TARG_ARCH))\
+sw/flat/TRDB_TEST/debug_test.obj?INIT=test,100:debug_test_init \
+sw/flat/TRDB_TEST/stream/stream_test.obj \
+sw/flat/FSTEST/fs_test.obj?INIT=test,100:fs_test_init  \
+sw/flat/RANDOM/random.obj \
+sw/flat/LDAPP/loadtest.obj \
+sw/flat/TCFWK/krnl_tcfwk.obj \
+sw/flat/XAPITEST/xapi_test.obj?INIT=test,100:xapiTestInit  \
+sw/flat/NOTEPAD_TEST/notepad_test.obj?INIT=test,100:notepad_test_init \
+sw/flat/BSP_PROZONE/trace_debug/prozonetr++.olst \
+sw/flat/ERROR/test.obj?INIT=test,100:err_test_init \
+sw/flat/TASKDEL/test.obj?INIT=test,100:taskdel_test_init \
+sw/flat/MEMMNGT/tests/core/test.obj?INIT=test,100:init_memmngt_tests \
+sw/flat/EHTEST/eh_test.obj?INIT=test,100:dbg_ExceptionInit 
+
+ENV_OBJS = \
+$(ADAP_OBJS_$(TARG_ARCH)) \
+$($(TARG_OS)_OBJS) \
+sw/flat/StartupCo/OS/co_startup.obj \
+sw/flat/KRNLOS_$(TARG_OS)/api/os_api.obj \
+sw/flat/KRNLOS_$(TARG_OS)/debug/os_dbg.obj \
+sw/flat/KRNLOS_$(TARG_OS)/init/os_init.obj \
+sw/flat/CPU$(TARG_ARCH)Api/cpu_api.obj \
+sw/flat/CPU$(TARG_ARCH)Error/error.obj \
+sw/flat/CPU$(TARG_ARCH)Debug/cpu_dbg.obj \
+sw/flat/CPU$(TARG_ARCH)Debug/dasm/dasm.obj \
+sw/flat/CPU$(TARG_ARCH)Debug/bp/bp.obj \
+sw/flat/TRDB/trace/trace++.obj \
+sw/flat/TRDB/tracebuf/tracebuf.obj \
+sw/flat/TRDB/print/print.obj \
+sw/flat/TRDB/dispatch/dispatch.obj \
+sw/flat/TRDB/vtracebuf/vtracebuf.obj \
+sw/flat/TRDB/common/memory/mem_dbg.obj \
+sw/flat/TRDB/common/os/os_dbg.obj \
+sw/flat/KRNLTRCPTS/tracepoints.obj \
+sw/flat/TICKDISP/tick_disp.obj \
+sw/flat/KRNLHWWD/hwwd.obj \
+sw/flat/KRNLSWWD/swwd.obj \
+sw/flat/CMDARGS/cmdArgs.obj \
+sw/flat/ERROR/error.obj \
+sw/flat/XAPI/xapi.obj \
+sw/flat/AdvancedLoadControl/stubs/AdvancedLoadControlDummy.o \
+sw/flat/KRNLLDAPP/ldApp.obj \
+sw/flat/KRNLLDCTRL/loadcontrol.obj \
+sw/flat/KRNLTRCTOOL/tracetool.obj \
+sw/flat/CTXTSWITCH/ctxt_switch.obj \
+sw/flat/CPULOAD/cpuload.obj \
+sw/flat/TASKDEL/taskdel.obj \
+sw/flat/ASAM_COMMON_CLASSES/sources/common_pure.obj \
+sw/flat/ASAM_COMMON_CLASSES/sources/new_ovl.o \
+sw/flat/MEMMNGT/sources/memmngt.obj \
+sw/flat/ASAM_NEWDELOVL/newdelovl.obj \
+sw/flat/ASSERT/assert.obj \
+sw/flat/KRNLCONFIG/krnl_config.obj \
+sw/flat/FSAPI/fsapi.obj \
+sw/flat/FSAPIPP/fsapipp.obj \
+sw/flat/build_info/bldinfo.obj?D=BLDNUM=$(BLDNUM) \
+sw/flat/XFS/xfs.obj \
+sw/flat/KRNLMISC/krnl_misc.obj \
+sw/flat/KRNLINIT_MODARGS/modargs.obj \
+sw/flat/BOB/bob.obj \
+sw/flat/SNPRINTF/asam_and_std_snprintf.obj \
+sw/flat/LIBGETOPT/getopt.obj \
+sw/flat/TRACE_DEBUG/traceDebug.obj \
+$($(TARG_ARCH)_ENV_OBJS) \
+sw/flat/FSPROM/intel168/dev_sync.o \
+sw/flat/SimpleTrace/simpleTrace.obj \
+sw/flat/GenericTraceFilter/gtracefilter.obj
+
+HOST_ENV_OBJS=\
+sw/flat/CHIPSIM/chipsim.obj \
+sw/flat/GRM/grm.obj \
+sw/flat/LCOM/lcom.obj \
+sw/flat/LSOCK/lsock.obj \
+sw/flat/FSHOST/host_fs.obj \
+sw/flat/FSSHELL/shell.obj \
+sw/flat/FSLZ77/lz77.lib \
+sw/flat/LIB_WRITEPID/write_pid.obj 
+
+INIT_SUBSYSTEM=\
+sw/flat/InitCommon/common.obj \
+sw/flat/InitLt/platform_init.obj \
+sw/flat/ASAMProData/prodata.obj\
+sw/flat/ProDataLayout1/boarddata.obj \
+sw/flat/$(BOARD)_Init/init.obj \
+sw/flat/ZLIB/zlib.obj
+
+BUF_LIB= \
+sw/flat/VBLIB/vbuf_lib.obj \
+sw/flat/TransceiverPoolMgr/src/TransceiverPoolMgr.obj \
+sw/flat/TransceiverBufLib/src/TransceiverBufLib.obj \
+sw/flat/TransceiverBufLib/trace_debug/trm_dbg.obj 
+
+ifeq ($(TARG_ARCH),HOST)
+PSTACK_HOST=\
+sw/flat/GEComm_hww/gecomm_osw.obj \
+sw/flat/HostLtHwSimulation/source/HostLtHwSimulation.o \
+sw/flat/HostGenericLLDriver/source/generic_lsock_hw.o
+endif
+
+PSTACK=\
+$(PSTACK_$(TARG_ARCH)) \
+sw/flat/SIF/sif.obj \
+sw/flat/Socket/socket.obj \
+sw/flat/NlNif/nif.obj \
+sw/flat/UKnl/microKernel.obj \
+sw/flat/NlNmisc/nmisc.obj \
+sw/flat/SLNETWORK/network.obj \
+sw/flat/NLADPT/adpt.obj \
+sw/flat/NLIDL/idl.obj \
+sw/flat/NlEth/eth_drv.obj \
+sw/flat/IAL/ial.obj\
+sw/flat/Rack/rack.obj \
+sw/flat/NLSLIP/ni_slip.obj \
+$(BUF_LIB)
+
+PSTACK+=\
+sw/flat/IP/ip_stack.obj \
+sw/flat/UDP/udp.obj \
+sw/flat/ICMP/icmp.obj \
+sw/flat/IPCFG_ASAM/ipcfg.lib \
+sw/flat/TCP/tcp.obj
+
+SERVERS_PLATFORM=\
+sw/flat/LOGIN/login.obj \
+sw/flat/SNTP-CLIENT/sntp_client.obj \
+sw/flat/RCOM-SERVER/rcom_server.obj \
+sw/flat/RFC/rfc.obj \
+sw/flat/ASAM_MEMLIB/memlib.obj \
+sw/flat/FCMT_ERR/fmSource.obj \
+sw/flat/ASAMRFSCOMMON/rfs_co.obj \
+sw/flat/ASAMRFSSERVER/rfs_server.obj
+
+IOCM_HOST_MD=\
+sw/flat/IOCM/cdriver/mediaDriver/socket/HOST_IP_Socket/mediaDriver.obj \
+sw/flat/IOCM/cdriver/driver/socket/HOST_IP_Socket/component.obj 
+
+IOCM_OBJS=\
+sw/flat/iocmOsAsam/AsamOSI.obj \
+sw/flat/IOCM/core/core.obj \
+sw/flat/IOCM/init/initiocm.obj \
+sw/flat/IOCM/router/dynamicRouter/dynamicrouter.obj \
+sw/flat/iocmTools/tools.obj \
+sw/flat/NameServer/ns.obj \
+sw/flat/TASKCONVERTER/tc.obj \
+sw/flat/IOCM/cdriver/mediaDriver/socket/common/common.obj \
+sw/flat/IOCM/cdriver/core/cdcore.obj \
+sw/flat/IOCM/stubs/iocm_stubs.o \
+sw/flat/IOCM/cdriver/component/cdcomponent.obj \
+$(IOCM_$(TARG_ARCH)_MD)
+
+IOCM_ASAM_MD_OBJS=\
+sw/flat/IOCM/cdriver/mediaDriver/socket/ASAM_RK_Socket/mediaDriver.obj?IDL=idl/NotifyLinkStateChange.idl \
+sw/flat/ASAM_COMMON_IDL/asam_types.dummy?IDL=asam_types.idl \
+sw/flat/EqptCommon/common.dummy?IDL=export/eqpt_types.idl \
+sw/flat/IOCM/cdriver/driver/socket/ASAM_RK_Socket/driver.obj \
+sw/flat/IOCM/cdriver/mediaDriver/socket/ASAM_IP_Socket/mediaDriver.obj \
+sw/flat/IOCM/cdriver/driver/socket/ASAM_IP_Socket/driver.obj 
+
+IXP_FRAMEWORK = \
+sw/flat/NP_IXP2400_voice_RM/ixp_rm.obj \
+sw/flat/NP_IXP2400_voice_OSSL/ossl.obj \
+sw/flat/NP_IXP2400_voice_LIB/ixp_lib.obj \
+sw/flat/NP_IXP2400_voice_CCI/ixp_cci.obj \
+sw/flat/NP_IXP2400_voice_INIT/ixp_init.obj
+
+IXP_CC = \
+sw/flat/NP_IXP2400_voice_ATM/ixp_atm.obj \
+sw/flat/NP_IXP2400_voice_Vlan/ixp_vlan.obj \
+sw/flat/NP_IXP2400_voice_QoS/ixp_qos.obj \
+sw/flat/NP_IXP2400_voice_DEBUG/ixp_debug.obj \
+sw/flat/NP_IXP2400_voice_NAPT/ixp_napt.obj
+
+IXP_HWW_OBJS = \
+$(IXP_FRAMEWORK) \
+$(IXP_CC) 
+
+IXP_IFW_OBJS = \
+sw/flat/NP_Voice_itfwrap_INIT/lxfwd_init.obj \
+sw/flat/NP_Voice_itfwrap_PH/lxfwd_ph.obj \
+sw/flat/NP_Voice_itfwrap_Vlan/lxfwd_vlan.obj \
+sw/flat/NP_Voice_itfwrap_QoS/lxfwd_qos.obj \
+sw/flat/NP_Voice_itfwrap_NAPT/lxfwd_napt.obj 
+#sw/flat/GenLxFwdAdapter/genlxfwadap.obj 
+
+ifeq ($(TARG_ARCH),HOST)
+ivps-a_LXFWD_OBJS = \
+$(IXP_HWW_OBJS) \
+$(IXP_IFW_OBJS) 
+
+# for host we always take the implementation of IVPS-A
+LXFWD_OBJS= $(ivps-a_LXFWD_OBJS)
+endif
+
+HW_WRAPPER = \
+$($(BOARD)_HW_WRAPPER) \
+sw/flat/HsHwWrapper/hw_wrapper_hcllsm.obj \
+sw/flat/EquipHdS/boards_hcllsm.obj \
+sw/flat/TemperatureHds/temperature_hds_hcllsm.obj \
+sw/flat/CtrlTemperatureHds/ctrl_temperature_hds.obj \
+sw/flat/CtrlProxy/ctrlproxy.obj?IDL=export/idl/CtrlProxy.idl \
+sw/flat/SfpHww/sfphww.dummy?IDL=export/SfpHww.idl \
+sw/flat/ExtAlarmHds/extalarm_hds_nxltx.obj \
+sw/flat/FanCtrl/fanCtrl.obj \
+sw/flat/LedDrv/led_drv_improved.obj \
+sw/flat/$(BOARD)_Init/led_descriptors.o \
+sw/flat/Rip93CS66L/rip_drv.obj \
+sw/flat/RipSpi/spi_drv.obj \
+sw/flat/RipCo/rip.obj \
+sw/flat/HsAsics/asics_lt.obj \
+sw/flat/HsRip_Boards/rip_to_hw.obj \
+sw/flat/RelayController/co/relay_controller.obj\
+sw/flat/RelayController/reco/reco.obj\
+sw/flat/RelayController/sreco/sreco.obj\
+
+HW_WRAPPER +=\
+sw/flat/VoiceCommon/SipWrapper/sipw.obj
+
+HWW_DOMAIN = \
+$(HW_WRAPPER) \
+$(LXFWD_OBJS) 
+ifeq ($(TARG_ARCH),HOST)
+LXFWD_ITF= \
+sw/flat/GenLxFwdWrapItf/source/genLxFwd_VoiceAdapter.o \
+sw/flat/GenLxFwdWrapItfv/lxfwd_debug.obj
+endif
+
+APPLICATIONS_PLTF = \
+sw/flat/FlhCommon/flh.obj \
+sw/flat/bitmap/bitmap.obj 
+
+ifeq ($(TARG_ARCH),HOST)
+npot-b_APPLICATIONS=\
+sw/flat/VoiceCommon/Generic_Voice_Hardware_wrapper/GVHW.obj \
+sw/flat/VoiceCommon/NGCC_Zarlink_FW/NGCC_FW.obj \
+sw/flat/VoiceCommon/Generic_Voice_Hww_SST/stub/UniformStubs/VAPIStubs/VAPIStubs.obj \
+sw/flat/VoiceCommon/Generic_Voice_Hww_SST/stub/UniformStubs/NGCCStubs/NGCCStubs.obj \
+sw/flat/VoiceCommon/Generic_Voice_Hww_SST/stub/UniformStubs/gvhwSSTUniStubs.obj
+else
+ifeq ($(AT),AT_MSPD)
+npot-b_APPLICATIONS=\
+sw/flat/VoiceCommon/Generic_Voice_Hardware_wrapper/GVHW.obj \
+sw/flat/VoiceCommon/M823xx_Mindspeed_VAPI/vapim.obj \
+sw/flat/VoiceCommon/NGCC_Zarlink_API_II/API_II.obj \
+sw/flat/VoiceCommon/NGCC_Zarlink_FW/NGCC_FW.obj \
+sw/flat/VoiceCommon/Generic_Voice_Hww_SST/stub/UniformStubs/PALStubs/PALStubs.obj \
+sw/flat/VoiceCommon/Generic_Voice_Hww_SST/stub/UniformStubs/gvhwSSTUniStubs.obj     \
+sw/flat/VoiceCommon/Generic_Voice_Hww_SST/gvhwSSTFrame.obj  \
+sw/flat/VoiceCommon/Generic_Voice_Hardware_wrapper/sst/src/common/sstComm.obj \
+sw/flat/VoiceCommon/Generic_Voice_Hardware_wrapper/sst/src/testcase/testcase.obj
+else                                   
+npot-b_APPLICATIONS=\
+sw/flat/VoiceCommon/M823xx_Mindspeed_VAPI/vapim.obj \
+sw/flat/VoiceCommon/NGCC_Zarlink_API_II/API_II.obj \
+sw/flat/VoiceCommon/NGCC_Zarlink_FW/NGCC_FW.obj \
+sw/flat/VoiceCommon/Generic_Voice_Hardware_wrapper/GVHW.obj
+endif
+endif
+
+GENERATED_FILES = \
+sw/flat/CapabilityMgr/CapabilityMgrLt.obj?IDL=export/idl/BulkRequest.idl+STEP1=codeGenerate \
+
+APPLICATIONS = \
+sw/flat/InfraNt/infra.dummy?IDL=idl/infra_types.idl \
+sw/flat/SfpMgnt/sfpMgnt.dummy?IDL=idl/SfpCommonTypes.idl \
+sw/flat/EqptCoreExtLsm/eqptCoreExtLsm.obj?ILST=export/eqptMgntCoreExtLsm_idl.ilst \
+sw/flat/EqptCoreCommon/commonCore.obj?IDL=export/eqptCore_types.idl \
+sw/flat/EqptCoreCommon/commonCore.dummy?IDL=export/ExtLsmCore.idl \
+sw/flat/EqptCoreNt/CoreNt.dummy?IDL=export/Restart.idl \
+sw/flat/EqptCoreNt/eqptMgntCore.dummy?IDL=export/BoardState.idl \
+sw/flat/InfraLt/infra_lt.obj?ILST=idl/infra.ilst \
+sw/flat/EqptCtrlCommon/eqptCtrlCommon.obj?ILST=export/eqptCtrl.ilst \
+sw/flat/EqptCtrlSlave/eqptCtrlSlave.obj \
+sw/flat/EqptCtrlLt/eqptCtrlLsm.obj?ILST=export/eqptCtrl.ilst\
+sw/flat/EqptCommon/common.obj?IDL=export/eqpt_types.idl \
+sw/flat/Aha/aha.obj \
+sw/flat/SYSDATMGR-EXTLSM/systemDataMgntExtLsm.obj \
+sw/flat/SYSDATMGR-COMMON/systemDataCommon.obj \
+sw/flat/AsamDld/source/process/process.dummy?IDL=idl/CTRLDldMgr.idl \
+sw/flat/MTA_Common/messages/mtaMessages.obj   \
+sw/flat/CdeProfileMgntLsm/CdeProfileMgntLsm.obj?IDL=idl/CdeCtrl.idl \
+sw/flat/CdeProfileMgntNt/app/cdeProfMgnt.dummy?IDL=../idl/CdeTrans.idl \
+sw/flat/pmFileMgntLsm/pmFileMgntLsm.obj?ILST=../pmFileMgntNt/export/pmFileData.ilst+IDL=export/pmFileDataLsm.idl \
+sw/flat/SystemMgntLsm/SystemMgntLsm.obj?IDL=export/SystemNtToLsm.idl \
+sw/flat/ServiceAvailMgr/SAM_lt.obj?IDL=export/ServiceAvailMgr.idl \
+$($(BOARD)_APPLICATIONS) 
+
+APPLICATIONS +=\
+sw/flat/CpuLoadControl/cpuloadcontrol.obj \
+sw/flat/MemUsageMonitor/MemUsageMonitor.obj \
+sw/flat/SystemMonitorMgntLsm/SystemMonitorMgntLsm.obj?ILST=export/idl/SystemMonitor.ilst \
+sw/flat/ItfmBroker/ItfmBroker.obj?ILST=export/idl/ItfmBroker.ilst \
+sw/flat/DataUtilities/DataUtilities.obj \
+sw/flat/HdlcMmiAdapter/HdlcMmiAdapter.obj \
+sw/flat/HdlcMmiIocmItf/HdlcMmiIocmItf.obj?IDL=idl/HdlcMmiIocmItf.idl \
+sw/flat/VlanBridgeMgntCommon/core/vbridgecomm.dummy?ILST=../export/Vbridge.ilst \
+sw/flat/EqptEdseProxy/eqptEdseProxy.dummy?IDL=export/EdseProxy.idl \
+sw/flat/TroubleShootingMgnt/TSCounter.dummy?ILST=export/idl/TSCounter.ilst \
+sw/flat/RelayMgnt/relayMgntTypes.dummy?IDL=idl/RelayMgntTypes.idl \
+sw/flat/RelayMgntLsm/relayMgntLsm.obj?IDL=idl/RelayMgntLsm.idl\
+sw/flat/QoSMgntNt/QoSMgntNt.dummy?ILST=export/QoSNt.ilst \
+sw/flat/MTA_LT/app/mta.obj 
+
+CVP_LIBS = \
+sw/flat/VoiceComPack/SIP_PFL/sip_pfl.obj \
+sw/flat/VoiceComPack/SIP_PAL/sip_pal.obj \
+sw/flat/VoiceComPack/SIP_SSM/grfrtlsc/sipssm_grfrtlsc.obj \
+sw/flat/VoiceComPack/SIP_SSM/src_GRF/sipssm_grf.obj \
+sw/flat/VoiceComPack/SIP_SSM/sip_ssm.obj \
+sw/flat/VoiceComPack/SipMgnt/sip_mgnt.obj \
+sw/flat/VoiceComPack/SSAPIWrapper/sipssapiw.obj \
+sw/flat/PmhCommon/pmh.obj \
+sw/flat/VoiceComPack/PMC/pmc.obj 
+
+ifeq ($(TARG_ARCH),HOST)
+CVP_LIBS += \
+sw/flat/VoiceComPack/alusip/sipstack.obj \
+sw/flat/VoiceComPack/SIP_PAL/pal/enhanced_dmlparser/dmlparser_$(HOST_ARCH).obj
+else
+CVP_LIBS += \
+sw/flat/VoiceComPack/alusip/sipstack.obj \
+sw/flat/VoiceComPack/SIP_PAL/pal/enhanced_dmlparser/dmlparser.obj
+endif
+
+#ifeq ($(TARG_ARCH),HOST)
+#CVP_LIBS = \
+#sw/flat/VoiceComPack/lib.fromSrv \
+#sw/flat/VoiceComPack/lib/cvp_$(HOST_ARCH).a_ci 
+#else
+#CVP_LIBS = \
+#sw/flat/VoiceComPack/lib.fromSrv \
+#sw/flat/VoiceComPack/lib/$(BOARD)/cvp.lib_ci \
+#sw/flat/VoiceComPack/lib/$(BOARD)/cvp_templates.lib_ci
+#endif
+
+VOICE_APP = \
+sw/flat/VoiceAppMgntLsm/VoiceAppMgntLsm.obj?ILST=../VoiceAppMgntNt/export/VoiceConfigServer.ilst+IDL=/export/VappLsmItf.idl \
+sw/flat/VLTMgntLsm/VLTMgntLsm.obj?ILST=../VLTMgntLsm/export/VLTLsm.ilst \
+sw/flat/DHCPClient/dhcpc.obj 
+
+ifeq ($(TARG_ARCH),HOST)
+VOICE_APP += \
+sw/flat/polt-a_PKHD/src/pkhd.obj \
+sw/flat/ZItfMgntLsm/src/zitfmgntlsm.obj?IDL=../export/idl/zItfMgntLsmToNt.idl \
+sw/flat/VOIP_Common_Service/src/Voip_comSer.obj
+else
+VOICE_APP += \
+sw/flat/VOIP_Common_Service/src/Voip_comSer.obj 
+endif
+
+ifeq ($(TARG_ARCH),HOST)
+BOOTPACKAGECOMMIT_OBJS = \
+sw/flat/ASAMEXTLSM-BOOT/source/commit/bpcommit.obj
+else
+BOOTPACKAGECOMMIT_OBJS = \
+sw/flat/BPSelect/BPSelect.obj \
+sw/flat/IntelPromDrv/intel28F/intel28F.obj \
+sw/flat/$(BOARD)_FS/rom.lib
+endif
+
+ITF_LIBS = \
+$(LXFWD_ITF) 
+
+NCLIBS = \
+sw/flat/BSP/$(BOARD)_bsp.lib \
+sw/flat/BspCommon/stubs/MemoryPageProtection.o \
+sw/flat/LibIdl/idl_itf.lib
+
+DUMMYS = \
+sw/flat/DUMMY/dummy.lib
+
+###########################################################################
+#                                                                         #
+#                        Compilation rules                                #
+#                                                                         #
+###########################################################################
+ifeq ($(MODULE_OBJS_$(PROGRAM)),)
+MODULE_OBJS_$(PROGRAM) = \
+$(GENERATED_FILES) \
+$(ENV_OBJS) \
+$(VOICE_APP)\
+$(INIT_SUBSYSTEM) \
+$(SERVERS_PLATFORM) \
+$(TEST_OBJS) \
+$(BOOTPACKAGECOMMIT_OBJS) \
+$(PSTACK) \
+$(APPLICATIONS) \
+$(HWW_DOMAIN) \
+$(IOCM_OBJS) \
+$(IOCM_ASAM_MD_OBJS) \
+$(APPLICATIONS_PLTF) \
+$($(TARG_ARCH)_BSP) \
+$(ITF_LIBS) \
+$(NCLIBS) \
+$(DUMMYS) \
+$(CVP_LIBS)
+
+endif
+
+
+ifneq ($(TARG_ARCH),HOST)
+
+all : package
+	@echo "start"
+	cd $(VIEWROOT)/vobs/esam/build/$(BOARD)/OS/
+	$(MAKE) -f Makefile_sip target
+	@echo end
+
+target: $(PROGRAM).$(VERS)
+
+$(TARG_ARCH)_LNK=\
+        GHS_ram.lnk
+
+endif
+
+ifeq ($(TARG_ARCH),HOST)
+
+all : package
+	@echo "start"
+	cd $(VIEWROOT)/vobs/esam/build/$(BOARD)/OS/
+	$(MAKE) -f Makefile_sip host
+	@echo end
+
+host : $(PROGRAM).exe
+
+endif
+
+$(MODULE_DEF_$(PROGRAM))_DEFINES:=$(DEFINES_$(PROGRAM))
+GLOBALDEFINES:=$(GLOBALDEFINES_$(PROGRAM)) -DNO_SNMP_PRESENT -DGFLAG_TRM -DFD_LT \
+                -DESAM_NEP_BOARD -DBOARD_polt
+ 
+GLOBALDEFINES+= -DPSTACK_DYNAMIC_TRACE -DPOLT_ARP_TABLE -DENABLE_L4DIRECTLY_FWD 
+
+# For ISDN SIP Services
+GLOBALDEFINES += -DBOARD_NPOTB_SIP
+
+GLOBALDEFINES += -DNEW_LT_WATCHDOG_ARCHITECTURE -DHAS_SIMPLE_TRACE
+
+#IPC between sipstack and application(PAL/SSAPIWRAPPER) module will be msgqueue
+GLOBALDEFINES += -DSSAPI_MSGQUEUE
+
+#sipstack platform flag
+GLOBALDEFINES += -DPORT_XAPI
+
+#pmFileLsm specific flag
+GLOBALDEFINES += -DBOARD_VOICE_LT
+
+ifneq ($(TARG_CPU),)
+GLOBALDEFINES += -DTARG_CPU_$(TARG_CPU)
+endif
+
+ifeq ($(AT),AT_MSPD)
+GLOBALDEFINES += -DAT_MSPD
+endif
+
+ifneq ($(TARG_ARCH),HOST)
+#field upgradable bootprom
+GLOBALDEFINES += -DFIELD_UPGR_BOOTPROM -DDBOOT 
+endif
+
+GHS_ARMARCH4_XFLAGS += -nostdlib -nofloatio 
+export GHS_ARMARCH4_XFLAGS 
+
+
+GHS_LFLAGS +=-lnk=-accumulate_rela_rel_addends -lnk=-always_accumulate_addends
+vx_wrappers_DEFINES  := -DUSE_REAL_VXWORKS
+export vx_wrappers_DEFINES
+
+MIB_PATH            := $(ROOT)/mibs
+
+#do not set the flag -rodata, thus the RODATA section will not be created. THe
+#   coff2ddl tool does not take into account the RODATA section!!
+#E2C_FLAGS := -rodata
+C2LZ7_FLAGS := -e
+
+######################################
+#   Statistics sub-function option   #
+######################################
+
+STATS_PER_CALL   := ENABLE
+STATS_PER_LINE   := ENABLE
+STATS_PER_BOARD  := ENABLE
+STATS_PER_SYSTEM := ENABLE
+STATS_PER_LINE_SUM := DISABLE
+STATS_PER_CALL_SUM := DISABLE
+
+GLOBALDEFINES += -DSTATS_PER_CALL_SUM_RECORD_NUM=32
+
+export STATS_PER_CALL STATS_PER_LINE STATS_PER_BOARD STATS_PER_SYSTEM STATS_PER_LINE_SUM STATS_PER_CALL_SUM
+
+ifeq ($(STATS_PER_CALL),DISABLE)
+GLOBALDEFINES += -DDISABLE_STATS_PER_CALL
+endif
+
+ifeq ($(STATS_PER_LINE),DISABLE)
+GLOBALDEFINES += -DDISABLE_STATS_PER_LINE
+GLOBALDEFINES += -DDISABLE_STATS_PER_BOARD
+endif
+
+ifeq ($(STATS_PER_BOARD),DISABLE)
+GLOBALDEFINES += -DDISABLE_STATS_PER_BOARD
+endif
+
+ifeq ($(STATS_PER_SYSTEM),DISABLE)
+GLOBALDEFINES += -DDISABLE_STATS_PER_SYSTEM
+endif
+
+ifeq ($(STATS_PER_LINE_SUM),DISABLE)
+GLOBALDEFINES += -DDISABLE_STATS_PER_LINE_SUM
+endif
+
+ifeq ($(STATS_PER_CALL_SUM),DISABLE)
+GLOBALDEFINES += -DDISABLE_STATS_PER_CALL_SUM
+endif
+
+include $(ROOT)/sw/flat/BLDCOMMON/Makefile_top
+include $(ROOT)/sw/flat/BLDCOMMON/step1.mak
+
+package : $(ROOT)/sw/flat/VoiceComPack/lib.fromSrv $(ROOT)/sw/flat/VoiceCommon/lib.fromSrv
+
+
+ifneq ($(EMDBG),)
+GHS_XFLAGS+=-dual_debug
+endif
+
+export GHS_XFLAGS
+

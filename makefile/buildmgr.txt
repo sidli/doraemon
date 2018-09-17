@@ -1,0 +1,424 @@
+
+two DL380 installed EXSI with IP 135.242.61.172/174, the IP of Vcenter is 135.242.61.171, you can access them with vSphere
+
+NAS（Network Attached Storage：网络附属存储）按字面简单说就是连接在网络上，具备资料存储功能的装置，因此也称为“网络存储器”。它是一种专用数据存储服务器。它以数据为中心，将存储设备与服务器彻底分离，集中管理数据
+NTP是网络时间协议(Network Time Protocol)，它是用来同步网络中各个计算机的时间的协议。
+
+Please define the env variables before you make a build by:
+export GHS_LMHOST=@FNLX14,ASBLX18 #or GHS_LMHOST=@ASBLX18,FNLX14
+export GHS_LMHOST=@FNLX14,ASBLX18
+export GHS_LMWHICH=ghs
+
+磁盘阵列（Redundant Arrays of Independent Disks，RAID），有“独立磁盘构成的具有冗余能力的阵列”之意。
+
+备份系统
+tar -cvpzf /repo/backup.tz / --exclude=/proc --exclude=/tmp --exclude=/sys --exclude=/media --exclude=/repo --exclude=/run
+
+那你把你的公钥放到 随便一个上海账号的authorized_keys 里面
+然后从青岛发起 rsync
+rsync -avz /home/buildmgr/tools buildmgr@ISAMV-QD1:/home/buildmgr/
+源和目的换一换就好了 
+把所有的rsync命令放在一个.sh里面
+crontab设置好调用 这个.sh就可以了 
+上面命令里的 buildmgr换成你加公钥的上海的账号
+cat rsync_QD.sh
+#!/bin/bash
+rsync -avz /ap/local/devtools buildmgr@ISAMV-QD1:/ap/local/
+rsync -avz /ap/local/coverity buildmgr@ISAMV-QD1:/ap/local/
+rsync -avz /ap/local/env buildmgr@ISAMV-QD1:/ap/local/
+rsync -avz /home/buildmgr/bin5.6 buildmgr@ISAMV-QD1:/home/buildmgr/
+rsync -avz /home/buildmgr/perl5 buildmgr@ISAMV-QD1:/home/buildmgr/
+rsync -avz /home/buildmgr/tools buildmgr@ISAMV-QD1:/home/buildmgr
+
+df -hl
+du -sh ./*
+查看分区使用情况
+
+一个是top命 令，查看CPU和内存，进程。另一个是iostat –xn 1命 令查看磁盘IO。DF命令查看当前磁盘 大小，不要超过80%为宜。
+
+yum provides haha.so.6      --查看是谁有这个so文件
+yum install texinfo*    --Tools needed to create Texinfo format documentation files（needed by make）
+yum install glibc*i686      --The GNU libc libraries
+yum install zlib*i686       --compression and decompression library
+yum install libX11*i686     --Core X11 protocol client library（needed by hsi parsing program）
+yum info perl-Switch
+yum install perl-Switch     --A switch statement for Perl
+
+不能修改passwd的读写权限，不然用户登录的时候会出错
+
+Valgrind是一款用于内存调试、内存泄漏检测以及性能分析的软件开发工具。
+
+输出重定向
+make IVY=ivy > tgt1.out 2>&1
+
+tee
+tee - read from standard input and write to standard output and files
+Copy standard input to each FILE, and also to standard output.输出重定向
+
+unset
+unset - BASH_BUILTINS
+unset GCC_EXEC_PREFIX
+删除全局变量GCC_EXEC_PREFIX
+
+systemctl list-units
+systemctl start vsftpd.service
+systemctl enable vsftpd
+
+sidl    ALL=(ALL) NOPASSWD:ALL
+不需要密码sudo
+alias su_buildmgr="sudo su buildmgr"
+切换到buildmgr用户
+
+SELinux(Security-Enhanced Linux) 是美国国家安全局（NSA）对于强制访问控制的实现，是 Linux历史上最杰出的新安全子系统。NSA是在Linux社区的帮助下开发了一种访问控制体系，在这种访问控制体系的限制下，进程只能访问那些在他的任务中所需要文件。SELinux 默认安装在 Fedora 和 Red Hat Enterprise Linux 上，也可以作为其他发行版上容易安装的包得到。
+
+ftp没法创建文件可能是开启了SELinux
+查看SELinux状态：
+1、/usr/sbin/sestatus -v      ##如果SELinux status参数为enabled即为开启状态
+SELinux status:                 enabled
+2、getenforce                 ##也可以用这个命令检查
+关闭SELinux：
+1、临时关闭（不用重启机器）：
+setenforce 0                  ##设置SELinux 成为permissive模式
+                              ##setenforce 1 设置SELinux 成为enforcing模式
+2、修改配置文件需要重启机器：
+修改/etc/selinux/config 文件
+将SELINUX=enforcing改为SELINUX=disabled
+重启机器即可
+
+groupadd docker
+usermod -aG docker $USER
+
+Buildme - a cloud based CI solution. See also detailed reports. A build monitor is deployed to balance Buildme and CI
+
+cd centos6-image && tar -c . | docker import - centos7
+docker images
+docker run -i -t centos7 /bin/bash
+//进终端（没有ssh服务），-i 分配终端，-t表示在前台执行，-d表示在后台运行 
+docker build -t centos7-ssh .
+docker ps -a
+docker export 4886d048924b > centos7.tar
+cat centos7.tar  | docker import - centos7:v1.0
+docker run -i -t centos7:v1.0 /bin/bash
+socker attach [container id]
+
+/etc/rc.local
+domainname Shanghai
+/etc/hosts
+135.251.206.229 asblx29
+138.203.68.172  hg.be.alcatel-lucent.com
+138.203.68.172  artifact.be.alcatel-lucent.com
+135.203.68.87    aww.sh.bel.alcatel.be
+
+cd /root/.ssh
+scp sidl@135.242.61.175:/home/sidl/.ssh/id_rsa.pub ./
+scp sidl@135.242.61.175:/home/sidl/.ssh/id_rsa ./
+hg clone ssh://hg@135.251.206.229/fdt1265/sw
+
+2、执行命令，查看容器信息 ，找到你的容器
+      docker inspect +容器ID
+3、执行命令启动你的容器
+      docker start + 容器ID
+
+reinstall mercurial
+
+hg clone ssh://hg@asblx29/fdt1265/sw
+
+ps -e -o ppid,stat | grep Z | cut -d " " -f2 | xargs kill -9
+杀死僵尸进程
+
+fuser -m -v /dev/mapper/cl-repome
+查看目录在被谁使用
+umount /dev/mapper/cl-repome
+卸载磁盘
+mkfs -t ext4 /dev/mapper/cl-repome
+格式化文件系统
+mkfs -t xfs 
+
+
+防火墙：iptables　　Apache服务名称：httpd　　MySQL服务名称：mysqld　　VSFTP服务名称：vsftpd
+使某服务 自动启动　　systemctl enable httpd.service
+使某服务 不自动启动　　systemctl disable httpd.service
+检查服务 状态　　systemctl is-active httpd.service（仅显示是否 Active）systemctl status httpd.service（服务详细信息）
+显示所有 已启动的服务　　systemctl list-units --type=service
+启动某服务　　systemctl start httpd.service
+停止某服务　　systemctl stop httpd.service
+重启某服务　　systemctl restart httpd.service
+
+ulimit -c unlimited
+core dump又叫核心转储, 当程序运行过程中发生异常, 程序异常退出时, 由操作系统把程序当前的内存状况存储在一个core文件中, 叫core dump. (linux中如果内存越界会收到SIGSEGV信号，然后就会core dump)在程序运行的过程中，有的时候我们会遇到Segment fault(段错误)这样的错误。这种看起来比较困难，因为没有任何的栈、trace信息输出。该种类型的错误往往与指针操作相关。往往可以通过这样的方式进行定位。
+当前目录core.[pid]的coredump
+
+VNC 锁屏的问题解决方法:
+１）请用ssh登录服务器后执行。vncserver –kill :10 ，如果你的ID是10的话，kill掉当前进程后重建vnc，通过start_vnc重建
+2)再登录ＶＮＣ后，执行setterm -blank 0
+3)在vnc界面中，执行如下操作：
+System（菜单栏）-> Preferences->Screensaver，取消对 Activer Screensave....的勾选
+
+对指定用户的quota配置。
+[root@srv3 ~]#edquota -u username （编辑用户）
+
+Disk quotas for user test (uid 501):
+
+  Filesystem                   blocks       soft       hard     inodes     soft     hard
+
+  /dev/mapper/vg_aont12-lv_home         40          0          0         10        0        0
+
+Blocks不用配
+
+前两个Soft hard是容量限制KB
+
+后两个Soft Hard是文件数量（inodes）
+
+
+[root@srv3 ~]#edquota -g groupname（编辑组）
+[root@srv3 ~]#edquota -p user1 user2 （将用户user1的配置复制到用户user2）
+
+[root@ASBLX09 ~]# repquota -a
+*** Report for user quotas on device /dev/sda2
+Block grace time: 7days; Inode grace time: 7days
+                        Block limits File limits
+User used soft hard grace used soft hard grace
+----------------------------------------------------------------------
+root -- 202292 0 0 4 0 0 
+buildmgr -- 59607688 0 0 2082524 0 0 
+chunyagu -- 4 0 0 1 0 0 
+xiongbic -- 4 0 0 1 0 0 
+quand -- 11788148 0 0 555501 0 0 
+hzhu030 -- 4 0 0 1 0 0 
+brantzh -- 4 0 0 1 0 0 
+xdeng -- 52434296 0 0 2046166 0 0 
+jbhuang -- 82646936 0 0 2699999 0 0 
+jingfeig -- 4 0 0 1 0 0 
+yxie007 -- 88842816 0 0 2953657 0 0 
+yunchanx -- 23450976 0 0 803669 0 0 
+zliu016 -- 32274272 0 0 961943 0 0     
+
+setquota -u sidl 5120000 5140480 2113645484 2113645484 /home/
+
+
+/etc/sysconfig/network-scripts/ifcfg-eth0
+
+
+批量配置限额 setquota -u <id> 100000 200000 0 0 /home
+
+[root@FNQDA001 ~]# vi /etc/pam.d/vsftpd
+#%PAM-1.0
+session optional pam_keyinit.so force revoke
+auth required pam_listfile.so item=user sense=deny file=/etc/vsftpd/ftpusers onerr=succeed
+#auth required pam_shells.so
+auth include system-auth
+account include system-auth
+session required pam_loginuid.so
+session include system-auth
+
+vi /etc/ssh/sshd_config
+解决root用户登录问题
+
+/etc/fstab 编辑文件系统配置quato等内容
+sudo mount -a
+不用重启就可以解决重新挂载
+
+abrt-cli list
+
+
+hg initial 创建一个本地库
+unset PERL_MM_OPT
+
+
+ASBLX61:/ap/local/devtools
+$ hg path
+default = ssh://hg@hg.be.alcatel-lucent.com/all/devtools
+path路径在这里
+
+
+export HTTP_PROXY=135.251.33.16:80
+
+nohup用途：LINUX命令用法，不挂断地运行命令。
+nohup java -DJENKINS_HOME=/repo/builder/jenkins -DJETTY_HOME=/repo/builder/jenkins -jar jenkins.war > jenkins.log 2>&1 &
+nohup /var/hudson/jdk1.7.0_25/bin/java -jar /var/hudson/jenkins_1.640.war
+
+配置vxworks上网管理，管理口对应管理的ip 
+
+
+file not recognized: File truncated
+This error most likely appeared after the previous build was interrupted and object file was not generated completely.
+
+
+DNS:
+[root@localhost ~]# cat /etc/resolv.conf
+search               localdomain
+nameserver 172.16.0.250
+linux下dns测试命令：
+/etc/hosts ：记录hostname对应的ip地址
+/etc/resolv.conf ：设置DNS服务器的ip地址
+/etc/host.conf ：指定域名解析的顺序（是从本地的hosts文件解析还是从DNS解析）
+DNS的查询指令：host、nslookup、dig
+
+mount -o loop rhel-server-6.0-i386-dvd.iso /ISO/
+挂载ISO镜像文件
+
+新系统如果添加nfs文件系统
+/etc/fstab
+yum install rpcbind -y
+yum install nfs-utils -y
+查看服务器共享的文件
+[root@localhost~]# showmount -e 172.16.30.91
+挂载到客户机上
+[root@localhost ~]# mount -t nfs172.16.30.91:/sharedata /mnt/
+添加开机启动到/etc/fstab
+FNQDA019:/home          /home                   nfs     defaults        0 0
+
+配置nis客户端
+修改/etc/yp.conf文件
+domain Shanghai server FNQDA019
+ypserver FNQDA019
+
+查看一个命令的运行log
+strace -o passwd.log passwd
+
+yum重新安装软件
+yum reinstall xxx
+
+同步文件
+rsync -avz buildmgr@135.251.205.65:/home/buildmgr/CI_Repo /home/buildmgr/
+
+a. 首先将用户名密码一起写入一个临时文件.
+cat chpass.txt
+root:123456
+zhaohang:123456
+b. 使用如下命令对用户口令进行修改：
+chpasswd < chpass.txt
+
+netstat -natp
+Netstat是在内核中访问网络连接状态及其相关信息的程序，它能提供TCP连接，TCP和UDP监听，进程内存管理的相关报告。
+iptables -nL
+查看防火墙设置
+iptables -D INPUT 9
+删除防火墙INPUT目录中的第九条规则
+
+/etc/sysconfig/network-scripts/ifcfg-eth0
+PREFIX=25
+systemctl restart network
+ifconfig eth0 netmask 255.255.255.128
+不重启设置设置网络netmask
+
+正则表达式中：
+&lt; < 小于号 
+&gt; > 大于号 
+&amp; & 和 
+&apos; ' 单引号 
+&quot; " 双引号
+
+gcc/g++ -shared -fPIC
+强制使用动态库
+
+ /etc/ld.so.conf 
+ 配置so路径
+ 
+g++ -nostdlib
+options specifying linkage of the system libraries, such as -static-libgcc or -shared-libgcc, will be ignored
+-Bprefix
+This option specifies where to find the executables, libraries, include files, and data files of the compiler itself.
+
+
+修改/proc/sys/kernel/softlockup_panic值为1将产生core文件，core文件的位置在/proc/sys/kernel/core_pattern
+/proc目录本身是动态加载的，每次系统重启都会重新加载，因此这种方法只能作为临时修改
+
+延长CPU STUCK阈值为30
+echo 30 > /proc/sys/kernel/watchdog_thresh 
+sysctl -w kernel.watchdog_thresh=30
+/etc/sysctl.conf
+kernel.watchdog_thresh=30
+下面这个文件控制产生coredump的位置
+proc/sys/kernel/core_pattern
+
+
+ASBLX34:/home/sidl/do
+$ time g++ main.cpp
+g++ main.cpp  0.05s user 0.02s system 29% cpu 0.216 total
+ASBLX34:/home/sidl/do
+$ g++ A.h          
+ASBLX34:/home/sidl/do
+$ time g++ main.cpp
+g++ main.cpp  0.03s user 0.02s system 92% cpu 0.052 total
+ASBLX34:/home/sidl/do
+$ ls -al A.h.gch 
+-rw-r--r-- 1 sidl wbasw 2339192 Nov  6 14:30 A.h.gch
+ASBLX34:/home/sidl/do
+使用Precompile header可以显著提高编译效率
+
+iostat -x 1
+查看磁盘读写
+vmstat -n 1
+查看内存使用情况
+free -h
+查看内存使用情况
+sudo iotop
+查看使用磁盘io最多的进程
+
+[root@QDFNA01 ~]# top
+top - 15:51:29 up 15 days,  2:32, 41 users,  load average: 1.02, 5.52, 9.19
+Tasks: 844 total,   1 running, 842 sleeping,   1 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.2 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+       As  a default, percentages for these individual categories are displayed.  Where two labels are shown below, those for more
+       recent kernel versions are shown first.
+           us, user    : time running un-niced user processes
+           sy, system  : time running kernel processes
+           ni, nice    : time running niced user processes
+           id, idle    : time spent in the kernel idle handler
+           wa, IO-wait : time waiting for I/O completion
+           hi : time spent servicing hardware interrupts
+           si : time spent servicing software interrupts
+           st : time stolen from this vm by the hypervisor
+           
+           
+/var/spool/abrt/
+abrt-cli list
+abrt-auto-reporting disabled
+abrt-auto-reporting enabled
+
+service httpd start
+启动http服务器
+
+同一个ssh文件免秘钥登陆其他服务器
+cat id_rsa.pub >>~/.ssh/authorized_keys
+
+
+针对Docker客户端版本大于1.10的用户您可以通过修改daemon配置文件/etc/docker/daemon.json来使用加速器：sudo mkdir -p /etc/docker
+sudo tee /etc/docker/daemon.json <<-'EOF'
+{
+  "registry-mirrors": ["https://xxxxxxxx.mirror.aliyuncs.com"]
+}
+EOF
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+
+nohup hg serve > /dev/null 2>&1 &
+启动mercurial server
+
+alias pmd="/home/sidl/PMD/pmd-bin-6.2.0/bin/run.sh cpd"
+pmd --minimum-tokens 100 --files ./iwu --language cpp > haha.out
+
+systemctl stop abrt-ccpp.service
+systemctl stop abrt-oops.service
+systemctl stop abrt-xorg.service
+systemctl stop abrtd.service
+systemctl disable abrt-oops.service
+systemctl disable abrt-ccpp.service
+systemctl disable abrt-xorg.service
+systemctl disable abrtd.service
+
+g++ -shared -fPIC -o libmyAPI.so myAPI.cpp
+编译动态库
+g++ -static
+编译使用静态库
+
+Valgrind是一款用于内存调试、内存泄漏检测以及性能分析的软件开发工具。
+
+ps -A -ostat,ppid |grep -e '^[Zz]' | awk '{print $2}'
+显示所有僵死进程
+kill -HUP `ps -A -ostat,ppid |grep -e '^[Zz]' | awk '{print $2}'`
+杀死所有僵死进程
+30 2 * * * kill -HUP `ps -A -ostat,ppid |grep -e '^[Zz]' | awk '{print $2}'`
+每天晚上两点半杀死所有僵死进程
+

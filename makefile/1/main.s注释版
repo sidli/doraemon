@@ -1,0 +1,31 @@
+	.file	"main.c"
+	.intel_syntax noprefix
+	.def	__main;	.scl	2;	.type	32;	.endef
+	.section .rdata,"dr"
+.LC0:
+	.ascii "hello world\0"
+	.text
+	.globl	main
+	.def	main;	.scl	2;	.type	32;	.endef
+	.seh_proc	main
+main:
+	push	rbp		//因为接着要将此时的 esp (堆栈指针，stack pointer)赋予 ebp(堆栈数据指针，base pointer，基址指针) 以便后面用 ebp 来作为栈基并以此通过 [ebp+??] 来访问函数的参数、以 [ebp-??] 来访问函数的变量。
+	.seh_pushreg	rbp
+	mov	rbp, rsp	//rsp指针复制到rbp中
+	.seh_setframe	rbp, 0
+	sub	rsp, 48		//rsp移动若干位，预留空间给函数传递的变量使用，可以看到是从高地址到低地址
+	.seh_stackalloc	48
+	.seh_endprologue
+	call	__main
+	lea	rax, .LC0[rip]		//传递.LC0[rip]地址到rax(用于操作数和结果的累加器)，load effective address
+	mov	QWORD PTR -8[rbp], rax		//将字符串地址放入rbp中
+	mov	rax, QWORD PTR -8[rbp]		//将参数栈首地址放入rax，为函数调用做准备，函数参数传递从末位到首位
+	mov	rcx, rax		//将rax保存到rcx中
+	call	printf
+	nop
+	add	rsp, 48
+	pop	rbp
+	ret
+	.seh_endproc
+	.ident	"GCC: (GNU) 4.8.3"
+	.def	printf;	.scl	2;	.type	32;	.endef

@@ -1,0 +1,1 @@
+int wang_hello();

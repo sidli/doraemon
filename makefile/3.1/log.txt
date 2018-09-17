@@ -1,0 +1,17 @@
+gcc main.c -std=c99
+
+#include "print_pretty.c"
+#include "print_pretty.c"
+
+#ifndef PRINT_PRETTY
+#define PRINT_PRETTY
+#endif
+
+C99标准
+C89标准
+
+gcc -c -o wang_hello.o wang_hello.c -std=c99
+
+make -f Makefile.debug
+
+gcc main.o miao_hello.o wang_hello.o -o main.exe

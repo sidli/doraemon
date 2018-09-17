@@ -1,0 +1,15 @@
+CCP = gcc -std=c99
+OFLAG = -o
+.SUFFEXES:.o .c .exe
+.c.o:
+	${CCP} -c $<
+.o.exe:
+	${CCP} ${OFLAG} $@ $<
+all: main.exe
+main.exe:miao_hello.o wang_hello.o print_pretty.o main.o
+miao_hello.o:miao_hello.c
+wang_hello.o:wang_hello.c
+print_pretty.o:print_pretty.c
+main.o:main.c
+clean: 
+	rm -f *.o
