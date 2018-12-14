@@ -1,0 +1,1681 @@
+UPDATE usertable user769523418233689801 [ field6=2X%-[-7P= Y5&Le:@s8R542|-4h*=081z.1v0]=0Xu#*b?Tk8(08L5 V)0J=)/l.9l!A; #*?;n+]1%(><A{8B+ 9>+Se;<d#Q') ]
+READ usertable user5122958731299648014 [ <all fields>]
+UPDATE usertable user5918050438630543064 [ field8=8.z"I-2 4-'r9'f7I=3> =)0> |'$`;?r'"<4U!(4t##x/= 9<05[7=0($Ps, h6Nc*J3)3x<Vg>_+*;r/X)?Me7$.<Z/<Ja3P;< ]
+UPDATE usertable user2071219101098386137 [ field7=:Ie6V,]59?.1Zu/)`)G+,Za!1p/Y%9D+-<j<B/ G+)=r/0r4Hu;"&&)"9Pa!W#-C{0E))Q)6'0$P:881Rc=A'4(d#'l:\#!P%  ]
+[OVERALL], RunTime(ms), 852
+[OVERALL], Throughput(ops/sec), 117370.89201877934
+[TOTAL_GCS_PS_Scavenge], Count, 1
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 1
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.11737089201877934
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 1
+[TOTAL_GC_TIME], Time(ms), 1
+[TOTAL_GC_TIME_%], Time(%), 0.11737089201877934
+[READ], Operations, 50345
+[READ], AverageLatency(us), 4.266977852815573
+[READ], MinLatency(us), 3
+[READ], MaxLatency(us), 1923
+[READ], 95thPercentileLatency(us), 7
+[READ], 99thPercentileLatency(us), 14
+[READ], Return=OK, 50345
+[CLEANUP], Operations, 1
+[CLEANUP], AverageLatency(us), 10.0
+[CLEANUP], MinLatency(us), 10
+[CLEANUP], MaxLatency(us), 10
+[CLEANUP], 95thPercentileLatency(us), 10
+[CLEANUP], 99thPercentileLatency(us), 10
+[UPDATE], Operations, 49655
+[UPDATE], AverageLatency(us), 7.433591783304803
+[UPDATE], MinLatency(us), 3
+[UPDATE], MaxLatency(us), 856
+[UPDATE], 95thPercentileLatency(us), 13
+[UPDATE], 99thPercentileLatency(us), 24
+[UPDATE], Return=OK, 49655
+READ usertable user1921072577756444623 [ <all fields>]
+READ usertable user5802728716254195226 [ <all fields>]
+READ usertable user4741048842180729928 [ <all fields>]
+UPDATE usertable user653081774833061067 [ field9==#8-A{-He3F{-:&!.f5).)Ku:T'!@o6?<-=n/K5,!81O{3:f/Y9)I)9_+0Y5"G}3=d0]g3.$"'4,Gq)34(H##X?1/>68~+%"!)b? ]
+[OVERALL], RunTime(ms), 1043
+[OVERALL], Throughput(ops/sec), 95877.27708533077
+[TOTAL_GCS_PS_Scavenge], Count, 1
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 1
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.09587727708533077
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 1
+[TOTAL_GC_TIME], Time(ms), 1
+[TOTAL_GC_TIME_%], Time(%), 0.09587727708533077
+[READ], Operations, 50186
+[READ], AverageLatency(us), 42.19158729526163
+[READ], MinLatency(us), 3
+[READ], MaxLatency(us), 6771
+[READ], 95thPercentileLatency(us), 113
+[READ], 99thPercentileLatency(us), 361
+[READ], Return=OK, 50186
+[CLEANUP], Operations, 5
+[CLEANUP], AverageLatency(us), 4.2
+[CLEANUP], MinLatency(us), 0
+[CLEANUP], MaxLatency(us), 12
+[CLEANUP], 95thPercentileLatency(us), 12
+[CLEANUP], 99thPercentileLatency(us), 12
+[UPDATE], Operations, 49814
+[UPDATE], AverageLatency(us), 50.53998875818043
+[UPDATE], MinLatency(us), 4
+[UPDATE], MaxLatency(us), 6819
+[UPDATE], 95thPercentileLatency(us), 123
+[UPDATE], 99thPercentileLatency(us), 369
+[UPDATE], Return=OK, 49814
+UPDATE usertable user8401215584746478334 [ field4=5*",Vq&<l/Uu#H!0Pe0Wq;4.3K{>N-!?r3O97-r;Gk+)j78:,/0%X%3<&!<29G{;@}"9l:Q-$8n2+d  >9^m1)b+]s07(8]%7R7$ ]
+READ usertable user2528598084314492139 [ <all fields>]
+READ usertable user7803280757444808063 [ <all fields>]
+UPDATE usertable user2645039727715120873 [ field8=, j&+6>U?5T+0*&1V5;_}3Gc8Q};T!0D-9:|!C?,M#5U?%>h6'l/..2>6<Xa3T+<R/4]o>Si;8,8Hg9=b?A/ )z+Mu0N; B=7Dk' ]
+[OVERALL], RunTime(ms), 1036
+[OVERALL], Throughput(ops/sec), 96525.09652509652
+[TOTAL_GCS_PS_Scavenge], Count, 1
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 1
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.09652509652509653
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 1
+[TOTAL_GC_TIME], Time(ms), 1
+[TOTAL_GC_TIME_%], Time(%), 0.09652509652509653
+[READ], Operations, 50255
+[READ], AverageLatency(us), 86.49678638941398
+[READ], MinLatency(us), 3
+[READ], MaxLatency(us), 10343
+[READ], 95thPercentileLatency(us), 273
+[READ], 99thPercentileLatency(us), 1762
+[READ], Return=OK, 50255
+[CLEANUP], Operations, 10
+[CLEANUP], AverageLatency(us), 4.2
+[CLEANUP], MinLatency(us), 1
+[CLEANUP], MaxLatency(us), 12
+[CLEANUP], 95thPercentileLatency(us), 12
+[CLEANUP], 99thPercentileLatency(us), 12
+[UPDATE], Operations, 49745
+[UPDATE], AverageLatency(us), 101.1414011458438
+[UPDATE], MinLatency(us), 4
+[UPDATE], MaxLatency(us), 10351
+[UPDATE], 95thPercentileLatency(us), 281
+[UPDATE], 99thPercentileLatency(us), 1621
+[UPDATE], Return=OK, 49745
+UPDATE usertable user3348582268060305055 [ field6==]59U7<Ru7,28!>9<~'(r2^y>P7(M=5#x;&p2?$!Km+G;$J+(Ng;8r8H=%#054l7.<7F)9;65I&/j$:>,Y%==><V5$0b'58%$x7 ]
+UPDATE usertable user3338649943509629245 [ field2=,?f;?*>^? >d:4v+" $ p&.z!7",R=!,n?&t$\c2X5'Ra3_u,D}+K+9F%-R'/2v6Og>@s3Vi.+<-3r+(|2%n!341H=(-p;De:#*= ]
+READ usertable user6742720804395623661 [ <all fields>]
+READ usertable user5349475954545216457 [ <all fields>]
+[OVERALL], RunTime(ms), 1084
+[OVERALL], Throughput(ops/sec), 92250.92250922509
+[TOTAL_GCS_PS_Scavenge], Count, 1
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 1
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.09225092250922509
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 1
+[TOTAL_GC_TIME], Time(ms), 1
+[TOTAL_GC_TIME_%], Time(%), 0.09225092250922509
+[READ], Operations, 50082
+[READ], AverageLatency(us), 175.88482888063575
+[READ], MinLatency(us), 3
+[READ], MaxLatency(us), 17839
+[READ], 95thPercentileLatency(us), 532
+[READ], 99thPercentileLatency(us), 4107
+[READ], Return=OK, 50082
+[CLEANUP], Operations, 20
+[CLEANUP], AverageLatency(us), 2.0
+[CLEANUP], MinLatency(us), 0
+[CLEANUP], MaxLatency(us), 6
+[CLEANUP], 95thPercentileLatency(us), 3
+[CLEANUP], 99thPercentileLatency(us), 6
+[UPDATE], Operations, 49918
+[UPDATE], AverageLatency(us), 204.18111703193236
+[UPDATE], MinLatency(us), 4
+[UPDATE], MaxLatency(us), 16879
+[UPDATE], 95thPercentileLatency(us), 532
+[UPDATE], 99thPercentileLatency(us), 3965
+[UPDATE], Return=OK, 49918
+UPDATE usertable user7104206083901049679 [ field4=#C912r=K/1:t*E-4C!55t>Qw9P7 =r<U?,>x'(r:G!.80 #f;Ua.Ym4%~20d0-z3C/>X= *0)A'0Im+00%-"8J- [#0G!4K=,Nq7 ]
+UPDATE usertable user8049662629791728126 [ field8=!7f;T#)Hi*I{8G{74:;R+!18=  <-n:*f2*8%De.?0#/4<Oy:5p3Ea>B!1@g+Ww/Rs=A9(#694p&[w1Ec/Vg"'r>Z/'4*53d1U/4 ]
+READ usertable user1573987489603120213 [ <all fields>]
+UPDATE usertable user5585365541829320262 [ field4=)S*6.184(J%?Ea+'p>D.Oa11p; ~8((5M'5H'9+25)2-5t,0d:R5'&<(:d0Po&72)O/Io"@k'1~=Mw*_/ 1<4B%7".-)l8$f6 ]
+[OVERALL], RunTime(ms), 1120
+[OVERALL], Throughput(ops/sec), 89285.71428571429
+[TOTAL_GCS_PS_Scavenge], Count, 2
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 2
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.17857142857142858
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 2
+[TOTAL_GC_TIME], Time(ms), 2
+[TOTAL_GC_TIME_%], Time(%), 0.17857142857142858
+[READ], Operations, 49835
+[READ], AverageLatency(us), 460.0987859937795
+[READ], MinLatency(us), 3
+[READ], MaxLatency(us), 30463
+[READ], 95thPercentileLatency(us), 2239
+[READ], 99thPercentileLatency(us), 10383
+[READ], Return=OK, 49835
+[CLEANUP], Operations, 50
+[CLEANUP], AverageLatency(us), 1.4
+[CLEANUP], MinLatency(us), 0
+[CLEANUP], MaxLatency(us), 5
+[CLEANUP], 95thPercentileLatency(us), 3
+[CLEANUP], 99thPercentileLatency(us), 5
+[UPDATE], Operations, 50165
+[UPDATE], AverageLatency(us), 522.8741951559853
+[UPDATE], MinLatency(us), 4
+[UPDATE], MaxLatency(us), 25727
+[UPDATE], 95thPercentileLatency(us), 2119
+[UPDATE], 99thPercentileLatency(us), 9967
+[UPDATE], Return=OK, 50165
+UPDATE usertable user55146947531390796 [ field2=)Z1=$j1'j'O3:Su2Z="*, O5%E;()"?$0%>`,K31@!5@3$ |5Nm:_i-600;f9(j7^;,)b?8 --$0Vo<D{?Ii/_-510"",0Ro(#.) ]
+UPDATE usertable user5912804296099134935 [ field3=9]c*=09^99/z-8|>Y5 $.9.01N?))l-\31T{)\k&)t*.,%Ma'%$9"h:.l/M= Sk#N"K'%Ey4/05D/2** ;.:R?%%*1&81As <<( ]
+UPDATE usertable user3242974555016791144 [ field9=5J}3F5.Nm+;d#E9,O!79,!#,(#~:^;)%v##|"^7552"#v7Yg>P7A!=F#,04!Yu3Dy8_e+B+#W==E#=Ei7681G-%3&( l&'8/8~/ ]
+READ usertable user5691533215384974621 [ <all fields>]
+[OVERALL], RunTime(ms), 1159
+[OVERALL], Throughput(ops/sec), 86281.27696289905
+[TOTAL_GCS_PS_Scavenge], Count, 2
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 3
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.2588438308886971
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 2
+[TOTAL_GC_TIME], Time(ms), 3
+[TOTAL_GC_TIME_%], Time(%), 0.2588438308886971
+[READ], Operations, 50140
+[READ], AverageLatency(us), 923.8138611886717
+[READ], MinLatency(us), 3
+[READ], MaxLatency(us), 34143
+[READ], 95thPercentileLatency(us), 5071
+[READ], 99thPercentileLatency(us), 16039
+[READ], Return=OK, 50140
+[CLEANUP], Operations, 100
+[CLEANUP], AverageLatency(us), 1.11
+[CLEANUP], MinLatency(us), 0
+[CLEANUP], MaxLatency(us), 5
+[CLEANUP], 95thPercentileLatency(us), 3
+[CLEANUP], 99thPercentileLatency(us), 4
+[UPDATE], Operations, 49860
+[UPDATE], AverageLatency(us), 977.3153028479743
+[UPDATE], MinLatency(us), 4
+[UPDATE], MaxLatency(us), 37151
+[UPDATE], 95thPercentileLatency(us), 4063
+[UPDATE], 99thPercentileLatency(us), 15119
+[UPDATE], Return=OK, 49860
+UPDATE usertable user1337537941806875960 [ field4=5Q%8#~40d#C;:Q74Ti>384L'0Is22$?'2(H/0Pc:%8%_9(Tu5Ua:%l+Q?%B5),n7#n6 b.-`+G5%A)A-=5j+G+)?l94440h*9n. ]
+UPDATE usertable user1241302592801897411 [ field2=)=*91 .8f;Rw<F9 $.(Q90Y)/S{2,n&/<9P=:=$$Y/0\{7<`-%00Y=5R+<\u2*2((l!@w#Ao>Xo&.v,:*)*v!=6)Ug+=n:_g8K-$ ]
+READ usertable user3338649943509629245 [ <all fields>]
+READ usertable user4288356040983891607 [ <all fields>]
+[OVERALL], RunTime(ms), 1149
+[OVERALL], Throughput(ops/sec), 87032.20191470844
+[TOTAL_GCS_PS_Scavenge], Count, 2
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 2
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.17406440382941687
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 2
+[TOTAL_GC_TIME], Time(ms), 2
+[TOTAL_GC_TIME_%], Time(%), 0.17406440382941687
+[READ], Operations, 49937
+[READ], AverageLatency(us), 1251.4001842321325
+[READ], MinLatency(us), 3
+[READ], MaxLatency(us), 57567
+[READ], 95thPercentileLatency(us), 7495
+[READ], 99thPercentileLatency(us), 21487
+[READ], Return=OK, 49937
+[CLEANUP], Operations, 150
+[CLEANUP], AverageLatency(us), 0.9533333333333334
+[CLEANUP], MinLatency(us), 0
+[CLEANUP], MaxLatency(us), 5
+[CLEANUP], 95thPercentileLatency(us), 3
+[CLEANUP], 99thPercentileLatency(us), 4
+[UPDATE], Operations, 50063
+[UPDATE], AverageLatency(us), 1415.6622255957493
+[UPDATE], MinLatency(us), 4
+[UPDATE], MaxLatency(us), 57439
+[UPDATE], 95thPercentileLatency(us), 7035
+[UPDATE], 99thPercentileLatency(us), 22319
+[UPDATE], Return=OK, 50063
+UPDATE usertable user7461223496605049899 [ field3=<7()C=:>b3Ks5$b&Kc(]1(Dk,*b.,h)Dq.#h5D#9U=26.1^{*Vs7Z710f&Oy-Ki"1|:=> 84.\q&<24.l7U%6R%=,l:P/)]5%O%8 ]
+UPDATE usertable user306556647191877105 [ field3=-3*%Z)--p/_g850(C5',&1Gq5@5,G71;n:"r7_;5G708~'L%4T5$L-Ae3?0;*~'^g(F?E'%>t22`<G)=8~:X!!J/<Ju&=,.4j& ]
+UPDATE usertable user5113586367261112652 [ field9=5J9!6.?:v'^m0N1$ h;Ko;Ac>&`/4>"?"4"85Ag&,07O79(v*9$8_!"E)(D3,?6%="8"h>%f##(< n7Da?L+0)v>,"!Y7,-~>L?) ]
+READ usertable user8401433899964320217 [ <all fields>]
+[OVERALL], RunTime(ms), 1213
+[OVERALL], Throughput(ops/sec), 82440.23083264632
+[TOTAL_GCS_PS_Scavenge], Count, 2
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 4
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.3297609233305853
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 2
+[TOTAL_GC_TIME], Time(ms), 4
+[TOTAL_GC_TIME_%], Time(%), 0.3297609233305853
+[READ], Operations, 50042
+[READ], AverageLatency(us), 1739.1835258382957
+[READ], MinLatency(us), 3
+[READ], MaxLatency(us), 58719
+[READ], 95thPercentileLatency(us), 10951
+[READ], 99thPercentileLatency(us), 22223
+[READ], Return=OK, 50042
+[CLEANUP], Operations, 200
+[CLEANUP], AverageLatency(us), 0.865
+[CLEANUP], MinLatency(us), 0
+[CLEANUP], MaxLatency(us), 8
+[CLEANUP], 95thPercentileLatency(us), 3
+[CLEANUP], 99thPercentileLatency(us), 4
+[UPDATE], Operations, 49958
+[UPDATE], AverageLatency(us), 2024.5849513591418
+[UPDATE], MinLatency(us), 4
+[UPDATE], MaxLatency(us), 59999
+[UPDATE], 95thPercentileLatency(us), 10447
+[UPDATE], 99thPercentileLatency(us), 21247
+[UPDATE], Return=OK, 49958
+READ usertable user7567391170160704258 [ <all fields>]
+READ usertable user6400663543555865497 [ <all fields>]
+READ usertable user4294162144027440184 [ <all fields>]
+READ usertable user1573987489603120213 [ <all fields>]
+READ usertable user6399761937749426484 [ <all fields>]
+READ usertable user3111914405046218919 [ <all fields>]
+READ usertable user2513979577744548648 [ <all fields>]
+READ usertable user8516755622340668055 [ <all fields>]
+READ usertable user4993018502353356685 [ <all fields>]
+READ usertable user6284440215373078646 [ <all fields>]
+READ usertable user5479976144003648234 [ <all fields>]
+[OVERALL], RunTime(ms), 638
+[OVERALL], Throughput(ops/sec), 156739.8119122257
+[TOTAL_GCS_PS_Scavenge], Count, 0
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.0
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 0
+[TOTAL_GC_TIME], Time(ms), 0
+[TOTAL_GC_TIME_%], Time(%), 0.0
+[READ], Operations, 100000
+[READ], AverageLatency(us), 4.33773
+[READ], MinLatency(us), 3
+[READ], MaxLatency(us), 387
+[READ], 95thPercentileLatency(us), 7
+[READ], 99thPercentileLatency(us), 12
+[READ], Return=OK, 100000
+[CLEANUP], Operations, 1
+[CLEANUP], AverageLatency(us), 11.0
+[CLEANUP], MinLatency(us), 11
+[CLEANUP], MaxLatency(us), 11
+[CLEANUP], 95thPercentileLatency(us), 11
+[CLEANUP], 99thPercentileLatency(us), 11
+READ usertable user9206239616628049194 [ <all fields>]
+READ usertable user4177720500626811450 [ <all fields>]
+READ usertable user4987430714527649991 [ <all fields>]
+READ usertable user1352156448376819451 [ <all fields>]
+READ usertable user1573987489603120213 [ <all fields>]
+READ usertable user3107446538244793121 [ <all fields>]
+READ usertable user8738586663566968817 [ <all fields>]
+READ usertable user5927982763181218874 [ <all fields>]
+READ usertable user5817347222824138717 [ <all fields>]
+READ usertable user2750429125540792901 [ <all fields>]
+READ usertable user6862728708791239180 [ <all fields>]
+[OVERALL], RunTime(ms), 831
+[OVERALL], Throughput(ops/sec), 120336.94344163658
+[TOTAL_GCS_PS_Scavenge], Count, 0
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.0
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 0
+[TOTAL_GC_TIME], Time(ms), 0
+[TOTAL_GC_TIME_%], Time(%), 0.0
+[READ], Operations, 100000
+[READ], AverageLatency(us), 35.87868
+[READ], MinLatency(us), 3
+[READ], MaxLatency(us), 4583
+[READ], 95thPercentileLatency(us), 189
+[READ], 99thPercentileLatency(us), 368
+[READ], Return=OK, 100000
+[CLEANUP], Operations, 5
+[CLEANUP], AverageLatency(us), 6.4
+[CLEANUP], MinLatency(us), 2
+[CLEANUP], MaxLatency(us), 13
+[CLEANUP], 95thPercentileLatency(us), 13
+[CLEANUP], 99thPercentileLatency(us), 13
+READ usertable user7948741098767481896 [ <all fields>]
+READ usertable user7239392455378749137 [ <all fields>]
+READ usertable user2051354451997034517 [ <all fields>]
+READ usertable user513427536553935811 [ <all fields>]
+READ usertable user2760361450091468711 [ <all fields>]
+READ usertable user4751541127243546186 [ <all fields>]
+READ usertable user663014099383736877 [ <all fields>]
+READ usertable user2393971673348933129 [ <all fields>]
+READ usertable user8401215584746478334 [ <all fields>]
+READ usertable user6154499986426787317 [ <all fields>]
+READ usertable user6521231408463621464 [ <all fields>]
+[OVERALL], RunTime(ms), 856
+[OVERALL], Throughput(ops/sec), 116822.42990654205
+[TOTAL_GCS_PS_Scavenge], Count, 0
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.0
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 0
+[TOTAL_GC_TIME], Time(ms), 0
+[TOTAL_GC_TIME_%], Time(%), 0.0
+[READ], Operations, 100000
+[READ], AverageLatency(us), 76.23867
+[READ], MinLatency(us), 3
+[READ], MaxLatency(us), 7387
+[READ], 95thPercentileLatency(us), 396
+[READ], 99thPercentileLatency(us), 757
+[READ], Return=OK, 100000
+[CLEANUP], Operations, 10
+[CLEANUP], AverageLatency(us), 3.3
+[CLEANUP], MinLatency(us), 1
+[CLEANUP], MaxLatency(us), 12
+[CLEANUP], 95thPercentileLatency(us), 12
+[CLEANUP], 99thPercentileLatency(us), 12
+READ usertable user3579785673325141179 [ <all fields>]
+READ usertable user9110004267623070645 [ <all fields>]
+READ usertable user4414170048423055703 [ <all fields>]
+READ usertable user6399761937749426484 [ <all fields>]
+READ usertable user8989654717933156561 [ <all fields>]
+READ usertable user6053236810108242522 [ <all fields>]
+READ usertable user5228908089637460490 [ <all fields>]
+READ usertable user5339761945212382530 [ <all fields>]
+READ usertable user9100071943072394835 [ <all fields>]
+READ usertable user1005413005517793606 [ <all fields>]
+READ usertable user5817347222824138717 [ <all fields>]
+[OVERALL], RunTime(ms), 871
+[OVERALL], Throughput(ops/sec), 114810.5625717566
+[TOTAL_GCS_PS_Scavenge], Count, 0
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.0
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 0
+[TOTAL_GC_TIME], Time(ms), 0
+[TOTAL_GC_TIME_%], Time(%), 0.0
+[READ], Operations, 100000
+[READ], AverageLatency(us), 155.93085
+[READ], MinLatency(us), 3
+[READ], MaxLatency(us), 7987
+[READ], 95thPercentileLatency(us), 810
+[READ], 99thPercentileLatency(us), 1481
+[READ], Return=OK, 100000
+[CLEANUP], Operations, 20
+[CLEANUP], AverageLatency(us), 1.85
+[CLEANUP], MinLatency(us), 1
+[CLEANUP], MaxLatency(us), 3
+[CLEANUP], 95thPercentileLatency(us), 3
+[CLEANUP], 99thPercentileLatency(us), 3
+READ usertable user5811541119780590140 [ <all fields>]
+READ usertable user7928534804371831711 [ <all fields>]
+READ usertable user6873002678636213555 [ <all fields>]
+READ usertable user1921072577756444623 [ <all fields>]
+READ usertable user6289686357904486775 [ <all fields>]
+READ usertable user2754896992342218699 [ <all fields>]
+READ usertable user3117720508089767496 [ <all fields>]
+READ usertable user8396529402727210653 [ <all fields>]
+READ usertable user7596409868082749357 [ <all fields>]
+READ usertable user4530051731311543989 [ <all fields>]
+READ usertable user1579233632134528342 [ <all fields>]
+[OVERALL], RunTime(ms), 859
+[OVERALL], Throughput(ops/sec), 116414.43538998836
+[TOTAL_GCS_PS_Scavenge], Count, 2
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 3
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.3492433061699651
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 2
+[TOTAL_GC_TIME], Time(ms), 3
+[TOTAL_GC_TIME_%], Time(%), 0.3492433061699651
+[READ], Operations, 100000
+[READ], AverageLatency(us), 367.12848
+[READ], MinLatency(us), 3
+[READ], MaxLatency(us), 17903
+[READ], 95thPercentileLatency(us), 2397
+[READ], 99thPercentileLatency(us), 4183
+[READ], Return=OK, 100000
+[CLEANUP], Operations, 50
+[CLEANUP], AverageLatency(us), 0.88
+[CLEANUP], MinLatency(us), 0
+[CLEANUP], MaxLatency(us), 4
+[CLEANUP], 95thPercentileLatency(us), 3
+[CLEANUP], 99thPercentileLatency(us), 4
+READ usertable user5933010590494785120 [ <all fields>]
+READ usertable user4866862849619894024 [ <all fields>]
+READ usertable user3222768260621140959 [ <all fields>]
+READ usertable user5691533215384974621 [ <all fields>]
+READ usertable user4746854945224278505 [ <all fields>]
+READ usertable user2071219101098386137 [ <all fields>]
+READ usertable user4288356040983891607 [ <all fields>]
+READ usertable user7350587956247969742 [ <all fields>]
+READ usertable user6168900177778888925 [ <all fields>]
+READ usertable user5324583478130298591 [ <all fields>]
+READ usertable user5218634119792486115 [ <all fields>]
+[OVERALL], RunTime(ms), 881
+[OVERALL], Throughput(ops/sec), 113507.37797956867
+[TOTAL_GCS_PS_Scavenge], Count, 1
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 1
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.11350737797956867
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 1
+[TOTAL_GC_TIME], Time(ms), 1
+[TOTAL_GC_TIME_%], Time(%), 0.11350737797956867
+[READ], Operations, 100000
+[READ], AverageLatency(us), 758.05994
+[READ], MinLatency(us), 3
+[READ], MaxLatency(us), 32863
+[READ], 95thPercentileLatency(us), 4827
+[READ], 99thPercentileLatency(us), 7659
+[READ], Return=OK, 100000
+[CLEANUP], Operations, 100
+[CLEANUP], AverageLatency(us), 0.71
+[CLEANUP], MinLatency(us), 0
+[CLEANUP], MaxLatency(us), 5
+[CLEANUP], 95thPercentileLatency(us), 2
+[CLEANUP], 99thPercentileLatency(us), 2
+READ usertable user3710627508077871521 [ <all fields>]
+READ usertable user2648947634004406223 [ <all fields>]
+READ usertable user2056600594528442646 [ <all fields>]
+READ usertable user3127092872128302858 [ <all fields>]
+READ usertable user4756568954557112432 [ <all fields>]
+READ usertable user6762367138279133398 [ <all fields>]
+READ usertable user8758232997450478554 [ <all fields>]
+READ usertable user7460663536092909451 [ <all fields>]
+READ usertable user4038066262347686194 [ <all fields>]
+READ usertable user8044976447772460445 [ <all fields>]
+READ usertable user2523693587077382575 [ <all fields>]
+[OVERALL], RunTime(ms), 926
+[OVERALL], Throughput(ops/sec), 107991.36069114471
+[TOTAL_GCS_PS_Scavenge], Count, 1
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 1
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.10799136069114472
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 1
+[TOTAL_GC_TIME], Time(ms), 1
+[TOTAL_GC_TIME_%], Time(%), 0.10799136069114472
+[READ], Operations, 100000
+[READ], AverageLatency(us), 1132.40622
+[READ], MinLatency(us), 3
+[READ], MaxLatency(us), 45439
+[READ], 95thPercentileLatency(us), 6679
+[READ], 99thPercentileLatency(us), 12119
+[READ], Return=OK, 100000
+[CLEANUP], Operations, 150
+[CLEANUP], AverageLatency(us), 0.46
+[CLEANUP], MinLatency(us), 0
+[CLEANUP], MaxLatency(us), 4
+[CLEANUP], 95thPercentileLatency(us), 2
+[CLEANUP], 99thPercentileLatency(us), 3
+READ usertable user6063510779953216897 [ <all fields>]
+READ usertable user6988884361524701841 [ <all fields>]
+READ usertable user7466127993842159463 [ <all fields>]
+READ usertable user6062950819441076449 [ <all fields>]
+READ usertable user6521231408463621464 [ <all fields>]
+READ usertable user3131779054147570539 [ <all fields>]
+READ usertable user7340655631697293932 [ <all fields>]
+READ usertable user5450397485569462687 [ <all fields>]
+READ usertable user6390949534223031570 [ <all fields>]
+READ usertable user7471155821155725709 [ <all fields>]
+READ usertable user7450949526760075524 [ <all fields>]
+[OVERALL], RunTime(ms), 941
+[OVERALL], Throughput(ops/sec), 106269.92561105207
+[TOTAL_GCS_PS_Scavenge], Count, 2
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 2
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.21253985122210414
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 2
+[TOTAL_GC_TIME], Time(ms), 2
+[TOTAL_GC_TIME_%], Time(%), 0.21253985122210414
+[READ], Operations, 100000
+[READ], AverageLatency(us), 1500.82698
+[READ], MinLatency(us), 3
+[READ], MaxLatency(us), 57151
+[READ], 95thPercentileLatency(us), 9135
+[READ], 99thPercentileLatency(us), 14391
+[READ], Return=OK, 100000
+[CLEANUP], Operations, 200
+[CLEANUP], AverageLatency(us), 0.56
+[CLEANUP], MinLatency(us), 0
+[CLEANUP], MaxLatency(us), 6
+[CLEANUP], 95thPercentileLatency(us), 2
+[CLEANUP], 99thPercentileLatency(us), 3
+SCAN usertable user6383805194937360214 26 [ <all fields>]
+SCAN usertable user429582669366036747 56 [ <all fields>]
+SCAN usertable user7224992264026647529 99 [ <all fields>]
+SCAN usertable user9011540893865228090 30 [ <all fields>]
+[OVERALL], RunTime(ms), 725
+[OVERALL], Throughput(ops/sec), 137931.0344827586
+[TOTAL_GCS_PS_Scavenge], Count, 1
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 1
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.13793103448275862
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 1
+[TOTAL_GC_TIME], Time(ms), 1
+[TOTAL_GC_TIME_%], Time(%), 0.13793103448275862
+[CLEANUP], Operations, 1
+[CLEANUP], AverageLatency(us), 9.0
+[CLEANUP], MinLatency(us), 9
+[CLEANUP], MaxLatency(us), 9
+[CLEANUP], 95thPercentileLatency(us), 9
+[CLEANUP], 99thPercentileLatency(us), 9
+[INSERT], Operations, 5059
+[INSERT], AverageLatency(us), 16.29215259932793
+[INSERT], MinLatency(us), 7
+[INSERT], MaxLatency(us), 1773
+[INSERT], 95thPercentileLatency(us), 32
+[INSERT], 99thPercentileLatency(us), 82
+[INSERT], Return=OK, 5059
+[SCAN], Operations, 94941
+[SCAN], AverageLatency(us), 3.9019706975911355
+[SCAN], MinLatency(us), 3
+[SCAN], MaxLatency(us), 371
+[SCAN], 95thPercentileLatency(us), 6
+[SCAN], 99thPercentileLatency(us), 12
+[SCAN], Return=OK, 94941
+INSERT usertable user4154496088452617142 [ field1=(1n6Uy)J3()0.+(-3>'Jy3!j)#$ D74-x+E+97((0v;8$%Ti/W}/560R%4S+"7h#-t2\+$(r?@9=10<0p7L{4<z*Hy.Da*>t>6p# field0=&>&(E-&Mq"U#/Yi;4:)3 ),l:Y1,#t-I%,Lw>H{.Lo+J-9_9+Gq;]g&Am+Ao<Pa3$:<O=<^{:0~2<`0S1%Ga='~'Cw,Ds":*(G=5 field7=7Da648"!6$Vy.R+9Qy9I{.8r;P94+~ ?f;R?=Y7)!~.\k&)6/N3-R%8>8%?.7[!1;:%Fm2T##K--6*"F'5C1&Em+:$' 0%8>>R%$ field6=?Z-)-d/Ks.^30?*,N#31p"[c='$0Jy6Q/<7<7Gu?U="*`#"4+>d7_a><|/(>?6t7$(?F/=Us8:d+8"*S{")` 3<0G{>Se*_%5(b2 field9= ><4?t$\-4C/=Kw7R1/^g"\1,@}.9f<9t6]a(;00Lo:No39`;Aw?5"/Pg:S!1&x6Qe;T949x?;:4^{,Ui'T)1Wc:8b%9`6 f/Ig. field8=#S"8 $9t.Xg8<x7=~?,$%]c+E=-W}&.b"I-7%l3=`/G94*b/-,-)64Sq:'6,64$-n$]o:T-96d;"`,&<4%b5Xk&!,&Je.1:)Na3 field3=/^%<-p)T#!!.:L%<9t)X)-T{;%~*T52Xm'\y2#f75 :[s68*&\;93p:(05,~"]q;($/Ug'<(;&h6 r/5<8E7$#486n+P59'~?Q51 field2=)(8 _w/C%8Hq>?r#Te=Vc:S;3@{;B+1(.(U5*Sw"Ca>O-,Q%1& 9Dq*[i6I37!|/3h,[i2F3/08%?&"B'!Ya":,,*,>Vo7Ta(?(9 field5=%,l?>z7&~'C1*,4!3j6Jk/+~-H/(M9=I! "p9Xk#L:;044h>^a&^q+J)) 6)860Wa27`>A#9Pg&R{8A98H=;J+1Yu8S75Wc-[y6 field4=#8h;+0+Mm#K! 2d>(0!;2- 485d#Bu%)<0:v5]?,X7!U7(/.%?`7^i0S14/6>]a+Sm&88!+<2&t?>~<<z&\)5:x+!`4Im#Q4,t. ]
+SCAN usertable user1825957149775746970 76 [ <all fields>]
+SCAN usertable user7187709305794650178 45 [ <all fields>]
+SCAN usertable user7943494956236073767 96 [ <all fields>]
+[OVERALL], RunTime(ms), 983
+[OVERALL], Throughput(ops/sec), 101729.3997965412
+[TOTAL_GCS_PS_Scavenge], Count, 1
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 1
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.10172939979654119
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 1
+[TOTAL_GC_TIME], Time(ms), 1
+[TOTAL_GC_TIME_%], Time(%), 0.10172939979654119
+[CLEANUP], Operations, 5
+[CLEANUP], AverageLatency(us), 4.0
+[CLEANUP], MinLatency(us), 1
+[CLEANUP], MaxLatency(us), 11
+[CLEANUP], 95thPercentileLatency(us), 11
+[CLEANUP], 99thPercentileLatency(us), 11
+[INSERT], Operations, 5103
+[INSERT], AverageLatency(us), 83.80913188320596
+[INSERT], MinLatency(us), 8
+[INSERT], MaxLatency(us), 6071
+[INSERT], 95thPercentileLatency(us), 222
+[INSERT], 99thPercentileLatency(us), 450
+[INSERT], Return=OK, 5103
+[SCAN], Operations, 94897
+[SCAN], AverageLatency(us), 41.403342571419536
+[SCAN], MinLatency(us), 3
+[SCAN], MaxLatency(us), 6183
+[SCAN], 95thPercentileLatency(us), 126
+[SCAN], 99thPercentileLatency(us), 278
+[SCAN], Return=OK, 94897
+SCAN usertable user774769560765097930 52 [ <all fields>]
+SCAN usertable user2297176363831814132 2 [ <all fields>]
+SCAN usertable user3956449419912651136 76 [ <all fields>]
+SCAN usertable user5691314900167132738 100 [ <all fields>]
+[OVERALL], RunTime(ms), 1018
+[OVERALL], Throughput(ops/sec), 98231.82711198428
+[TOTAL_GCS_PS_Scavenge], Count, 1
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 1
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.09823182711198428
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 1
+[TOTAL_GC_TIME], Time(ms), 1
+[TOTAL_GC_TIME_%], Time(%), 0.09823182711198428
+[CLEANUP], Operations, 10
+[CLEANUP], AverageLatency(us), 2.7
+[CLEANUP], MinLatency(us), 1
+[CLEANUP], MaxLatency(us), 10
+[CLEANUP], 95thPercentileLatency(us), 10
+[CLEANUP], 99thPercentileLatency(us), 10
+[INSERT], Operations, 4945
+[INSERT], AverageLatency(us), 147.30798786653185
+[INSERT], MinLatency(us), 8
+[INSERT], MaxLatency(us), 8815
+[INSERT], 95thPercentileLatency(us), 418
+[INSERT], 99thPercentileLatency(us), 1196
+[INSERT], Return=OK, 4945
+[SCAN], Operations, 95055
+[SCAN], AverageLatency(us), 89.84106043869339
+[SCAN], MinLatency(us), 3
+[SCAN], MaxLatency(us), 11727
+[SCAN], 95thPercentileLatency(us), 286
+[SCAN], 99thPercentileLatency(us), 870
+[SCAN], Return=OK, 95055
+SCAN usertable user6294154224705912573 1 [ <all fields>]
+SCAN usertable user2200051226316094356 36 [ <all fields>]
+SCAN usertable user7918042519309015453 73 [ <all fields>]
+SCAN usertable user6553268224164210686 46 [ <all fields>]
+[OVERALL], RunTime(ms), 1080
+[OVERALL], Throughput(ops/sec), 92592.5925925926
+[TOTAL_GCS_PS_Scavenge], Count, 1
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 1
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.0925925925925926
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 1
+[TOTAL_GC_TIME], Time(ms), 1
+[TOTAL_GC_TIME_%], Time(%), 0.0925925925925926
+[CLEANUP], Operations, 20
+[CLEANUP], AverageLatency(us), 2.8
+[CLEANUP], MinLatency(us), 1
+[CLEANUP], MaxLatency(us), 12
+[CLEANUP], 95thPercentileLatency(us), 4
+[CLEANUP], 99thPercentileLatency(us), 12
+[INSERT], Operations, 5025
+[INSERT], AverageLatency(us), 229.481592039801
+[INSERT], MinLatency(us), 8
+[INSERT], MaxLatency(us), 17167
+[INSERT], 95thPercentileLatency(us), 648
+[INSERT], 99thPercentileLatency(us), 2557
+[INSERT], Return=OK, 5025
+[SCAN], Operations, 94975
+[SCAN], AverageLatency(us), 193.81112924453802
+[SCAN], MinLatency(us), 3
+[SCAN], MaxLatency(us), 17775
+[SCAN], 95thPercentileLatency(us), 596
+[SCAN], 99thPercentileLatency(us), 2457
+[SCAN], Return=OK, 94975
+SCAN usertable user2629301300120896486 55 [ <all fields>]
+SCAN usertable user1370134718019605630 3 [ <all fields>]
+SCAN usertable user8510731204079277595 55 [ <all fields>]
+SCAN usertable user2628181379096615590 18 [ <all fields>]
+[OVERALL], RunTime(ms), 1061
+[OVERALL], Throughput(ops/sec), 94250.7068803016
+[TOTAL_GCS_PS_Scavenge], Count, 2
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 3
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.2827521206409048
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 2
+[TOTAL_GC_TIME], Time(ms), 3
+[TOTAL_GC_TIME_%], Time(%), 0.2827521206409048
+[CLEANUP], Operations, 50
+[CLEANUP], AverageLatency(us), 1.02
+[CLEANUP], MinLatency(us), 0
+[CLEANUP], MaxLatency(us), 4
+[CLEANUP], 95thPercentileLatency(us), 3
+[CLEANUP], 99thPercentileLatency(us), 4
+[INSERT], Operations, 5028
+[INSERT], AverageLatency(us), 522.8550119331742
+[INSERT], MinLatency(us), 8
+[INSERT], MaxLatency(us), 18607
+[INSERT], 95thPercentileLatency(us), 1564
+[INSERT], 99thPercentileLatency(us), 5503
+[INSERT], Return=OK, 5028
+[SCAN], Operations, 94972
+[SCAN], AverageLatency(us), 470.25103188308134
+[SCAN], MinLatency(us), 3
+[SCAN], MaxLatency(us), 30031
+[SCAN], 95thPercentileLatency(us), 1525
+[SCAN], 99thPercentileLatency(us), 5403
+[SCAN], Return=OK, 94972
+SCAN usertable user6040846328291163037 8 [ <all fields>]
+SCAN usertable user8428566218427799875 27 [ <all fields>]
+SCAN usertable user1677697005892370897 22 [ <all fields>]
+SCAN usertable user7482208066730682415 56 [ <all fields>]
+[OVERALL], RunTime(ms), 1065
+[OVERALL], Throughput(ops/sec), 93896.71361502347
+[TOTAL_GCS_PS_Scavenge], Count, 3
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 3
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.28169014084507044
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 3
+[TOTAL_GC_TIME], Time(ms), 3
+[TOTAL_GC_TIME_%], Time(%), 0.28169014084507044
+[CLEANUP], Operations, 100
+[CLEANUP], AverageLatency(us), 0.72
+[CLEANUP], MinLatency(us), 0
+[CLEANUP], MaxLatency(us), 4
+[CLEANUP], 95thPercentileLatency(us), 2
+[CLEANUP], 99thPercentileLatency(us), 3
+[INSERT], Operations, 5005
+[INSERT], AverageLatency(us), 873.3362637362637
+[INSERT], MinLatency(us), 8
+[INSERT], MaxLatency(us), 26831
+[INSERT], 95thPercentileLatency(us), 2877
+[INSERT], 99thPercentileLatency(us), 8823
+[INSERT], Return=OK, 5005
+[SCAN], Operations, 94995
+[SCAN], AverageLatency(us), 920.7133112269066
+[SCAN], MinLatency(us), 3
+[SCAN], MaxLatency(us), 31647
+[SCAN], 95thPercentileLatency(us), 3175
+[SCAN], 99thPercentileLatency(us), 11175
+[SCAN], Return=OK, 94995
+SCAN usertable user8401775545258618782 92 [ <all fields>]
+SCAN usertable user2287803999793278770 54 [ <all fields>]
+INSERT usertable user2530837926363053931 [ field1=:R250%"8 =*&]=57*09p/<&'8n3Z54B!<(t56.8]9"\m'\y/[k2Ty No:?r "f&%0=K/5Kk9)8(2p*-65E!.Io3_a6Gk"I)4D?1 field0=?%z?K?(T=%$28N{;Ye4>|#68-.&=<h<[k.0x,Z=$H9/*&) f7Po>7| Z#1Ry)%08#8+/z;Oo">.-_y8?~:Ue#$>9Q{7W:X1.E{/ field7=#X&2&;5() v=!" ^q9@!5)t;F-!?v0X/9B/#Q- /<4#,9>|,2>=M5*[3,8<8_+=F{??$$3>;%*$=&%F)<W/+Xg&3t"-:1&:"-.4 field6=/[s'[y D};\y8L3< t 0(=*|;/$)H35L!(Z%*: ;b#$~7<t%>l?Yq1-h/3n():(3r73.(P':G31.x"A1!$"%#x/Lk1Ca?Zg(Eq+ field9=8,4%&t63r*T%Ri&S/-&t3R{;9 -O+87r:..'2*,Gg+]?(+t948<4l-"28M;*[%%_;>M?(_7/!8)@1-9f3Y+,1t'^?!7<0,*+/05 field8=?C;-L5=3r*Hm6'h.J+1Wq'[m:.f:W#!041%z"?z2.$2R5)=t.4.<86'(x+W1;#d&3b5&t'Iw) 6<#0;:j'[55>v&7r,H}.8z+Ns* field3=)Kc:P#4?j/Ke;I#598/De.4$.H)$R;>#$5%$1Sc7*|(V) [m'P/1D=:J74,n'3n>S%7Sa7A1>?<,1j=/z*;2&0f*@+/Oa&'*/I5% field2=4A? N)<\!)G%&(" Tm#X/(]g)1,,K9%^q:$v99j2Gg>):(/04"j:F7?2x#?(-N5<$j;04!#(3Qo;4`"34(Ow?K7!6f;]q:M#<3(- field5=/)h+Ga*]e:<n(H?%504N}>*j1/.9?*.)*1'*0,d2Y=3(",88)X?89b53r3_1 3t21p"Ba:8j'52<Ly;Q;->d&1 ) f? <!A} >t: field4=72:)),4:,%A!.<(4>0.T1!Sg%06)(x'_'^e&/n.<r '<==d!>h:D{%T-)<`$^3)+>5We&"&-]%%'8&T+$'0%]m>^5'&l'9*$9*9 ]
+SCAN usertable user6986644519476140049 12 [ <all fields>]
+[OVERALL], RunTime(ms), 1120
+[OVERALL], Throughput(ops/sec), 89285.71428571429
+[TOTAL_GCS_PS_Scavenge], Count, 2
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 4
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.35714285714285715
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 2
+[TOTAL_GC_TIME], Time(ms), 4
+[TOTAL_GC_TIME_%], Time(%), 0.35714285714285715
+[CLEANUP], Operations, 150
+[CLEANUP], AverageLatency(us), 0.7666666666666667
+[CLEANUP], MinLatency(us), 0
+[CLEANUP], MaxLatency(us), 4
+[CLEANUP], 95thPercentileLatency(us), 3
+[CLEANUP], 99thPercentileLatency(us), 3
+[INSERT], Operations, 5120
+[INSERT], AverageLatency(us), 1163.3181640625
+[INSERT], MinLatency(us), 9
+[INSERT], MaxLatency(us), 52383
+[INSERT], 95thPercentileLatency(us), 4211
+[INSERT], 99thPercentileLatency(us), 12671
+[INSERT], Return=OK, 5120
+[SCAN], Operations, 94880
+[SCAN], AverageLatency(us), 1409.881313237774
+[SCAN], MinLatency(us), 3
+[SCAN], MaxLatency(us), 63615
+[SCAN], 95thPercentileLatency(us), 4739
+[SCAN], 99thPercentileLatency(us), 14223
+[SCAN], Return=OK, 94880
+SCAN usertable user2528598084314492139 51 [ <all fields>]
+INSERT usertable user2551822496488686447 [ field1=-/f.Z=-:>52$;7r"Q13]k*Y};Jk+I90(< (*;K{/7~%H-9#.%-`?Sk'3p6B-1@5-Qa)?< ,n!:"9!>0.j.<.9=,)Um>7f?U?%\}; field0=;%j&@w6^5 Gw7 *0<<.7j2C'6J3(O#%:$44 (Ti&7x+_i.3:<Kw*Q=6?z?F94Ls?'2*P+9J-/Do;_+>Og>B#-6f..*.8l:?6-1l; field7=2 v*Vm&,,4Ca*7|.5b::8<&" @7<&f$*>$>23^i>K;8"l/T Zw'6*;[y2_;=-d>Nc4@+$<f0Ta#68?=n+5 $M#->l%%j63`:@34 field6='])$_%(Km7;h*6j21|-J#%<l/Ws27 6/:4">8])-Oe!&&("r-^%8Ok'E!$Q-;;$18~1Pg"Po6Ne72v;1",V'59 %6$*$h&T=0S/, field9=/Xi60"0!6%9n"Qk6Va"%|.!>.-r7)*3'"4&< P=-S3,P}.Aw9:t646.N/1% 9<&=>f7O3!8~:<*0Ww;A'%"v+Cy&7 -1d'E34Zk2 field8==@;=)b#8<8S%2I9$%27-6!L#2.6$Z55H"+n#8l?H7#&0<>~0L{2^q-Su6/67Ho";z*10 R5>F#8_3,@w+@{&@y"^++5f>L)%V/, field3=(2z7(4+3:!>b0'h*No=A+<V}.&p"Xg= p&Qy(5p#4p9$:5!|.#,<Q-(Ca./x*Gu?/t)Jc2!~,2v&;| 7j?I{ 6z" j<4>!U?6Ny2 field2= +v67`8Pm3W9=W=8Fk87$8Ok'Wk"*z8'(%?.3Hu:?b1Ik;7t4Ag#6*"^==$0>8~2<d(>x:Z90Y{"%n='>%Ys"Lc;D'/4l" j4Ua" field5=0:(8O=<!:9Z9$F+ M=(N+4^!1J=- b8O3=/t'9|'<4*7z/Uk,Qk2B%>A94Fc)Qo?,"8$* 9"#La&96;%<(>692p77&%$& ,:(Ti' field4=1C/ )~9Lk'9|:!v&Fc4To2:j#V9) ::=~+%z"N#,1b!D5!#b:X=9(f/T/$,h>%:(Y+"7l+T!3^3(!f,Q7 5p+[#=5p:1r+H%&[k6 ]
+SCAN usertable user2886175457530632807 95 [ <all fields>]
+SCAN usertable user8748300672899802744 99 [ <all fields>]
+[OVERALL], RunTime(ms), 1106
+[OVERALL], Throughput(ops/sec), 90415.91320072333
+[TOTAL_GCS_PS_Scavenge], Count, 3
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 5
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.45207956600361665
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 3
+[TOTAL_GC_TIME], Time(ms), 5
+[TOTAL_GC_TIME_%], Time(%), 0.45207956600361665
+[CLEANUP], Operations, 200
+[CLEANUP], AverageLatency(us), 0.76
+[CLEANUP], MinLatency(us), 0
+[CLEANUP], MaxLatency(us), 5
+[CLEANUP], 95thPercentileLatency(us), 2
+[CLEANUP], 99thPercentileLatency(us), 3
+[INSERT], Operations, 4964
+[INSERT], AverageLatency(us), 1915.408138597905
+[INSERT], MinLatency(us), 7
+[INSERT], MaxLatency(us), 51423
+[INSERT], 95thPercentileLatency(us), 6743
+[INSERT], 99thPercentileLatency(us), 17983
+[INSERT], Return=OK, 4964
+[SCAN], Operations, 95036
+[SCAN], AverageLatency(us), 1806.9523969864051
+[SCAN], MinLatency(us), 3
+[SCAN], MaxLatency(us), 53375
+[SCAN], 95thPercentileLatency(us), 6663
+[SCAN], 99thPercentileLatency(us), 20799
+[SCAN], Return=OK, 95036
+READ usertable user5219194080304626563 [ <all fields>]
+READ usertable user1458105806714631927 [ <all fields>]
+READ usertable user5696219397404242302 [ <all fields>]
+READ usertable user7461223496605049899 [ <all fields>]
+[OVERALL], RunTime(ms), 625
+[OVERALL], Throughput(ops/sec), 160000.0
+[TOTAL_GCS_PS_Scavenge], Count, 0
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.0
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 0
+[TOTAL_GC_TIME], Time(ms), 0
+[TOTAL_GC_TIME_%], Time(%), 0.0
+[READ], Operations, 94929
+[READ], AverageLatency(us), 3.8604325337884102
+[READ], MinLatency(us), 3
+[READ], MaxLatency(us), 382
+[READ], 95thPercentileLatency(us), 6
+[READ], 99thPercentileLatency(us), 12
+[READ], Return=OK, 94929
+[CLEANUP], Operations, 1
+[CLEANUP], AverageLatency(us), 13.0
+[CLEANUP], MinLatency(us), 13
+[CLEANUP], MaxLatency(us), 13
+[CLEANUP], 95thPercentileLatency(us), 13
+[CLEANUP], 99thPercentileLatency(us), 13
+[UPDATE], Operations, 5071
+[UPDATE], AverageLatency(us), 9.758627489647012
+[UPDATE], MinLatency(us), 5
+[UPDATE], MaxLatency(us), 855
+[UPDATE], 95thPercentileLatency(us), 19
+[UPDATE], 99thPercentileLatency(us), 39
+[UPDATE], Return=OK, 5071
+UPDATE usertable user6862728708791239180 [ field5=#A'1Z97;l&Cc=V5-Yy!?j+]?&T};0("*j6]u'Y917 &Xo3/.2T7(P#4/*1-,!1&<Du9]3(T},$>)>b1Ks?.x&\/%X%.6d7^=8Y15 ]
+READ usertable user643709410794525705 [ <all fields>]
+READ usertable user6867974851322647309 [ <all fields>]
+READ usertable user7923630307134722147 [ <all fields>]
+[OVERALL], RunTime(ms), 933
+[OVERALL], Throughput(ops/sec), 107181.13612004287
+[TOTAL_GCS_PS_Scavenge], Count, 0
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.0
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 0
+[TOTAL_GC_TIME], Time(ms), 0
+[TOTAL_GC_TIME_%], Time(%), 0.0
+[READ], Operations, 95032
+[READ], AverageLatency(us), 40.09307391194545
+[READ], MinLatency(us), 3
+[READ], MaxLatency(us), 8527
+[READ], 95thPercentileLatency(us), 166
+[READ], 99thPercentileLatency(us), 299
+[READ], Return=OK, 95032
+[CLEANUP], Operations, 5
+[CLEANUP], AverageLatency(us), 4.6
+[CLEANUP], MinLatency(us), 1
+[CLEANUP], MaxLatency(us), 12
+[CLEANUP], 95thPercentileLatency(us), 12
+[CLEANUP], 99thPercentileLatency(us), 12
+[UPDATE], Operations, 4968
+[UPDATE], AverageLatency(us), 74.92451690821257
+[UPDATE], MinLatency(us), 6
+[UPDATE], MaxLatency(us), 7011
+[UPDATE], 95thPercentileLatency(us), 229
+[UPDATE], 99thPercentileLatency(us), 367
+[UPDATE], Return=OK, 4968
+READ usertable user2408371864701034737 [ <all fields>]
+READ usertable user5213947937773218434 [ <all fields>]
+READ usertable user663014099383736877 [ <all fields>]
+UPDATE usertable user8170012179481642210 [ field0=;70,-`2A1<+~15j:Oa.G%8R+)*(8*r?Zq?&$+&>17";U7(.$(S"P/"$f*)4+>$<<6>4,-*t9 "!>d#?p;Xw(8$$76"0p:Gu=Q+ ]
+[OVERALL], RunTime(ms), 877
+[OVERALL], Throughput(ops/sec), 114025.08551881414
+[TOTAL_GCS_PS_Scavenge], Count, 0
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.0
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 0
+[TOTAL_GC_TIME], Time(ms), 0
+[TOTAL_GC_TIME_%], Time(%), 0.0
+[READ], Operations, 95059
+[READ], AverageLatency(us), 75.65068010393546
+[READ], MinLatency(us), 3
+[READ], MaxLatency(us), 8031
+[READ], 95thPercentileLatency(us), 347
+[READ], 99thPercentileLatency(us), 581
+[READ], Return=OK, 95059
+[CLEANUP], Operations, 10
+[CLEANUP], AverageLatency(us), 3.2
+[CLEANUP], MinLatency(us), 1
+[CLEANUP], MaxLatency(us), 9
+[CLEANUP], 95thPercentileLatency(us), 9
+[CLEANUP], 99thPercentileLatency(us), 9
+[UPDATE], Operations, 4941
+[UPDATE], AverageLatency(us), 139.3885853066181
+[UPDATE], MinLatency(us), 7
+[UPDATE], MaxLatency(us), 8043
+[UPDATE], 95thPercentileLatency(us), 436
+[UPDATE], 99thPercentileLatency(us), 659
+[UPDATE], Return=OK, 4941
+READ usertable user6062950819441076449 [ <all fields>]
+READ usertable user1015345330068469416 [ <all fields>]
+READ usertable user3111914405046218919 [ <all fields>]
+READ usertable user774209600252957482 [ <all fields>]
+[OVERALL], RunTime(ms), 946
+[OVERALL], Throughput(ops/sec), 105708.24524312897
+[TOTAL_GCS_PS_Scavenge], Count, 0
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.0
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 0
+[TOTAL_GC_TIME], Time(ms), 0
+[TOTAL_GC_TIME_%], Time(%), 0.0
+[READ], Operations, 95039
+[READ], AverageLatency(us), 165.51417838992413
+[READ], MinLatency(us), 3
+[READ], MaxLatency(us), 12695
+[READ], 95thPercentileLatency(us), 762
+[READ], 99thPercentileLatency(us), 1622
+[READ], Return=OK, 95039
+[CLEANUP], Operations, 20
+[CLEANUP], AverageLatency(us), 1.7
+[CLEANUP], MinLatency(us), 0
+[CLEANUP], MaxLatency(us), 9
+[CLEANUP], 95thPercentileLatency(us), 3
+[CLEANUP], 99thPercentileLatency(us), 9
+[UPDATE], Operations, 4961
+[UPDATE], AverageLatency(us), 269.62386615601696
+[UPDATE], MinLatency(us), 6
+[UPDATE], MaxLatency(us), 10599
+[UPDATE], 95thPercentileLatency(us), 878
+[UPDATE], 99thPercentileLatency(us), 1674
+[UPDATE], Return=OK, 4961
+READ usertable user4736362660161462247 [ <all fields>]
+READ usertable user784141924803633292 [ <all fields>]
+READ usertable user7466469639136458028 [ <all fields>]
+READ usertable user1824837228751466074 [ <all fields>]
+[OVERALL], RunTime(ms), 928
+[OVERALL], Throughput(ops/sec), 107758.62068965517
+[TOTAL_GCS_PS_Scavenge], Count, 2
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 2
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.21551724137931033
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 2
+[TOTAL_GC_TIME], Time(ms), 2
+[TOTAL_GC_TIME_%], Time(%), 0.21551724137931033
+[READ], Operations, 94941
+[READ], AverageLatency(us), 387.96013313531563
+[READ], MinLatency(us), 3
+[READ], MaxLatency(us), 21967
+[READ], 95thPercentileLatency(us), 2004
+[READ], 99thPercentileLatency(us), 5399
+[READ], Return=OK, 94941
+[CLEANUP], Operations, 50
+[CLEANUP], AverageLatency(us), 1.1
+[CLEANUP], MinLatency(us), 0
+[CLEANUP], MaxLatency(us), 4
+[CLEANUP], 95thPercentileLatency(us), 3
+[CLEANUP], 99thPercentileLatency(us), 4
+[UPDATE], Operations, 5059
+[UPDATE], AverageLatency(us), 710.0276734532516
+[UPDATE], MinLatency(us), 7
+[UPDATE], MaxLatency(us), 21583
+[UPDATE], 95thPercentileLatency(us), 2273
+[UPDATE], 99thPercentileLatency(us), 4723
+[UPDATE], Return=OK, 5059
+READ usertable user3468931817750219139 [ <all fields>]
+READ usertable user60174774844957042 [ <all fields>]
+READ usertable user292156455839775497 [ <all fields>]
+UPDATE usertable user899463647179981130 [ field3=9-`2*h73806<"Y+ >222 =Qc%U3,U{6Jk7'*)Y5,3~.264":$Tc'"`*-p;6.-:,842<Wi*_%)+6<Z3)P/(Gc2(6(Vw2<x;Ig+4$= ]
+[OVERALL], RunTime(ms), 959
+[OVERALL], Throughput(ops/sec), 104275.28675703859
+[TOTAL_GCS_PS_Scavenge], Count, 1
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 1
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.10427528675703858
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 1
+[TOTAL_GC_TIME], Time(ms), 1
+[TOTAL_GC_TIME_%], Time(%), 0.10427528675703858
+[READ], Operations, 95027
+[READ], AverageLatency(us), 786.0042198533049
+[READ], MinLatency(us), 3
+[READ], MaxLatency(us), 36191
+[READ], 95thPercentileLatency(us), 3777
+[READ], 99thPercentileLatency(us), 11391
+[READ], Return=OK, 95027
+[CLEANUP], Operations, 100
+[CLEANUP], AverageLatency(us), 0.7
+[CLEANUP], MinLatency(us), 0
+[CLEANUP], MaxLatency(us), 4
+[CLEANUP], 95thPercentileLatency(us), 2
+[CLEANUP], 99thPercentileLatency(us), 3
+[UPDATE], Operations, 4973
+[UPDATE], AverageLatency(us), 1305.4626985722903
+[UPDATE], MinLatency(us), 6
+[UPDATE], MaxLatency(us), 35423
+[UPDATE], 95thPercentileLatency(us), 4123
+[UPDATE], 99thPercentileLatency(us), 8759
+[UPDATE], Return=OK, 4973
+READ usertable user7572077352179971939 [ <all fields>]
+READ usertable user4153387984724034032 [ <all fields>]
+READ usertable user5942382954533320482 [ <all fields>]
+READ usertable user1337537941806875960 [ <all fields>]
+[OVERALL], RunTime(ms), 988
+[OVERALL], Throughput(ops/sec), 101214.57489878543
+[TOTAL_GCS_PS_Scavenge], Count, 2
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 3
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.30364372469635625
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 2
+[TOTAL_GC_TIME], Time(ms), 3
+[TOTAL_GC_TIME_%], Time(%), 0.30364372469635625
+[READ], Operations, 94992
+[READ], AverageLatency(us), 1172.466902475998
+[READ], MinLatency(us), 3
+[READ], MaxLatency(us), 38399
+[READ], 95thPercentileLatency(us), 5779
+[READ], 99thPercentileLatency(us), 14199
+[READ], Return=OK, 94992
+[CLEANUP], Operations, 150
+[CLEANUP], AverageLatency(us), 0.74
+[CLEANUP], MinLatency(us), 0
+[CLEANUP], MaxLatency(us), 6
+[CLEANUP], 95thPercentileLatency(us), 2
+[CLEANUP], 99thPercentileLatency(us), 2
+[UPDATE], Operations, 5008
+[UPDATE], AverageLatency(us), 1875.3448482428114
+[UPDATE], MinLatency(us), 6
+[UPDATE], MaxLatency(us), 37535
+[UPDATE], 95thPercentileLatency(us), 6215
+[UPDATE], 99thPercentileLatency(us), 12559
+[UPDATE], Return=OK, 5008
+READ usertable user3820703087922811230 [ <all fields>]
+READ usertable user7008189050113913013 [ <all fields>]
+READ usertable user1573987489603120213 [ <all fields>]
+UPDATE usertable user1573987489603120213 [ field5=:R=$?84W%5N#9Ji/>l3Y' Ko Gs>N:X)0@')1~#Gu7&l3$h+_+$F'3Z#55(?6l>O;9J?<8|6Ug38z6',4,b)Zy+1~5-|74t2Vm/ ]
+[OVERALL], RunTime(ms), 995
+[OVERALL], Throughput(ops/sec), 100502.51256281407
+[TOTAL_GCS_PS_Scavenge], Count, 2
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 3
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.3015075376884422
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 2
+[TOTAL_GC_TIME], Time(ms), 3
+[TOTAL_GC_TIME_%], Time(%), 0.3015075376884422
+[READ], Operations, 95078
+[READ], AverageLatency(us), 1551.7653084835608
+[READ], MinLatency(us), 3
+[READ], MaxLatency(us), 57439
+[READ], 95thPercentileLatency(us), 7851
+[READ], 99thPercentileLatency(us), 19471
+[READ], Return=OK, 95078
+[CLEANUP], Operations, 200
+[CLEANUP], AverageLatency(us), 0.54
+[CLEANUP], MinLatency(us), 0
+[CLEANUP], MaxLatency(us), 13
+[CLEANUP], 95thPercentileLatency(us), 2
+[CLEANUP], 99thPercentileLatency(us), 2
+[UPDATE], Operations, 4922
+[UPDATE], AverageLatency(us), 2739.3303535148316
+[UPDATE], MinLatency(us), 6
+[UPDATE], MaxLatency(us), 52831
+[UPDATE], 95thPercentileLatency(us), 8927
+[UPDATE], 99thPercentileLatency(us), 14191
+[UPDATE], Return=OK, 4922
+INSERT usertable user4566774729031400892 [ field1=7V91P%+)<<):"V-8N34L>.*,\y7_g5[w:7",Ly;T{3%~.G/188Do))~&<4-Ws'Pq:L',.`,,b*Yy;$6,X?)%d&%*+Hm.X+7C=$ field0=# :1<|5Ps2S'Cw?K}1!<,P9%Lk>Zw2<r*Jy-:*9S7$^# ?z5K+,_} \e69j?Os"[9" j+&r7Z{&Vu#7j'I7"Nc.:0-\3(d7[/% field7=;8b"6.(#r+Yq3-<$[i,O59"&?Qo26*,#~/(4&%<-<26Qu>(|8Mq'9z,Tm*%t=J9,/p48l2K{:R7 _!<P/Z59]=<:<.Z+<X,#t2 field6=>/<1Fg5]}6:0)^/0*:7>v# ,,$(<T-$;<)[94V=)W9:Bk.A+!Y!$=b5O?1/49Hs+J#'Zc?>,9I{6.n3Q3 S'!Uq>(4.^y+5,,=j/ field9=+9h#*:%1.4V3#2(!0`*]306|!6`'Cg"6|#[+4Z/(Mw6We*G7:>j>I%=9(1.0-+f7)>2=8 7&#>2 0|3Xm?Lk#Y{7->=Oq//t5H-5 field8=)$.)K9 Py6@%:F10%0)4")Yk+_/9U!7Fc386:[g:I=>,&1Z5 0>%S31@94$b:4&=]m+8(4&,?7p*(d&L? R).'*<6b<?l:1>#5t3 field3=$X1(6:(T?,O5,Qs*R#)D90&t7<d3Xi-5~3V{)Hq#^e;To.X%(Dq23b:24=@k#V}7%"+9*4+|.4~/\s9_94?h#8r;P{5B!9]a3'(0 field2=3:(0]?9*j'!"**:=5`2>v6[=206-J/9Fi'!p40:%I79W#,6z0Y-<<.5"t;5>*^*- 3+28C}*,`/W= ^q""z(I%<]#8<t:Xk&S?  field5=%_'= 25Ak2No= |/]%$0,0\c'Cm6[q*%&0"d"<416*;Jo7/j'/~3Du?>")<&=5r67p&M'(04'0x?$r*22=Eq.(l;O}?!8(4d-\3= field4=8H?L7![u.9:,Dw:J=18z2^m"%<%4~*,d:1*-]"3. =2 .h"%x>N1+:~.Qg-Li;C<,d3K%'+x:_w<C%(+z<'$5[c00,0)b6;j7 ]
+READ usertable user5570405389965078206 [ <all fields>]
+READ usertable user1861560226471322977 [ <all fields>]
+INSERT usertable user1449281585892539227 [ field1=*2($,(20$8S#(Wk;:h:24!Eo)!v7P5S/ Hs=4~+3n%,( )&&Q;402$7$<;,=S'%<d.5"$Qa:Ts.6 ;W10#41Ss>[=0I/8$d/$"9 field0=,Ey/D +t>Eq2%8)=,9Gs?#2/% 8*&'(`:R- Ka##,7Ug#7n%<&-1n,Eq?/`.[?8Hw.0h"'|5/n2+h8L;544=M{6V97^m2]=&&j3 field7=5$0<Ce"!>,H-%@+5Hg$.&)781Fg;Yk&@q&%|-(0%\u(4l*Bw!W-$=f =>=B=+['(#n3U+8Da2>89P' .*1]} Q*"~3_+=Xq+'r# field6=;=x;,4>Ju".:&Z7,X+!1*9W5*2:<!~$^/M"K/ &<$($0'21\%$,4*Ue7K7?).<:n;%t2R7.;v>Ko;+x"=f:_s2Gw#/d>+f>3$= field9="(j#Sk55>%%* !d*Ac)Hs#L{<'|"%l+P1=L#/:n+S+8#$<G9=Vs>U=(&.,]k%Q)(Y}%\3,Zw)C;5Is!M!,Rm6[w/>*%Ac"8*8Z;% field8=)2,1),99l>*h'->!Ma27$$N-?U!)_s0 0$J-?$&< t9<8<:$$*v++t; 0!Y#1Ra?&85;&9'0#Ka3:|$W/-Bw6Gu'R3)Q? :t=V), field3=1^{2S+:Xu7Z-#Ou&^+8^1,+,1Ys/5j="~/#$#3j.Nk:Kg*T90Cg+Fc;Na?$$ Y;)^=920!Gw#Z}+ ~&-,%E95(|;;"0/6$Aw9['  field2=9E- V-/5n7"8/S&Rs&Fq;\?"Se.J-%.f"Yg":8$>t0[s"^5,-8 A%6.|?:f<Bk38x9C+(Kg:3<)U/9\s/K'#[c?!d).`#68#94( field5=+X+(=`+725R+ N?4=d)#|35"8K-8U'0+d'U"/l/X' 1 0R7?26(;d.[;5Q=!D= Z3<Cq?0`>62!%d8! 4[g62b.)v)2v6P13 f? field4=!Bg?Y3%3<(9~8<6)3&0Mw"O!--"4@7+"",S+?@o+Gu(0~?<|;O>9j-?`71><<~'B'._e"Zu'0b'Om0\{?E#<T=0Cq,4( @o5I)5 ]
+[OVERALL], RunTime(ms), 703
+[OVERALL], Throughput(ops/sec), 142247.5106685633
+[TOTAL_GCS_PS_Scavenge], Count, 1
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 1
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.1422475106685633
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 1
+[TOTAL_GC_TIME], Time(ms), 1
+[TOTAL_GC_TIME_%], Time(%), 0.1422475106685633
+[READ], Operations, 94890
+[READ], AverageLatency(us), 4.202265781431131
+[READ], MinLatency(us), 3
+[READ], MaxLatency(us), 1778
+[READ], 95thPercentileLatency(us), 7
+[READ], 99thPercentileLatency(us), 12
+[READ], Return=OK, 94890
+[CLEANUP], Operations, 1
+[CLEANUP], AverageLatency(us), 11.0
+[CLEANUP], MinLatency(us), 11
+[CLEANUP], MaxLatency(us), 11
+[CLEANUP], 95thPercentileLatency(us), 11
+[CLEANUP], 99thPercentileLatency(us), 11
+[INSERT], Operations, 5110
+[INSERT], AverageLatency(us), 18.26751467710372
+[INSERT], MinLatency(us), 7
+[INSERT], MaxLatency(us), 1334
+[INSERT], 95thPercentileLatency(us), 30
+[INSERT], 99thPercentileLatency(us), 104
+[INSERT], Return=OK, 5110
+READ usertable user2859384784361451714 [ <all fields>]
+READ usertable user1963601678519850103 [ <all fields>]
+READ usertable user3223888181645421855 [ <all fields>]
+READ usertable user3984360014106113125 [ <all fields>]
+[OVERALL], RunTime(ms), 927
+[OVERALL], Throughput(ops/sec), 107874.86515641856
+[TOTAL_GCS_PS_Scavenge], Count, 1
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 1
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.10787486515641855
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 1
+[TOTAL_GC_TIME], Time(ms), 1
+[TOTAL_GC_TIME_%], Time(%), 0.10787486515641855
+[READ], Operations, 95028
+[READ], AverageLatency(us), 39.81246579955381
+[READ], MinLatency(us), 3
+[READ], MaxLatency(us), 9615
+[READ], 95thPercentileLatency(us), 169
+[READ], 99thPercentileLatency(us), 316
+[READ], Return=OK, 95028
+[CLEANUP], Operations, 5
+[CLEANUP], AverageLatency(us), 4.0
+[CLEANUP], MinLatency(us), 1
+[CLEANUP], MaxLatency(us), 12
+[CLEANUP], 95thPercentileLatency(us), 12
+[CLEANUP], 99thPercentileLatency(us), 12
+[INSERT], Operations, 4972
+[INSERT], AverageLatency(us), 87.22244569589702
+[INSERT], MinLatency(us), 8
+[INSERT], MaxLatency(us), 9527
+[INSERT], 95thPercentileLatency(us), 275
+[INSERT], 99thPercentileLatency(us), 612
+[INSERT], Return=OK, 4972
+READ usertable user3813777063854981757 [ <all fields>]
+READ usertable user7860210049560315151 [ <all fields>]
+READ usertable user7791450236139869026 [ <all fields>]
+READ usertable user3506774736494356938 [ <all fields>]
+[OVERALL], RunTime(ms), 974
+[OVERALL], Throughput(ops/sec), 102669.4045174538
+[TOTAL_GCS_PS_Scavenge], Count, 1
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 1
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.10266940451745381
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 1
+[TOTAL_GC_TIME], Time(ms), 1
+[TOTAL_GC_TIME_%], Time(%), 0.10266940451745381
+[READ], Operations, 94893
+[READ], AverageLatency(us), 86.16314164374612
+[READ], MinLatency(us), 3
+[READ], MaxLatency(us), 8831
+[READ], 95thPercentileLatency(us), 364
+[READ], 99thPercentileLatency(us), 1165
+[READ], Return=OK, 94893
+[CLEANUP], Operations, 10
+[CLEANUP], AverageLatency(us), 2.6
+[CLEANUP], MinLatency(us), 0
+[CLEANUP], MaxLatency(us), 8
+[CLEANUP], 95thPercentileLatency(us), 8
+[CLEANUP], 99thPercentileLatency(us), 8
+[INSERT], Operations, 5107
+[INSERT], AverageLatency(us), 133.54670060701
+[INSERT], MinLatency(us), 8
+[INSERT], MaxLatency(us), 6535
+[INSERT], 95thPercentileLatency(us), 518
+[INSERT], 99thPercentileLatency(us), 1239
+[INSERT], Return=OK, 5107
+READ usertable user2073458943146947929 [ <all fields>]
+READ usertable user3133458935683991883 [ <all fields>]
+READ usertable user3425842756474673211 [ <all fields>]
+READ usertable user3133458935683991883 [ <all fields>]
+[OVERALL], RunTime(ms), 925
+[OVERALL], Throughput(ops/sec), 108108.1081081081
+[TOTAL_GCS_PS_Scavenge], Count, 1
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 1
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.10810810810810811
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 1
+[TOTAL_GC_TIME], Time(ms), 1
+[TOTAL_GC_TIME_%], Time(%), 0.10810810810810811
+[READ], Operations, 95034
+[READ], AverageLatency(us), 155.33798430035566
+[READ], MinLatency(us), 3
+[READ], MaxLatency(us), 15679
+[READ], 95thPercentileLatency(us), 782
+[READ], 99thPercentileLatency(us), 1967
+[READ], Return=OK, 95034
+[CLEANUP], Operations, 20
+[CLEANUP], AverageLatency(us), 1.1
+[CLEANUP], MinLatency(us), 0
+[CLEANUP], MaxLatency(us), 9
+[CLEANUP], 95thPercentileLatency(us), 2
+[CLEANUP], 99thPercentileLatency(us), 9
+[INSERT], Operations, 4966
+[INSERT], AverageLatency(us), 373.64156262585584
+[INSERT], MinLatency(us), 8
+[INSERT], MaxLatency(us), 15623
+[INSERT], 95thPercentileLatency(us), 1636
+[INSERT], 99thPercentileLatency(us), 2545
+[INSERT], Return=OK, 4966
+READ usertable user1368796481777482851 [ <all fields>]
+READ usertable user1611270447835117564 [ <all fields>]
+READ usertable user5030519775803195919 [ <all fields>]
+READ usertable user1368796481777482851 [ <all fields>]
+[OVERALL], RunTime(ms), 911
+[OVERALL], Throughput(ops/sec), 109769.4840834248
+[TOTAL_GCS_PS_Scavenge], Count, 2
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 2
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.21953896816684962
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 2
+[TOTAL_GC_TIME], Time(ms), 2
+[TOTAL_GC_TIME_%], Time(%), 0.21953896816684962
+[READ], Operations, 94994
+[READ], AverageLatency(us), 386.113638756132
+[READ], MinLatency(us), 3
+[READ], MaxLatency(us), 24831
+[READ], 95thPercentileLatency(us), 2297
+[READ], 99thPercentileLatency(us), 5463
+[READ], Return=OK, 94994
+[CLEANUP], Operations, 50
+[CLEANUP], AverageLatency(us), 0.86
+[CLEANUP], MinLatency(us), 0
+[CLEANUP], MaxLatency(us), 4
+[CLEANUP], 95thPercentileLatency(us), 2
+[CLEANUP], 99thPercentileLatency(us), 4
+[INSERT], Operations, 5006
+[INSERT], AverageLatency(us), 837.6747902516979
+[INSERT], MinLatency(us), 8
+[INSERT], MaxLatency(us), 22879
+[INSERT], 95thPercentileLatency(us), 3515
+[INSERT], 99thPercentileLatency(us), 4947
+[INSERT], Return=OK, 5006
+READ usertable user3109674562997657127 [ <all fields>]
+READ usertable user8564872510929780229 [ <all fields>]
+READ usertable user8564872510929780229 [ <all fields>]
+READ usertable user5329829620661706720 [ <all fields>]
+[OVERALL], RunTime(ms), 941
+[OVERALL], Throughput(ops/sec), 106269.92561105207
+[TOTAL_GCS_PS_Scavenge], Count, 2
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 3
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.3188097768331562
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 2
+[TOTAL_GC_TIME], Time(ms), 3
+[TOTAL_GC_TIME_%], Time(%), 0.3188097768331562
+[READ], Operations, 94960
+[READ], AverageLatency(us), 777.7274536647009
+[READ], MinLatency(us), 3
+[READ], MaxLatency(us), 42367
+[READ], 95thPercentileLatency(us), 4219
+[READ], 99thPercentileLatency(us), 7975
+[READ], Return=OK, 94960
+[CLEANUP], Operations, 100
+[CLEANUP], AverageLatency(us), 0.58
+[CLEANUP], MinLatency(us), 0
+[CLEANUP], MaxLatency(us), 4
+[CLEANUP], 95thPercentileLatency(us), 2
+[CLEANUP], 99thPercentileLatency(us), 3
+[INSERT], Operations, 5040
+[INSERT], AverageLatency(us), 1392.5505952380952
+[INSERT], MinLatency(us), 8
+[INSERT], MaxLatency(us), 42367
+[INSERT], 95thPercentileLatency(us), 5075
+[INSERT], 99thPercentileLatency(us), 8139
+[INSERT], Return=OK, 5040
+READ usertable user4527263746046539535 [ <all fields>]
+READ usertable user4656985659774988981 [ <all fields>]
+READ usertable user8152593870350996479 [ <all fields>]
+READ usertable user2073458943146947929 [ <all fields>]
+[OVERALL], RunTime(ms), 993
+[OVERALL], Throughput(ops/sec), 100704.93454179255
+[TOTAL_GCS_PS_Scavenge], Count, 2
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 3
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.3021148036253776
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 2
+[TOTAL_GC_TIME], Time(ms), 3
+[TOTAL_GC_TIME_%], Time(%), 0.3021148036253776
+[READ], Operations, 94973
+[READ], AverageLatency(us), 1179.8894001453045
+[READ], MinLatency(us), 3
+[READ], MaxLatency(us), 47903
+[READ], 95thPercentileLatency(us), 6247
+[READ], 99thPercentileLatency(us), 12679
+[READ], Return=OK, 94973
+[CLEANUP], Operations, 150
+[CLEANUP], AverageLatency(us), 0.7866666666666666
+[CLEANUP], MinLatency(us), 0
+[CLEANUP], MaxLatency(us), 4
+[CLEANUP], 95thPercentileLatency(us), 2
+[CLEANUP], 99thPercentileLatency(us), 4
+[INSERT], Operations, 5027
+[INSERT], AverageLatency(us), 1738.8038591605332
+[INSERT], MinLatency(us), 8
+[INSERT], MaxLatency(us), 48447
+[INSERT], 95thPercentileLatency(us), 7183
+[INSERT], 99thPercentileLatency(us), 13759
+[INSERT], Return=OK, 5027
+READ usertable user4074010984337560766 [ <all fields>]
+READ usertable user3119618704844030723 [ <all fields>]
+READ usertable user9197415395805956494 [ <all fields>]
+INSERT usertable user918001877334907757 [ field1==<`60($5*1:(7La6$>:]#0@{2Ty*8j,!h#,d3]s2#>)62$!":3(-Uo+*$,.j.Ry:]3>V9$3,0%f+'08":)Sg-Uq#!~;Vq.T175(< field0==L%$\k.%n?_}2-$$Cu&M94'h/*p3Xk&_s3N1&Na",x/Q70(j3$200x%T7(?r(Z3(N/;J}.1r+.j'<d(Ue",|*&`*G/6My2Q! =l> field7=56 5Z'+&.!@s+Z;</l)"d>Pg#G#,Cu>^q',|5Jw>E/(J/$=p3>|*;d*H;-Z?1-`?La4]#8Oc"[7%-27\'5E78B;(9h-=&54:;^3  field6=9Vs>K}.-6%&(<Uy>9:,3`#H{$O3$:>'!&0-2 F942f 2,9"h*2n/ b?$:%Dy(%x6>~$<><P}$?f2-`?;|;V#+.~?:n?V?(J3";6( field9=,Qq/2d&M=1\'1Ug&C}*8~>%z#2r2#x+0t::>$G=0]}!5h.)b$Q{&V}$Ey>#n.360=b&W{;.,*> ,.v$824N1+:j+>`'.l2P95H#1 field8=('x'L9 (t3Ug3E9<'z,^;<)~8C')~:"x'4t3E+!F)1Ri"-2-^e2U%&9<! p6A74]u)Xi?Ug&K5%T7!02$N'0A' -~6C/)O?9:`& field3=62~.8n,Wc+R=#F=%W{=I9!_s%Jg&/t5+h?Ik<Y1!'*>-*=9$<(~']%/R5%[o3_k38n9K= P93=>%U?%L7=Sk?*"$S3,S%472;(b* field2=(<d'Qa2Ik.]5(Kq3J-3(d:L??;~"J+<B;<]5:]!1@{7%$%"x0Gi2O}!6|:(d,#`>_a*Z!=C9:!8=-$3:|;H=*;f2Q=!;$)^)-S9) field5=>O+)Z!4^?([o"Y-4]u>Ww64,;.n'A72.t;J;!'~6#h;&. U-:<v"W/#%24-:<Um26z6(x*? .A1 3n5Y78M#-t*:,$Ao6Xy4N%, field4=5W=4I):G95X-/G9-# *8`:/<7We;2('4j6Mq$M)!?d'34 $x(Pq&5.+9<)/$?Sw')<4S{.#j%Aa+!~6(.$/2/O!902,'d;+n.J1! ]
+[OVERALL], RunTime(ms), 991
+[OVERALL], Throughput(ops/sec), 100908.17356205852
+[TOTAL_GCS_PS_Scavenge], Count, 2
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 4
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.4036326942482341
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 2
+[TOTAL_GC_TIME], Time(ms), 4
+[TOTAL_GC_TIME_%], Time(%), 0.4036326942482341
+[READ], Operations, 95000
+[READ], AverageLatency(us), 1569.6964
+[READ], MinLatency(us), 3
+[READ], MaxLatency(us), 55903
+[READ], 95thPercentileLatency(us), 9407
+[READ], 99thPercentileLatency(us), 17231
+[READ], Return=OK, 95000
+[CLEANUP], Operations, 200
+[CLEANUP], AverageLatency(us), 0.405
+[CLEANUP], MinLatency(us), 0
+[CLEANUP], MaxLatency(us), 5
+[CLEANUP], 95thPercentileLatency(us), 2
+[CLEANUP], 99thPercentileLatency(us), 2
+[INSERT], Operations, 5000
+[INSERT], AverageLatency(us), 2568.662
+[INSERT], MinLatency(us), 8
+[INSERT], MaxLatency(us), 50911
+[INSERT], 95thPercentileLatency(us), 10543
+[INSERT], 99thPercentileLatency(us), 16415
+[INSERT], Return=OK, 5000
+[TOTAL_GCS_PS_Scavenge], Count, 1
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 2
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.19880715705765406
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 1
+[TOTAL_GC_TIME], Time(ms), 2
+[TOTAL_GC_TIME_%], Time(%), 0.19880715705765406
+[READ], Operations, 100000
+[READ], AverageLatency(us), 4.02902
+[READ], MinLatency(us), 3
+[READ], MaxLatency(us), 4459
+[READ], 95thPercentileLatency(us), 7
+[READ], 99thPercentileLatency(us), 12
+[READ], Return=OK, 100000
+[READ-MODIFY-WRITE], Operations, 50156
+[READ-MODIFY-WRITE], AverageLatency(us), 11.652344684584097
+[READ-MODIFY-WRITE], MinLatency(us), 7
+[READ-MODIFY-WRITE], MaxLatency(us), 3475
+[READ-MODIFY-WRITE], 95thPercentileLatency(us), 21
+[READ-MODIFY-WRITE], 99thPercentileLatency(us), 37
+[CLEANUP], Operations, 1
+[CLEANUP], AverageLatency(us), 10.0
+[CLEANUP], MinLatency(us), 10
+[CLEANUP], MaxLatency(us), 10
+[CLEANUP], 95thPercentileLatency(us), 10
+[CLEANUP], 99thPercentileLatency(us), 10
+[UPDATE], Operations, 50156
+[UPDATE], AverageLatency(us), 6.142495414307361
+[UPDATE], MinLatency(us), 3
+[UPDATE], MaxLatency(us), 2925
+[UPDATE], 95thPercentileLatency(us), 12
+[UPDATE], 99thPercentileLatency(us), 21
+[UPDATE], Return=OK, 50156
+[TOTAL_GCS_PS_Scavenge], Count, 1
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 1
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.0684931506849315
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 1
+[TOTAL_GC_TIME], Time(ms), 1
+[TOTAL_GC_TIME_%], Time(%), 0.0684931506849315
+[READ], Operations, 100000
+[READ], AverageLatency(us), 43.07789
+[READ], MinLatency(us), 3
+[READ], MaxLatency(us), 11815
+[READ], 95thPercentileLatency(us), 112
+[READ], 99thPercentileLatency(us), 366
+[READ], Return=OK, 100000
+[READ-MODIFY-WRITE], Operations, 49942
+[READ-MODIFY-WRITE], AverageLatency(us), 91.12324296183573
+[READ-MODIFY-WRITE], MinLatency(us), 8
+[READ-MODIFY-WRITE], MaxLatency(us), 16335
+[READ-MODIFY-WRITE], 95thPercentileLatency(us), 224
+[READ-MODIFY-WRITE], 99thPercentileLatency(us), 1100
+[CLEANUP], Operations, 5
+[CLEANUP], AverageLatency(us), 4.4
+[CLEANUP], MinLatency(us), 1
+[CLEANUP], MaxLatency(us), 13
+[CLEANUP], 95thPercentileLatency(us), 13
+[CLEANUP], 99thPercentileLatency(us), 13
+[UPDATE], Operations, 49942
+[UPDATE], AverageLatency(us), 43.986003764366664
+[UPDATE], MinLatency(us), 4
+[UPDATE], MaxLatency(us), 11495
+[UPDATE], 95thPercentileLatency(us), 112
+[UPDATE], 99thPercentileLatency(us), 353
+[UPDATE], Return=OK, 49942
+[TOTAL_GCS_PS_Scavenge], Count, 1
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 1
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.07072135785007072
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 1
+[TOTAL_GC_TIME], Time(ms), 1
+[TOTAL_GC_TIME_%], Time(%), 0.07072135785007072
+[READ], Operations, 100000
+[READ], AverageLatency(us), 87.11256
+[READ], MinLatency(us), 3
+[READ], MaxLatency(us), 11783
+[READ], 95thPercentileLatency(us), 259
+[READ], 99thPercentileLatency(us), 1384
+[READ], Return=OK, 100000
+[READ-MODIFY-WRITE], Operations, 49886
+[READ-MODIFY-WRITE], AverageLatency(us), 163.78609229042218
+[READ-MODIFY-WRITE], MinLatency(us), 8
+[READ-MODIFY-WRITE], MaxLatency(us), 20303
+[READ-MODIFY-WRITE], 95thPercentileLatency(us), 451
+[READ-MODIFY-WRITE], 99thPercentileLatency(us), 2771
+[CLEANUP], Operations, 10
+[CLEANUP], AverageLatency(us), 3.4
+[CLEANUP], MinLatency(us), 1
+[CLEANUP], MaxLatency(us), 9
+[CLEANUP], 95thPercentileLatency(us), 9
+[CLEANUP], 99thPercentileLatency(us), 9
+[UPDATE], Operations, 49886
+[UPDATE], AverageLatency(us), 71.90594555586738
+[UPDATE], MinLatency(us), 4
+[UPDATE], MaxLatency(us), 10295
+[UPDATE], 95thPercentileLatency(us), 237
+[UPDATE], 99thPercentileLatency(us), 1032
+[UPDATE], Return=OK, 49886
+[TOTAL_GCS_PS_Scavenge], Count, 1
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 1
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.07127583749109052
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 1
+[TOTAL_GC_TIME], Time(ms), 1
+[TOTAL_GC_TIME_%], Time(%), 0.07127583749109052
+[READ], Operations, 100000
+[READ], AverageLatency(us), 169.71145
+[READ], MinLatency(us), 3
+[READ], MaxLatency(us), 13231
+[READ], 95thPercentileLatency(us), 657
+[READ], 99thPercentileLatency(us), 3171
+[READ], Return=OK, 100000
+[READ-MODIFY-WRITE], Operations, 50054
+[READ-MODIFY-WRITE], AverageLatency(us), 320.9444000479482
+[READ-MODIFY-WRITE], MinLatency(us), 8
+[READ-MODIFY-WRITE], MaxLatency(us), 22831
+[READ-MODIFY-WRITE], 95thPercentileLatency(us), 1481
+[READ-MODIFY-WRITE], 99thPercentileLatency(us), 4815
+[CLEANUP], Operations, 20
+[CLEANUP], AverageLatency(us), 2.75
+[CLEANUP], MinLatency(us), 1
+[CLEANUP], MaxLatency(us), 10
+[CLEANUP], 95thPercentileLatency(us), 3
+[CLEANUP], 99thPercentileLatency(us), 10
+[UPDATE], Operations, 50054
+[UPDATE], AverageLatency(us), 143.33250089902904
+[UPDATE], MinLatency(us), 4
+[UPDATE], MaxLatency(us), 13207
+[UPDATE], 95thPercentileLatency(us), 540
+[UPDATE], 99thPercentileLatency(us), 2905
+[UPDATE], Return=OK, 50054
+[TOTAL_GCS_PS_Scavenge], Count, 2
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 2
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.13869625520110956
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 2
+[TOTAL_GC_TIME], Time(ms), 2
+[TOTAL_GC_TIME_%], Time(%), 0.13869625520110956
+[READ], Operations, 100000
+[READ], AverageLatency(us), 449.09782
+[READ], MinLatency(us), 3
+[READ], MaxLatency(us), 23903
+[READ], 95thPercentileLatency(us), 2055
+[READ], 99thPercentileLatency(us), 6287
+[READ], Return=OK, 100000
+[READ-MODIFY-WRITE], Operations, 49819
+[READ-MODIFY-WRITE], AverageLatency(us), 843.9654950922339
+[READ-MODIFY-WRITE], MinLatency(us), 8
+[READ-MODIFY-WRITE], MaxLatency(us), 34143
+[READ-MODIFY-WRITE], 95thPercentileLatency(us), 3919
+[READ-MODIFY-WRITE], 99thPercentileLatency(us), 10223
+[CLEANUP], Operations, 50
+[CLEANUP], AverageLatency(us), 1.86
+[CLEANUP], MinLatency(us), 0
+[CLEANUP], MaxLatency(us), 11
+[CLEANUP], 95thPercentileLatency(us), 4
+[CLEANUP], 99thPercentileLatency(us), 11
+[UPDATE], Operations, 49819
+[UPDATE], AverageLatency(us), 366.5913406531645
+[UPDATE], MinLatency(us), 4
+[UPDATE], MaxLatency(us), 22799
+[UPDATE], 95thPercentileLatency(us), 1704
+[UPDATE], 99thPercentileLatency(us), 6067
+[UPDATE], Return=OK, 49819
+[TOTAL_GCS_PS_Scavenge], Count, 2
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 2
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.13342228152101399
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 2
+[TOTAL_GC_TIME], Time(ms), 2
+[TOTAL_GC_TIME_%], Time(%), 0.13342228152101399
+[READ], Operations, 100000
+[READ], AverageLatency(us), 888.32861
+[READ], MinLatency(us), 3
+[READ], MaxLatency(us), 37215
+[READ], 95thPercentileLatency(us), 3999
+[READ], 99thPercentileLatency(us), 10543
+[READ], Return=OK, 100000
+[READ-MODIFY-WRITE], Operations, 49937
+[READ-MODIFY-WRITE], AverageLatency(us), 1674.4467829465127
+[READ-MODIFY-WRITE], MinLatency(us), 8
+[READ-MODIFY-WRITE], MaxLatency(us), 56767
+[READ-MODIFY-WRITE], 95thPercentileLatency(us), 7803
+[READ-MODIFY-WRITE], 99thPercentileLatency(us), 16071
+[CLEANUP], Operations, 100
+[CLEANUP], AverageLatency(us), 1.13
+[CLEANUP], MinLatency(us), 0
+[CLEANUP], MaxLatency(us), 6
+[CLEANUP], 95thPercentileLatency(us), 3
+[CLEANUP], 99thPercentileLatency(us), 4
+[UPDATE], Operations, 49937
+[UPDATE], AverageLatency(us), 748.7953020806216
+[UPDATE], MinLatency(us), 4
+[UPDATE], MaxLatency(us), 37183
+[UPDATE], 95thPercentileLatency(us), 3697
+[UPDATE], 99thPercentileLatency(us), 10727
+[UPDATE], Return=OK, 49937
+[TOTAL_GCS_PS_Scavenge], Count, 2
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 6
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.3929273084479371
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 2
+[TOTAL_GC_TIME], Time(ms), 6
+[TOTAL_GC_TIME_%], Time(%), 0.3929273084479371
+[READ], Operations, 100000
+[READ], AverageLatency(us), 1268.57798
+[READ], MinLatency(us), 3
+[READ], MaxLatency(us), 55167
+[READ], 95thPercentileLatency(us), 7483
+[READ], 99thPercentileLatency(us), 17503
+[READ], Return=OK, 100000
+[READ-MODIFY-WRITE], Operations, 50062
+[READ-MODIFY-WRITE], AverageLatency(us), 2435.525827973313
+[READ-MODIFY-WRITE], MinLatency(us), 8
+[READ-MODIFY-WRITE], MaxLatency(us), 84607
+[READ-MODIFY-WRITE], 95thPercentileLatency(us), 13607
+[READ-MODIFY-WRITE], 99thPercentileLatency(us), 24095
+[CLEANUP], Operations, 150
+[CLEANUP], AverageLatency(us), 0.86
+[CLEANUP], MinLatency(us), 0
+[CLEANUP], MaxLatency(us), 8
+[CLEANUP], 95thPercentileLatency(us), 2
+[CLEANUP], 99thPercentileLatency(us), 5
+[UPDATE], Operations, 50062
+[UPDATE], AverageLatency(us), 1122.9984019815429
+[UPDATE], MinLatency(us), 4
+[UPDATE], MaxLatency(us), 50239
+[UPDATE], 95thPercentileLatency(us), 7067
+[UPDATE], 99thPercentileLatency(us), 17295
+[UPDATE], Return=OK, 50062
+[TOTAL_GCS_PS_Scavenge], Count, 3
+[TOTAL_GC_TIME_PS_Scavenge], Time(ms), 5
+[TOTAL_GC_TIME_%_PS_Scavenge], Time(%), 0.31665611146295125
+[TOTAL_GCS_PS_MarkSweep], Count, 0
+[TOTAL_GC_TIME_PS_MarkSweep], Time(ms), 0
+[TOTAL_GC_TIME_%_PS_MarkSweep], Time(%), 0.0
+[TOTAL_GCs], Count, 3
+[TOTAL_GC_TIME], Time(ms), 5
+[TOTAL_GC_TIME_%], Time(%), 0.31665611146295125
+[READ], Operations, 100000
+[READ], AverageLatency(us), 1750.57051
+[READ], MinLatency(us), 3
+[READ], MaxLatency(us), 62175
+[READ], 95thPercentileLatency(us), 8663
+[READ], 99thPercentileLatency(us), 18991
+[READ], Return=OK, 100000
+[READ-MODIFY-WRITE], Operations, 50053
+[READ-MODIFY-WRITE], AverageLatency(us), 3360.051345573692
+[READ-MODIFY-WRITE], MinLatency(us), 8
+[READ-MODIFY-WRITE], MaxLatency(us), 85183
+[READ-MODIFY-WRITE], 95thPercentileLatency(us), 14255
+[READ-MODIFY-WRITE], 99thPercentileLatency(us), 25583
+[CLEANUP], Operations, 200
+[CLEANUP], AverageLatency(us), 0.82
+[CLEANUP], MinLatency(us), 0
+[CLEANUP], MaxLatency(us), 4
+[CLEANUP], 95thPercentileLatency(us), 3
+[CLEANUP], 99thPercentileLatency(us), 4
+[UPDATE], Operations, 50053
+[UPDATE], AverageLatency(us), 1529.9133718258645
+[UPDATE], MinLatency(us), 4
+[UPDATE], MaxLatency(us), 62303
+[UPDATE], 95thPercentileLatency(us), 8207
+[UPDATE], 99thPercentileLatency(us), 16847
+[UPDATE], Return=OK, 50053
+/usr/bin/java  -classpath /root/ycsb/ycsb_redis/conf:/root/ycsb/ycsb_redis/lib/core-0.15.0.jar:/root/ycsb/ycsb_redis/lib/HdrHistogram-2.1.4.jar:/root/ycsb/ycsb_redis/lib/htrace-core4-4.1.0-incubating.jar:/root/ycsb/ycsb_redis/lib/jackson-core-asl-1.9.4.jar:/root/ycsb/ycsb_redis/lib/jackson-mapper-asl-1.9.4.jar com.yahoo.ycsb.Client -t -db com.yahoo.ycsb.BasicDB -p operationcount=100000 -threads -P workloads/tsworkloada
